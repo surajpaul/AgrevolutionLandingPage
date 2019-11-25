@@ -21,35 +21,258 @@
 	 padding: 0;
 	 font-family: 'Open Sans', sans-serif;
 	 cursor: none;
+	 z-index: 999999 !important;
 }
- .cursor {
-	 position: fixed;
-	 left: 0;
-	 top: 0;
-	 pointer-events: none;
+/*.cursor {
+	position: fixed;
+	left: 0;
+	top: 0;
+	pointer-events: none;
+}*/
+.cursor--small {
+	width: 10px;
+	height: 10px;
+	left: -15px;
+	top: -15px;
+	border-radius: 50%;
+	border: solid 1px white;
+	background: white;
+	mix-blend-mode: difference;
+	z-index: 999999 !important;
 }
- .cursor--small {
-	 width: 10px;
-	 height: 10px;
-	 left: -15px;
-	 top: -15px;
-	 border-radius: 50%;
-	 z-index: 11000;
-	 border: solid 1px white;
-	 background: white;
-	 mix-blend-mode: difference;
+a{
+	text-decoration: none;
+	color: #fff;
+	cursor:none;
 }
-	</style>
+.pulse-dot:hover > .small-dots{
+	border: none;
+	box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+	border-radius: 50%;
+	cursor: none;
+	width: 9px;
+	transition: .8s ease;
+	-webkit-animation: pulse 1.50s infinite cubic-bezier(0.36, 0, 0, 1);
+	-moz-animation: pulse 1.50s infinite cubic-bezier(0.36, 0, 0, 1);
+	-ms-animation: pulse 1.50s infinite cubic-bezier(0.36, 0, 0, 1);
+	animation: pulse 1.50s infinite cubic-bezier(0.36, 0, 0, 1);
+}
+@-webkit-keyframes pulse {to {box-shadow: 0 0 0 35px rgba(232, 76, 61, 0);}}
+@-moz-keyframes pulse {to {box-shadow: 0 0 0 35px rgba(232, 76, 61, 0);}}
+@-ms-keyframes pulse {to {box-shadow: 0 0 0 35px rgba(232, 76, 61, 0);}}
+@keyframes pulse {to {box-shadow: 0 0 0 35px rgba(232, 76, 61, 0);}}
+</style>
 </head>
-<body class="cursor">
-<a href="#" class="pt-5 pl-5">hover</a>
-    <!-- <div class="left-cont"></div> -->
-    <!-- <div class="right-cont">
-        <div class="right-hover">HOVER</div>
-    </div> -->
-    <div class="cursor cursor--small">
-        <div class="cursor--in"></div>
-    </div>
+<body class="cursor" style="overflow: hidden;">
+	<div class="cursor cursor--small">
+		<div class="cursor--in"></div>
+	</div>
+
+
+	<section class="container">
+		<div style="position: absolute;top: 6%;left: 5%;">
+			<img class="zoom" onclick="openNav()" src="img/menu.svg" width="30px;">
+			<img class="pl-4" src="img/AGREVOLUTION.png">
+		</div>
+		<div style="position: absolute;top: 45%;left: 5%;">
+			<h1 class="text-white" style="text-transform: uppercase;">from soil to market</h1>
+			<h5 class="text-white" style="text-transform: uppercase;">Technologies for next agri revolution</h5>
+		</div>
+		<div style="position: absolute;top: 92%;left: 5%;">
+			<span style="font-size: 11.5px;color: #969696;">© 2019 Agrevolution</span>
+			<a class="pl-4" href="" style="font-size: 11.5px;color: #969696;">Privacy Policy</a>
+			<a class="pl-4" href="" style="font-size: 11.5px;color: #969696;">Contact Us</a>
+			<a class="btn ml-4" style="font-size: 11.5px;color: #969696;background: #f54336;width:110px;height: 30px;padding: 6px 10px;color: #fff;border-radius: 3px;">We're Hiring</a>
+		</div>
+
+		<div>
+			<img src="img/Arc.png" width="30%" style="position: absolute;top: 0%;right: 14%">
+			
+			<div class="pulse-dot">
+				<img class="small-dots" src="img/Ellipse.svg" width="7px" style="position: absolute;top: 8%;right: 22.9%;">
+				<span class="text-white small-text" style="font-size: 12px;position: absolute;top: 7%;right: 14%;">Know Your Soil</span>
+			</div>
+
+			<div class="pulse-dot">
+				<img class="small-dots" src="img/Ellipse.svg" width="7px" style="position: absolute;top: 21%;right: 18%;">
+				<span class="text-white small-text" style="font-size: 12px;position: absolute;top: 20%;right: 12%;">Agri Input</span>
+			</div>
+
+			<div class="pulse-dot">
+				<img class="small-dots" src="img/Ellipse.svg" width="7px" style="position: absolute;top: 34%;right: 15.2%;">
+				<span class="text-white small-text" style="font-size: 12px;position: absolute;top: 33%;right: 9.5%;">Advisory</span>
+			</div>
+
+			<div class="pulse-dot">
+				<img class="small-dots" src="img/Ellipse.svg" width="7px" style="position: absolute;top: 50%;right: 13.8%;">
+				<span class="text-white small-text" style="font-size: 12px;position: absolute;top: 49%;right: 4.8%;">Health & Growth</span>
+			</div>
+
+			<div class="pulse-dot">
+				<img class="small-dots" src="img/Ellipse.svg" width="7px" style="position: absolute;top: 66%;right: 14.5%;">
+				<span class="text-white small-text" style="font-size: 12px;position: absolute;top: 65.5%;right: 7.5%;">Agri Output</span>
+			</div>
+
+			<div class="pulse-dot">
+				<img class="small-dots" src="img/Ellipse.svg" width="7px" style="position: absolute;top: 81%;right: 17%;">
+					<span class="text-white small-text" style="font-size: 12px;position: absolute;top: 81%;right: 7.5%;">Farm Intelligence</span>
+			</div>
+
+			<div class="pulse-dot">
+				<img class="small-dots" src="img/Ellipse.svg" width="7px" style="position: absolute;top: 94%;right: 21.4%;">
+				<span class="text-white small-text" style="font-size: 12px;position: absolute;top: 93%;right: 15.8%;">Finance</span>
+			</div>
+		</div>
+	</section>
+
+	<!-- overlay -->
+	<div id="myNav" class="overlay">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="img/error.png" width="30px"></a>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 py-4" align="center">
+					<h3 class="bold">Green Agrevolution Pvt. Ltd.</h3>
+					<p class="py-3" style="color: #777;font-size: 13px;">
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br> Lorem Ipsum has been the industry's standard dummy text<br> ever since the 1500s.
+					</p>
+				</div>
+				<div class="col-md-3">
+					<div class="card text-dark px-4 pt-4 pb-2">
+						<img src="img/0.png" width="50px">
+						<h6 class="bold pt-3">About DeHaat</h6>
+						<p class="pt-2" style="font-size: 12px;color: #777;">
+							Lorem Ipsum is simply dummy text of the printing and...
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="card text-dark px-4 pt-4 pb-2">
+						<img src="img/chip.png" width="50px">
+						<h6 class="bold pt-3">DeHaat Technology</h6>
+						<p class="pt-2" style="font-size: 12px;color: #777;">
+							Lorem Ipsum is simply dummy text of the printing and...
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="card text-dark px-4 pt-4 pb-2">
+						<img src="img/fertilizer.png" width="50px">
+						<h6 class="bold pt-3">Agri Input</h6>
+						<p class="pt-2" style="font-size: 12px;color: #777;">
+							Lorem Ipsum is simply dummy text of the printing and...
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="card text-dark px-4 pt-4 pb-2">
+						<img src="img/diagram.png" width="50px">
+						<h6 class="bold pt-3">Agri Output</h6>
+						<p class="pt-2" style="font-size: 12px;color: #777;">
+							Lorem Ipsum is simply dummy text of the printing and...
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row pt-5">
+				<div class="col-md-3">
+					<div class="card text-dark px-4 pt-4 pb-2">
+						<img src="img/0.png" width="50px">
+						<h6 class="bold pt-3">About DeHaat</h6>
+						<p class="pt-2" style="font-size: 12px;color: #777;">
+							Lorem Ipsum is simply dummy text of the printing and...
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="card text-dark px-4 pt-4 pb-2">
+						<img src="img/chip.png" width="50px">
+						<h6 class="bold pt-3">DeHaat Technology</h6>
+						<p class="pt-2" style="font-size: 12px;color: #777;">
+							Lorem Ipsum is simply dummy text of the printing and...
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="card text-dark px-4 pt-4 pb-2">
+						<img src="img/fertilizer.png" width="50px">
+						<h6 class="bold pt-3">Agri Input</h6>
+						<p class="pt-2" style="font-size: 12px;color: #777;">
+							Lorem Ipsum is simply dummy text of the printing and...
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="card text-dark px-4 pt-4 pb-2">
+						<img src="img/diagram.png" width="50px">
+						<h6 class="bold pt-3">Agri Output</h6>
+						<p class="pt-2" style="font-size: 12px;color: #777;">
+							Lorem Ipsum is simply dummy text of the printing and...
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+
+	
+
+<!-- overlay -->
+<style>
+	.overlay {
+	  height: 100%;
+	  width: 0;
+	  position: fixed;
+	  z-index: -1;
+	  top: 0;
+	  left: 0;
+	  background-color: #fff;
+	  overflow-x: hidden;
+	  transition: 0.5s;
+	}
+	.overlay div{
+		max-width: 1200px;
+	}
+	.closebtn {
+		position: absolute;
+		right: 30px;
+		top: 20px;
+	}
+	@media screen and (max-width: 700px) {
+		.fade-in{
+			display: none;
+		}
+	}
+	.text-dark{
+		color: red;
+	}
+	.card{
+		box-shadow: none;
+		border:1px solid #e0dede;
+		border-radius: 0px;
+		transition: all 0.8s;
+	}
+	.card:hover{
+		box-shadow: 0px 0px 25px 4px #e0dede;
+		margin-top: -15px;
+	}
+	.bold{
+		font-weight: bold;
+	}
+</style>
+
+
+
+<script>
+	function openNav() {
+	  document.getElementById("myNav").style.width = "100%";
+	}
+	function closeNav() {
+	  document.getElementById("myNav").style.width = "0%";
+	}
+</script>
+
+
 
 
 	<!-- JQuery -->
@@ -60,6 +283,29 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<!-- MDB core JavaScript -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/js/mdb.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+		$("a").mouseenter(function(){
+		    $(".cursor--small").css("border", "solid 15px white");
+		    $(".cursor--small").css("transition", ".6s");
+		});
+		$("a").mouseleave(function(){
+		    $(".cursor--small").css("border", "solid 1px white");
+		    $(".cursor--small").css("transition", "none");
+		});
+
+
+
+		// cursor temp fix
+		$(".zoom").click(function(){
+			$("*").css("cursor", "pointer");
+		});
+		$(".closebtn").click(function(){
+			$("*").css("cursor", "none");
+		});
+	});
+</script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

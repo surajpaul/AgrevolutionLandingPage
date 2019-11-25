@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Landing page</title>
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<!-- Bootstrap core CSS -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Material Design Bootstrap -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/css/mdb.min.css" rel="stylesheet">
+	<!-- font(Roboto) -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap">
+	<style>
+		body{
+			font-family: 'Roboto', sans-serif;
+			background: #000;
+		}
+* {
+	 margin: 0;
+	 padding: 0;
+	 font-family: 'Open Sans', sans-serif;
+	 cursor: none;
+}
+ .cursor {
+	 position: fixed;
+	 left: 0;
+	 top: 0;
+	 pointer-events: none;
+}
+ .cursor--small {
+	 width: 10px;
+	 height: 10px;
+	 left: -15px;
+	 top: -15px;
+	 border-radius: 50%;
+	 z-index: 11000;
+	 border: solid 1px white;
+	 background: white;
+	 mix-blend-mode: difference;
+}
+	</style>
+</head>
+<body class="cursor">
+<a href="#" class="pt-5 pl-5">hover</a>
+    <!-- <div class="left-cont"></div> -->
+    <!-- <div class="right-cont">
+        <div class="right-hover">HOVER</div>
+    </div> -->
+    <div class="cursor cursor--small">
+        <div class="cursor--in"></div>
+    </div>
+
+
+	<!-- JQuery -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- Bootstrap tooltips -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+	<!-- Bootstrap core JavaScript -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<!-- MDB core JavaScript -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/js/mdb.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		let clientX = -100;
+		let clientY = -100;
+		const innerCursor = document.querySelector(".cursor--small");
+		const cursor_in = document.querySelector(".cursor--in");
+
+		const initCursor = () => {  document.addEventListener("mousemove", e => {
+		    clientX = e.clientX;
+		    clientY = e.clientY;
+		  });
+		  
+		  const render = () => {
+		    TweenMax.to(innerCursor, '0.3', {
+		      x: clientX,
+		      y: clientY
+		    });
+		    requestAnimationFrame(render);
+		  };
+		  requestAnimationFrame(render);
+		};
+
+		initCursor();
+	</script>
+</body>
+</html>

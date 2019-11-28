@@ -1,712 +1,462 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Landing page</title>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-	<!-- Bootstrap core CSS -->
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-	<!-- Material Design Bootstrap -->
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/css/mdb.min.css" rel="stylesheet">
-	<!-- font(Roboto) -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap">
-	<!-- aos -->
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<style>
-/*cursor*/
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400|Raleway:300);
- *, *:before, *:after {
-	 box-sizing: border-box;
-}
- .header {
-	 position: relative;
-	 overflow: visible;
-}
- .header:after {
-	 content: '';
-	 position: absolute;
-	 bottom: 0;
-	 left: 50%;
-	 width: 50px;
-	 height: 2px;
-	 background-color: #dc5656;
-	 transform: translateX(-50%);
-}
- .pen__subheading {
-	 margin-bottom: 0;
-}
- .pen__subheading a {
-	 color: #dc5656;
-}
- .pen__subheading a:hover, .pen__subheading a:focus {
-	 color: #e58080;
-}
- .container {
-	 overflow: hidden;
-	 width: 100%;
-	 max-width: 800px;
-	 margin: 0 auto;
-	 padding: 2rem 1rem;
-}
- .col {
-	 padding: 1rem;
-}
- @media (min-width: 800px) {
-	 .col {
-		 width: 50%;
-		 float: left;
-	}
-	 .col:nth-of-type(2n+1) {
-		 clear: left;
-	}
-}
- .col.col--full {
-	 width: 100%;
-}
-html, body, html *, body * {
-	 cursor: none;
-}
- .cursor-dot, .cursor-dot-outline {
-	 pointer-events: none;
-	 position: absolute;
-	 top: 50%;
-	 left: 50%;
-	 border-radius: 50%;
-	 opacity: 0;
-	 transform: translate(-50%, -50%);
-	 transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
- .cursor-dot {
-	 width: 8px;
-	 height: 8px;
-	 background-color: #fff;
-	 z-index: 9999;
-}
- .cursor-dot-outline {
-	 width: 30px;
-	 height: 30px;
-	 background-color: rgba(225, 225, 225, 0.5);
-	 z-index: 9999;
-}
-/*previous pulse*/
-.pulse-dot:hover > .small-dots{
-	border: none;
-	box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
-	border-radius: 50%;
-	cursor: none;
-	width: 9px;
-	transition: .8s ease;
-	-webkit-animation: pulse 1.50s infinite cubic-bezier(0.36, 0, 0, 1);
-	-moz-animation: pulse 1.50s infinite cubic-bezier(0.36, 0, 0, 1);
-	-ms-animation: pulse 1.50s infinite cubic-bezier(0.36, 0, 0, 1);
-	animation: pulse 1.50s infinite cubic-bezier(0.36, 0, 0, 1);
-}
-@-webkit-keyframes pulse {to {box-shadow: 0 0 0 35px rgba(232, 76, 61, 0);}}
-@-moz-keyframes pulse {to {box-shadow: 0 0 0 35px rgba(232, 76, 61, 0);}}
-@-ms-keyframes pulse {to {box-shadow: 0 0 0 35px rgba(232, 76, 61, 0);}}
-@keyframes pulse {to {box-shadow: 0 0 0 35px rgba(232, 76, 61, 0);}}
-/**/
-.rotate-img{
-	border: none;
-	box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
-	border-radius: 50%;
-	cursor: none;
-	transition: .8s ease;
-	-webkit-animation: pulse-img 2s infinite cubic-bezier(0.45, 0, 0, 1);
-	-moz-animation: pulse-img 2s infinite cubic-bezier(0.45, 0, 0, 1);
-	-ms-animation: pulse-img 2s infinite cubic-bezier(0.45, 0, 0, 1);
-	animation: pulse-img 2s infinite cubic-bezier(0.45, 0, 0, 1);
-}
-@-webkit-keyframes pulse-img {to {box-shadow: 0 0 0 75px rgba(232, 76, 61, 0);}}
-@-moz-keyframes pulse-img {to {box-shadow: 0 0 0 75px rgba(232, 76, 61, 0);}}
-@-ms-keyframes pulse-img {to {box-shadow: 0 0 0 75px rgba(232, 76, 61, 0);}}
-@keyframes pulse-img {to {box-shadow: 0 0 0 75px rgba(232, 76, 61, 0);}}
-.outerCircle {
-background-color: transparent;
-opacity: .9;
-width: 100%;
-height: 100%;
-position: relative;
--moz-animation: spinoffPulse 12s infinite linear;
--webkit-animation: spinoffPulse 12s infinite linear;
-}
-@-moz-keyframes spinPulse {
-    0% { -moz-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #bdd73c;}
-	50% { -moz-transform:rotate(145deg); opacity:1; }
-	100% { -moz-transform:rotate(-320deg); opacity:0; }
-}
-@-moz-keyframes spinoffPulse {
-    0% { -moz-transform:rotate(0deg); }
-	100% { -moz-transform:rotate(360deg);  }
-}
-@-webkit-keyframes spinPulse {
-    0% { -webkit-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #bdd73c; }
-	50% { -webkit-transform:rotate(145deg); opacity:1;}
-	100% { -webkit-transform:rotate(-320deg); opacity:0; }
-}
-@-webkit-keyframes spinoffPulse {
-    0% { -webkit-transform:rotate(0deg); }
-	100% { -webkit-transform:rotate(360deg); }
-}
-.codepen {
-background-color: transparent;
-border: 8px solid rgba(28, 170, 83, 1);
-opacity: 1;
-border-right: 5px solid transparent;
-border-left: 5px solid transparent;
-border-radius: 65%;
-width: 135%;
-height: 135%;
-margin-top: -52px;margin-left: -52px;
--moz-animation: spinPulse 4s infinite ease-in-out;
--webkit-animation: spinPulse 4s infinite ease-in-out;
-}
-.codepen1 {
-	background-color: transparent;
-	border: 5px solid rgba(28, 170, 83, 1);
-	opacity: 1;
-	border-left: 5px solid transparent;
-	border-right: 5px solid transparent;
-	border-radius: 55%;
-	width: 106%;
-	height: 106%;
-	margin-top: -362px;margin-left: -10px;
-	-moz-animation: spinoffPulse 3s infinite linear;
-	-webkit-animation: spinoffPulse 3s infinite linear;
-}
-@-moz-keyframes spinPulse {
-    0% { -moz-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #bdd73c;}
-	50% { -moz-transform:rotate(145deg); opacity:1; }
-	100% { -moz-transform:rotate(-320deg); opacity:0; }
-}
-@-moz-keyframes spinoffPulse {
-    0% { -moz-transform:rotate(0deg); }
-	100% { -moz-transform:rotate(360deg);  }
-}
-@-webkit-keyframes spinPulse {
-    0% { -webkit-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #bdd73c; }
-	50% { -webkit-transform:rotate(145deg); opacity:1;}
-	100% { -webkit-transform:rotate(-320deg); opacity:0; }
-}
-@-webkit-keyframes spinoffPulse {
-    0% { -webkit-transform:rotate(0deg); }
-	100% { -webkit-transform:rotate(360deg); }
-}
-@-moz-keyframes rotatecircle {
-    0% { -moz-transform:rotate(0deg); }
-	100% { -moz-transform:rotate(-360deg); }
-}
-
-@-webkit-keyframes rotatecircle {
-    0% { -webkit-transform:rotate(0deg); }
-100% { -webkit-transform:rotate(-360deg); }
-}
-
-
-
-
-
-
-/*custom css*/
-.bg-img{
-	background: url('img/dehaat.png') no-repeat;
-	background-size: 300px;
-	height: 300px;
-	width: 300px;
-	position: absolute;
-	top: 30%;
-	left: 50%;
-}
-.headings{
-	position: absolute;
-	top: 45%;
-	left: 5%;
-}
-.hiring{
-	position: absolute;
-	top: 91%;
-	left: 5%;
-}
-.btn-hire{
-	font-size: 15px;
-	color: #000;
-	background: #fff;
-	width:140px;
-	height: 50px;
-	padding: 7px 12px;
-	border-radius: 3px;
-}
-.btn-hire:hover {
-	font-size: 15px;
-	color: #0e7f40 !important;
-	background: #fff;
-	width:140px;
-	height: 50px;
-	padding: 7px 12px;
-	border-radius: 3px;
-}
-@media screen and (max-width: 992px) {
-	.small-stars{
-		display: none;
-	}
-	.bg-img{
-		background: url('img/dehaat.png') no-repeat;
-		background-size: 300px;
-		height: 300px;
-		width: 300px;
-		position: absolute;
-		top: 30%;
-		left: 20%;
-	}
-	.headings{
-		position: absolute;
-		top: 90%;
-		left: 5%;
-	}
-	.hiring{
-		position: absolute;
-		top: 6%;
-		left: 76%;
-	}
-	.menu{
-		display: none;
-	}
-}
-.bg-arc{
-	width: 30%;
-	position: absolute;top: 0%;right: 14%;
-}
-/*@media screen and (max-height: 750px) {
-	.bg-arc{
-		width: 31%;
-		position: absolute;top: 0%;right: 14%;
-	}
-}
-@media screen and (max-height: 730px) {
-	.bg-arc{
-		width: 30.5%;
-		position: absolute;top: 0%;right: 14%;
-	}
-}*/
-@media screen and (max-height: 720px) {
-	.bg-arc{
-		width: 30%;
-		position: absolute;top: 0%;right: 14%;
-	}
-}
-/*@media screen and (max-height: 705px) {
-	.bg-arc{
-		width: 29%;
-		position: absolute;top: 0%;right: 14%;
-	}
-}
-@media screen and (max-height: 690px) {
-	.bg-arc{
-		width: 28.5%;
-		position: absolute;top: 0%;right: 14%;
-	}
-}
-@media screen and (max-height: 680px) {
-	.bg-arc{
-		width: 28%;
-		position: absolute;top: 0%;right: 14%;
-	}
-}
-@media screen and (max-height: 670px) {
-	.bg-arc{
-		width: 28%;
-		position: absolute;top: 0%;right: 14.3%;
-	}
-}
-@media screen and (max-height: 660px) {
-	.bg-arc{
-		width: 27.5%;
-		position: absolute;top: 0%;right: 14.3%;
-	}
-}
-@media screen and (max-height: 650px) {
-	.bg-arc{
-		width: 26.5%;
-		position: absolute;top: 1%;right: 14.3%;
-	}
-}
-@media screen and (max-height: 640px) {
-	.bg-arc{
-		width: 26%;
-		position: absolute;top: 1%;right: 14.4%;
-	}
-}*/
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Landing Page</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/css/mdb.min.css" rel="stylesheet">
+    <!-- font(Roboto) -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap">
+    <link rel="stylesheet" href="parallex.css">
 </head>
-<body style="overflow: hidden;background-color: #000;">
+<body style="background: #000;">
+    <section class="wrapper">
+        <div class="bg" id="stars"></div>
+        <div class="bg" id="stars2"></div>
+        <div class="bg" id="stars3"></div>
+        <!-- <div id="main">
+            <span>suraj paul CSS</span>
+        </div> -->
 
-	<section class="container">
-		<!-- menubar -->
-		<div data-aos="fade-down" style="position: absolute;top: 6%;left: 5%;">
-			<a><img class="zoom" onclick="openNav()" src="img/menu.svg" width="30px;"></a>
-			<img class="pl-4 pb-2" src="img/AGREVOLUTION.png">
-			<a class="pl-5 bold menu" href="" style="font-size: 13px;color: #969696;margin-left: 40px;">Solutions</a>
-			<a class="pl-5 bold menu" href="" style="font-size: 13px;color: #969696;">DeHaat MODEL</a>
-			<a class="pl-5 bold menu" href="" style="font-size: 13px;color: #969696;text-transform: uppercase;">Blog</a>
-			<a class="pl-5 bold menu" href="" style="font-size: 13px;color: #969696;">About Us</a>
-		</div>
-		<!-- center heading -->
-		<div data-aos="fade-right" class="headings">
-			<h1 class="text-white" style="text-transform: uppercase;">from soil to market</h1>
-			<h5 class="text-white" style="text-transform: uppercase;">Technologies for next agri revolution</h5>
-		</div>
-		<!-- rotating image -->
-		<div class="rotate-img bg-img">
-			<img class="outerCircle" src="img/assets/inner.svg" style="position: absolute;width: 101%;height: 101%;margin-top: -3px;margin-left: -3px;" data-aos="fade-up" data-aos-duration="3000">
-			<img class="outerCircle" src="img/assets/outer.svg" style="position: absolute;width: 124%;height:124%;margin-top: -35px;margin-left: -35px;" data-aos="fade-up" data-aos-duration="3500">
-			<img class="outerCircle" src="img/assets/outer2.svg" style="position: absolute;width: 110%;height: 110%;margin-top: -15px;margin-left: -15px;" data-aos="fade-up" data-aos-duration="4000">
-			<div class="codepen" data-aos="fade-up" data-aos-duration="4500"></div>
-			<div class="codepen1" data-aos="fade-up" data-aos-duration="5000"></div>
-		</div>
-		<!-- hiring button -->
-		<div class="hiring">
-			<a class="bold btn-hire">We're Hiring</a>
-		</div>
-		<!-- dots -->
-		<div class="small-stars">
-			<img src="img/Arc.png" class="bg-arc">
-			
-			<div class="pulse-dot">
-				<img class="small-dots" src="img/Ellipse.svg" width="7px" style="position: absolute;top: 20%;right: 18.3%;">
-				<span class="text-white small-text" style="font-size: 12px;position: absolute;top: 19%;right: 10.5%;">Know Your Soil</span>
-			</div>
+        <section class="container">
+          <!-- menubar -->
+          <div data-aos="fade-down" style="position: absolute;top: 6%;left: 5%;">
+            <a><img class="zoom" onclick="openNav()" src="img/menu.svg" width="30px;"></a>
+            <img class="pl-4 pb-2" src="img/AGREVOLUTION.png">
+            <a class="pl-5 bold menu" href="" style="font-size: 13px;color: #969696;margin-left: 40px;">Solutions</a>
+            <a class="pl-5 bold menu" href="" style="font-size: 13px;color: #969696;">DeHaat Model</a>
+            <a class="pl-5 bold menu" href="" style="font-size: 13px;color: #969696;text-transform: uppercase;">Blog</a>
+            <a class="pl-5 bold menu" href="" style="font-size: 13px;color: #969696;">About Us</a>
+          </div>
+          <!-- center heading -->
+          <div data-aos="fade-right" class="headings">
+            <h1 class="text-green bold main-text skew skew-main">from <span style="font-size: 60px;">soil</span><br> to <span style="font-size: 60px;">market</span></h1>
+            <h1 class="text-green bold back-text glitch glitch-main">from <span style="font-size: 60px;">soil</span><br> to <span style="font-size: 60px;">market</span></h1>
+            <h5 class="text-white detail-main">Technologies for next agri revolution</h5>
 
-			<div class="pulse-dot">
-				<img class="small-dots" src="img/Ellipse.svg" width="7px" style="position: absolute;top: 30%;right: 15.8%;">
-				<span class="text-white small-text" style="font-size: 12px;position: absolute;top: 29%;right: 10%;">Agri Input</span>
-			</div>
+            <!-- dot1 -->
+            <h1 class="text-green bold main-text skew skew1" style="display: none;">Know your <br><span style="font-size: 60px;">soil</span></h1>
+            <h1 class="text-green bold back-text glitch glitch1" style="display: none;">Know your <br><span style="font-size: 60px;">soil</span></h1>
+            <h5 class="text-white detail1" style="display: none;">soil testing and health card</h5>
 
-			<div class="pulse-dot">
-				<img class="small-dots" src="img/Ellipse.svg" width="7px" style="position: absolute;top: 40%;right: 14.4%;">
-				<span class="text-white small-text" style="font-size: 12px;position: absolute;top: 39%;right: 9.5%;">Advisory</span>
-			</div>
+            <!-- dot2 -->
+            <h1 class="text-green bold main-text skew skew2" style="display: none;">agri <span style="font-size: 60px;">input</span></h1>
+            <h1 class="text-green bold back-text glitch glitch2" style="display: none;">agri <span style="font-size: 60px;">input</span></h1>
+            <h5 class="text-white detail2" style="display: none;">seed, nutrition and protection</h5>
 
-			<div class="pulse-dot">
-				<img class="small-dots" src="img/Ellipse.svg" width="7px" style="position: absolute;top: 50%;right: 13.8%;">
-				<span class="text-white small-text" style="font-size: 12px;position: absolute;top: 49%;right: 5.4%;">Health & Growth</span>
-			</div>
+            <!-- dot3 -->
+            <h1 class="text-green bold main-text skew skew3" style="display: none;"><span style="font-size: 60px;">advisory</span></h1>
+            <h1 class="text-green bold back-text glitch glitch3" style="display: none;"><span style="font-size: 60px;">advisory</span></h1>
+            <h5 class="text-white detail3" style="display: none;">helpline and support</h5>
 
-			<div class="pulse-dot">
-				<img class="small-dots" src="img/Ellipse.svg" width="7px" style="position: absolute;top: 60%;right: 14%;">
-				<span class="text-white small-text" style="font-size: 12px;position: absolute;top: 59%;right: 7.5%;">Agri Output</span>
-			</div>
+            <!-- dot4 -->
+            <h1 class="text-green bold main-text skew skew4" style="display: none;"><span style="font-size: 60px;">health</span><br> and <span style="font-size: 60px;">growth</span></h1>
+            <h1 class="text-green bold back-text glitch glitch4" style="display: none;"><span style="font-size: 60px;">health</span><br> and <span style="font-size: 60px;">growth</span></h1>
+            <h5 class="text-white detail4" style="display: none;">yield forecast</h5>
 
-			<div class="pulse-dot">
-				<img class="small-dots" src="img/Ellipse.svg" width="7px" style="position: absolute;top: 70%;right: 15%;">
-					<span class="text-white small-text" style="font-size: 12px;position: absolute;top: 69%;right: 6.8%;">Farm Intelligence</span>
-			</div>
+            <!-- dot5 -->
+            <h1 class="text-green bold main-text skew skew5" style="display: none;">agri <span style="font-size: 60px;">output</span></h1>
+            <h1 class="text-green bold back-text glitch glitch5" style="display: none;">agri <span style="font-size: 60px;">output</span></h1>
+            <h5 class="text-white detail5" style="display: none;">harvest & market access</h5>
 
-			<div class="pulse-dot">
-				<img class="small-dots" src="img/Ellipse.svg" width="7px" style="position: absolute;top: 80%;right: 16.9%;">
-				<span class="text-white small-text" style="font-size: 12px;position: absolute;top: 79%;right: 12%;">Finance</span>
-			</div>
-		</div>
-	</section>
+            <!-- dot6 -->
+            <h1 class="text-green bold main-text skew skew6" style="display: none;">farm <span style="font-size: 60px;">intelligence</span></h1>
+            <h1 class="text-green bold back-text glitch glitch6" style="display: none;">farm <span style="font-size: 60px;">intelligence</span></h1>
+            <h5 class="text-white detail6" style="display: none;">ai, ml & analytics</h5>
 
-	<!-- overlay -->
-	<div id="myNav" class="overlay">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="img/error.png" width="30px"></a>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 py-4" align="center">
-					<h3 class="bold">Green Agrevolution Pvt. Ltd.</h3>
-					<p class="py-3" style="color: #777;font-size: 13px;">
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br> Lorem Ipsum has been the industry's standard dummy text<br> ever since the 1500s.
-					</p>
-				</div>
-				<div class="col-md-3">
-					<div class="card text-dark px-4 pt-4 pb-2">
-						<img src="img/0.png" width="50px">
-						<h6 class="bold pt-3">About DeHaat</h6>
-						<p class="pt-2" style="font-size: 12px;color: #777;">
-							Lorem Ipsum is simply dummy text of the printing and...
-						</p>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="card text-dark px-4 pt-4 pb-2">
-						<img src="img/chip.png" width="50px">
-						<h6 class="bold pt-3">DeHaat Technology</h6>
-						<p class="pt-2" style="font-size: 12px;color: #777;">
-							Lorem Ipsum is simply dummy text of the printing and...
-						</p>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="card text-dark px-4 pt-4 pb-2">
-						<img src="img/fertilizer.png" width="50px">
-						<h6 class="bold pt-3">Agri Input</h6>
-						<p class="pt-2" style="font-size: 12px;color: #777;">
-							Lorem Ipsum is simply dummy text of the printing and...
-						</p>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="card text-dark px-4 pt-4 pb-2">
-						<img src="img/diagram.png" width="50px">
-						<h6 class="bold pt-3">Agri Output</h6>
-						<p class="pt-2" style="font-size: 12px;color: #777;">
-							Lorem Ipsum is simply dummy text of the printing and...
-						</p>
-					</div>
-				</div>
-			</div>
+            <!-- dot7 -->
+            <h1 class="text-green bold main-text skew skew7" style="display: none;">agri <span style="font-size: 60px;">finance</span></h1>
+            <h1 class="text-green bold back-text glitch glitch7" style="display: none;">agri <span style="font-size: 60px;">finance</span></h1>
+            <h5 class="text-white detail7" style="display: none;">credit & insurance</h5>
+            
+          </div>
+          <!-- rotating image -->
+          <div class="rotate-img bg-img">
+            <img class="outerCircle" src="img/assets/inner.svg" style="position: absolute;width: 101%;height: 101%;margin-top: -3px;margin-left: -3px;" data-aos="fade-up" data-aos-duration="3000">
+            <img class="outerCircle" src="img/assets/outer.svg" style="position: absolute;width: 124%;height:124%;margin-top: -35px;margin-left: -35px;" data-aos="fade-up" data-aos-duration="3500">
+            <img class="outerCircle" src="img/assets/outer2.svg" style="position: absolute;width: 110%;height: 110%;margin-top: -15px;margin-left: -15px;" data-aos="fade-up" data-aos-duration="4000">
+            <div class="codepen" data-aos="fade-up" data-aos-duration="4500"></div>
+            <div class="codepen1" data-aos="fade-up" data-aos-duration="5000"></div>
+          </div>
+          <!-- hiring button -->
+          <div class="hiring">
+            <a class="bold btn-hire">We're Hiring</a>
+          </div>
+          <!-- dots -->
+          <div class="small-stars">
+            <img src="img/Arc.png" class="bg-arc">
+            
+            <div class="pulse-dot dot1">
+              <img class="small-dots" src="img/Ellipse.svg" width="10px" style="position: absolute;top: 20%;right: 18.3%;">
+              <span class="text-white small-text" style="font-size: 12px;position: absolute;top: 19%;right: 10.5%;">Know Your Soil</span>
+            </div>
 
-			<div class="row pt-5">
-				<div class="col-md-3">
-					<div class="card text-dark px-4 pt-4 pb-2">
-						<img src="img/0.png" width="50px">
-						<h6 class="bold pt-3">About DeHaat</h6>
-						<p class="pt-2" style="font-size: 12px;color: #777;">
-							Lorem Ipsum is simply dummy text of the printing and...
-						</p>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="card text-dark px-4 pt-4 pb-2">
-						<img src="img/chip.png" width="50px">
-						<h6 class="bold pt-3">DeHaat Technology</h6>
-						<p class="pt-2" style="font-size: 12px;color: #777;">
-							Lorem Ipsum is simply dummy text of the printing and...
-						</p>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="card text-dark px-4 pt-4 pb-2">
-						<img src="img/fertilizer.png" width="50px">
-						<h6 class="bold pt-3">Agri Input</h6>
-						<p class="pt-2" style="font-size: 12px;color: #777;">
-							Lorem Ipsum is simply dummy text of the printing and...
-						</p>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="card text-dark px-4 pt-4 pb-2">
-						<img src="img/diagram.png" width="50px">
-						<h6 class="bold pt-3">Agri Output</h6>
-						<p class="pt-2" style="font-size: 12px;color: #777;">
-							Lorem Ipsum is simply dummy text of the printing and...
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>		
-	</div>
-	<!-- overlay css-->
-	<style>
-		.overlay {
-		  height: 100%;
-		  width: 0;
-		  position: fixed;
-		  z-index: 1;
-		  top: 0;
-		  left: 0;
-		  background-color: #fff;
-		  overflow: hidden;
-		  transition: 0.5s;
-		}
-		.overlay div{
-			max-width: 1200px;
-		}
-		.closebtn {
-			position: absolute;
-			right: 30px;
-			top: 20px;
-		}
-		@media screen and (max-width: 700px) {
-			.fade-in{
-				display: none;
-			}
-		}
-		.text-dark{
-			color: red;
-		}
-		.card{
-			box-shadow: none;
-			border:1px solid #e0dede;
-			border-radius: 0px;
-			transition: all 0.8s;
-		}
-		.card:hover{
-			box-shadow: 0px 0px 25px 4px #e0dede;
-			margin-top: -15px;
-		}
-		.bold{
-			font-weight: bold;
-		}
-	</style>
+            <div class="pulse-dot dot2">
+              <img class="small-dots" src="img/Ellipse.svg" width="10px" style="position: absolute;top: 30%;right: 15.8%;">
+              <span class="text-white small-text" style="font-size: 12px;position: absolute;top: 29%;right: 10%;">Agri Input</span>
+            </div>
 
-	<script>
-		function openNav() {
-		  document.getElementById("myNav").style.width = "100%";
-		}
-		function closeNav() {
-		  document.getElementById("myNav").style.width = "0%";
-		}
-	</script>
-	<div class="cursor-dot-outline"></div>
-	<div class="cursor-dot"></div>
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <div class="pulse-dot dot3">
+              <img class="small-dots" src="img/Ellipse.svg" width="10px" style="position: absolute;top: 40%;right: 14.4%;">
+              <span class="text-white small-text" style="font-size: 12px;position: absolute;top: 39%;right: 9.5%;">Advisory</span>
+            </div>
+
+            <div class="pulse-dot dot4">
+              <img class="small-dots" src="img/Ellipse.svg" width="10px" style="position: absolute;top: 50%;right: 13.8%;">
+              <span class="text-white small-text" style="font-size: 12px;position: absolute;top: 49%;right: 5.4%;">Health & Growth</span>
+            </div>
+
+            <div class="pulse-dot dot5">
+              <img class="small-dots" src="img/Ellipse.svg" width="10px" style="position: absolute;top: 60%;right: 14%;">
+              <span class="text-white small-text" style="font-size: 12px;position: absolute;top: 59%;right: 7.5%;">Agri Output</span>
+            </div>
+
+            <div class="pulse-dot dot6">
+              <img class="small-dots" src="img/Ellipse.svg" width="10px" style="position: absolute;top: 70%;right: 15%;">
+                <span class="text-white small-text" style="font-size: 12px;position: absolute;top: 69%;right: 6.8%;">Farm Intelligence</span>
+            </div>
+
+            <div class="pulse-dot dot7">
+              <img class="small-dots" src="img/Ellipse.svg" width="10px" style="position: absolute;top: 80%;right: 16.9%;">
+              <span class="text-white small-text" style="font-size: 12px;position: absolute;top: 79%;right: 12%;">Finance</span>
+            </div>
+          </div>
+        </section>
+    </section>
+
+  <!-- overlay -->
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="img/error.png" width="30px"></a>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 py-4" align="center">
+          <h3 class="bold">Green Agrevolution Pvt. Ltd.</h3>
+          <p class="py-3" style="color: #777;font-size: 13px;">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br> Lorem Ipsum has been the industry's standard dummy text<br> ever since the 1500s.
+          </p>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-dark px-4 pt-4 pb-2">
+            <img src="img/0.png" width="50px">
+            <h6 class="bold pt-3">About DeHaat</h6>
+            <p class="pt-2" style="font-size: 12px;color: #777;">
+              Lorem Ipsum is simply dummy text of the printing and...
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-dark px-4 pt-4 pb-2">
+            <img src="img/chip.png" width="50px">
+            <h6 class="bold pt-3">DeHaat Technology</h6>
+            <p class="pt-2" style="font-size: 12px;color: #777;">
+              Lorem Ipsum is simply dummy text of the printing and...
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-dark px-4 pt-4 pb-2">
+            <img src="img/fertilizer.png" width="50px">
+            <h6 class="bold pt-3">Agri Input</h6>
+            <p class="pt-2" style="font-size: 12px;color: #777;">
+              Lorem Ipsum is simply dummy text of the printing and...
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-dark px-4 pt-4 pb-2">
+            <img src="img/diagram.png" width="50px">
+            <h6 class="bold pt-3">Agri Output</h6>
+            <p class="pt-2" style="font-size: 12px;color: #777;">
+              Lorem Ipsum is simply dummy text of the printing and...
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row pt-5">
+        <div class="col-md-3">
+          <div class="card text-dark px-4 pt-4 pb-2">
+            <img src="img/0.png" width="50px">
+            <h6 class="bold pt-3">About DeHaat</h6>
+            <p class="pt-2" style="font-size: 12px;color: #777;">
+              Lorem Ipsum is simply dummy text of the printing and...
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-dark px-4 pt-4 pb-2">
+            <img src="img/chip.png" width="50px">
+            <h6 class="bold pt-3">DeHaat Technology</h6>
+            <p class="pt-2" style="font-size: 12px;color: #777;">
+              Lorem Ipsum is simply dummy text of the printing and...
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-dark px-4 pt-4 pb-2">
+            <img src="img/fertilizer.png" width="50px">
+            <h6 class="bold pt-3">Agri Input</h6>
+            <p class="pt-2" style="font-size: 12px;color: #777;">
+              Lorem Ipsum is simply dummy text of the printing and...
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-dark px-4 pt-4 pb-2">
+            <img src="img/diagram.png" width="50px">
+            <h6 class="bold pt-3">Agri Output</h6>
+            <p class="pt-2" style="font-size: 12px;color: #777;">
+              Lorem Ipsum is simply dummy text of the printing and...
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </div>
+  <!-- overlay css-->
+  <style>
+    .overlay {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #fff;
+      overflow: hidden;
+      transition: 0.5s;
+    }
+    .overlay div{
+      max-width: 1200px;
+    }
+    .closebtn {
+      position: absolute;
+      right: 30px;
+      top: 20px;
+    }
+    @media screen and (max-width: 700px) {
+      .fade-in{
+        display: none;
+      }
+    }
+    .text-dark{
+      color: red;
+    }
+    .card{
+      box-shadow: none;
+      border:1px solid #e0dede;
+      border-radius: 0px;
+      transition: all 0.8s;
+    }
+    .card:hover{
+      box-shadow: 0px 0px 25px 4px #e0dede;
+      margin-top: -15px;
+    }
+    .bold{
+      font-weight: bold;
+    }
+  </style>
+
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({
         offset: 200,
         duration: 1000,
       });
     </script>
-	<!-- JQuery -->
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<!-- Bootstrap tooltips -->
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-	<!-- Bootstrap core JavaScript -->
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-	<!-- MDB core JavaScript -->
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/js/mdb.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/js/mdb.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
-	var cursor = {
-	    delay: 8,
-	    _x: 0,
-	    _y: 0,
-	    endX: (window.innerWidth / 12),
-	    endY: (window.innerHeight / 12),
-	    cursorVisible: true,
-	    cursorEnlarged: false,
-	    $dot: document.querySelector('.cursor-dot'),
-	    $outline: document.querySelector('.cursor-dot-outline'),
-	    
-	    init: function() {
-	        // Set up element sizes
-	        this.dotSize = this.$dot.offsetWidth;
-	        this.outlineSize = this.$outline.offsetWidth;
-	        
-	        this.setupEventListeners();
-	        this.animateDotOutline();
-	    },
-	    
-	    setupEventListeners: function() {
-	        var self = this;
-	        
-	        // Anchor hovering
-	        document.querySelectorAll('a').forEach(function(el) {
-	            el.addEventListener('mouseover', function() {
-	                self.cursorEnlarged = true;
-	                self.toggleCursorSize();
-	            });
-	            el.addEventListener('mouseout', function() {
-	                self.cursorEnlarged = false;
-	                self.toggleCursorSize();
-	            });
-	        });
-	        
-	        // Click events
-	        document.addEventListener('mousedown', function() {
-	            self.cursorEnlarged = true;
-	            self.toggleCursorSize();
-	        });
-	        document.addEventListener('mouseup', function() {
-	            self.cursorEnlarged = false;
-	            self.toggleCursorSize();
-	        });
-	  
-	  
-	        document.addEventListener('mousemove', function(e) {
-	            // Show the cursor
-	            self.cursorVisible = true;
-	            self.toggleCursorVisibility();
+var lFollowX = 0,
+    lFollowY = 0,
+    x = 0,
+    y = 0,
+    friction = 1 / 30;
 
-	            // Position the dot
-	            self.endX = e.pageX;
-	            self.endY = e.pageY;
-	            self.$dot.style.top = self.endY + 'px';
-	            self.$dot.style.left = self.endX + 'px';
-	        });
-	        
-	        // Hide/show cursor
-	        document.addEventListener('mouseenter', function(e) {
-	            self.cursorVisible = true;
-	            self.toggleCursorVisibility();
-	            self.$dot.style.opacity = 1;
-	            self.$outline.style.opacity = 1;
-	        });
-	        
-	        document.addEventListener('mouseleave', function(e) {
-	            self.cursorVisible = true;
-	            self.toggleCursorVisibility();
-	            self.$dot.style.opacity = 0;
-	            self.$outline.style.opacity = 0;
-	        });
-	    },
-	    
-	    animateDotOutline: function() {
-	        var self = this;
-	        
-	        self._x += (self.endX - self._x) / self.delay;
-	        self._y += (self.endY - self._y) / self.delay;
-	        self.$outline.style.top = self._y + 'px';
-	        self.$outline.style.left = self._x + 'px';
-	        
-	        requestAnimationFrame(this.animateDotOutline.bind(self));
-	    },
-	    
-	    toggleCursorSize: function() {
-	        var self = this;
-	        
-	        if (self.cursorEnlarged) {
-	            self.$dot.style.transform = 'translate(-50%, -50%) scale(0.75)';
-	            self.$outline.style.transform = 'translate(-50%, -50%) scale(1.5)';
-	        } else {
-	            self.$dot.style.transform = 'translate(-50%, -50%) scale(1)';
-	            self.$outline.style.transform = 'translate(-50%, -50%) scale(1)';
-	        }
-	    },
-	    
-	    toggleCursorVisibility: function() {
-	        var self = this;
-	        
-	        if (self.cursorVisible) {
-	            self.$dot.style.opacity = 1;
-	            self.$outline.style.opacity = 1;
-	        } else {
-	            self.$dot.style.opacity = 0;
-	            self.$outline.style.opacity = 0;
-	        }
-	    }
-	}
-	cursor.init();
+function moveBackground() {
+  x += (lFollowX - x) * friction;
+  y += (lFollowY - y) * friction;
+  
+  translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
+
+  $('.bg').css({
+    '-webit-transform': translate,
+    '-moz-transform': translate,
+    'transform': translate
+  });
+
+  window.requestAnimationFrame(moveBackground);
+}
+
+$(window).on('mousemove click', function(e) {
+
+  var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
+  var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+  lFollowX = (30 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+  lFollowY = (20 * lMouseY) / 100;
+
+});
+
+moveBackground();
 </script>
 <script>
-		$(document).ready(function(){
-			$(".pulse-dot").mouseenter(function(){
-			    $(".rotate-img").css("background", "url('img/tracter.png') no-repeat");
-			    $(".rotate-img").css("background-size", "296px");
-			    $(".cursor--small").css("transition", ".6s");
-			});
-			$(".pulse-dot").mouseleave(function(){
-			    $(".rotate-img").css("background", "url('img/dehaat.png') no-repeat");
-			    $(".rotate-img").css("background-size", "300px");
-			    $(".cursor--small").css("transition", "none");
-			});
+    $(document).ready(function(){
+      // change center image
+      $(".pulse-dot").mouseenter(function(){
+          $(".rotate-img").css("background", "url('img/tracter.png') no-repeat");
+          $(".rotate-img").css("background-size", "296px");
+          $(".cursor--small").css("transition", ".6s");
+      });
+      $(".pulse-dot").mouseleave(function(){
+          $(".rotate-img").css("background", "url('img/dehaat.png') no-repeat");
+          $(".rotate-img").css("background-size", "300px");
+          $(".cursor--small").css("transition", "none");
+      });
 
 
-			$(".zoom").click(function(){
-				$(".cursor-dot").css("background-color", "#000");
-				$(".cursor-dot-outline").css("background-color", "rgba(000, 000, 000, 0.5)");
-			});
-			$(".closebtn").click(function(){
-				$(".cursor-dot").css("background-color", "#fff");
-				$(".cursor-dot-outline").css("background-color", "rgba(225, 225, 225, 0.5)");
-			});
-		});
+      // change text
+      $(".dot1").mouseenter(function(){
+        $(".skew-main").css("display", "none");
+        $(".glitch-main").css("display", "none");
+        $(".detail-main").css("display", "none");
+        $(".skew1").css("display", "block");
+        $(".glitch1").css("display", "block");
+        $(".detail1").css("display", "block");
+      });
+      $(".dot1").mouseleave(function(){
+        $(".skew-main").css("display", "block");
+        $(".glitch-main").css("display", "block");
+        $(".detail-main").css("display", "block");
+        $(".detail1").css("display", "none");
+        $(".skew1").css("display", "none");
+        $(".glitch1").css("display", "none");
+      });
+
+      $(".dot2").mouseenter(function(){
+        $(".skew-main").css("display", "none");
+        $(".glitch-main").css("display", "none");
+        $(".detail-main").css("display", "none");
+        $(".skew2").css("display", "block");
+        $(".glitch2").css("display", "block");
+        $(".detail2").css("display", "block");
+      });
+      $(".dot2").mouseleave(function(){
+        $(".skew-main").css("display", "block");
+        $(".glitch-main").css("display", "block");
+        $(".detail-main").css("display", "block");
+        $(".detail2").css("display", "none");
+        $(".skew2").css("display", "none");
+        $(".glitch2").css("display", "none");
+      });
+
+      $(".dot3").mouseenter(function(){
+        $(".skew-main").css("display", "none");
+        $(".glitch-main").css("display", "none");
+        $(".detail-main").css("display", "none");
+        $(".skew3").css("display", "block");
+        $(".glitch3").css("display", "block");
+        $(".detail3").css("display", "block");
+      });
+      $(".dot3").mouseleave(function(){
+        $(".skew-main").css("display", "block");
+        $(".glitch-main").css("display", "block");
+        $(".detail-main").css("display", "block");
+        $(".detail3").css("display", "none");
+        $(".skew3").css("display", "none");
+        $(".glitch3").css("display", "none");
+      });
+
+      $(".dot4").mouseenter(function(){
+        $(".skew-main").css("display", "none");
+        $(".glitch-main").css("display", "none");
+        $(".detail-main").css("display", "none");
+        $(".skew4").css("display", "block");
+        $(".glitch4").css("display", "block");
+        $(".detail4").css("display", "block");
+      });
+      $(".dot4").mouseleave(function(){
+        $(".skew-main").css("display", "block");
+        $(".glitch-main").css("display", "block");
+        $(".detail-main").css("display", "block");
+        $(".detail4").css("display", "none");
+        $(".skew4").css("display", "none");
+        $(".glitch4").css("display", "none");
+      });
+
+      $(".dot5").mouseenter(function(){
+        $(".skew-main").css("display", "none");
+        $(".glitch-main").css("display", "none");
+        $(".detail-main").css("display", "none");
+        $(".skew5").css("display", "block");
+        $(".glitch5").css("display", "block");
+        $(".detail5").css("display", "block");
+      });
+      $(".dot5").mouseleave(function(){
+        $(".skew-main").css("display", "block");
+        $(".glitch-main").css("display", "block");
+        $(".detail-main").css("display", "block");
+        $(".detail5").css("display", "none");
+        $(".skew5").css("display", "none");
+        $(".glitch5").css("display", "none");
+      });
+
+      $(".dot6").mouseenter(function(){
+        $(".skew-main").css("display", "none");
+        $(".glitch-main").css("display", "none");
+        $(".detail-main").css("display", "none");
+        $(".skew6").css("display", "block");
+        $(".glitch6").css("display", "block");
+        $(".detail6").css("display", "block");
+      });
+      $(".dot6").mouseleave(function(){
+        $(".skew-main").css("display", "block");
+        $(".glitch-main").css("display", "block");
+        $(".detail-main").css("display", "block");
+        $(".detail6").css("display", "none");
+        $(".skew6").css("display", "none");
+        $(".glitch6").css("display", "none");
+      });
+
+      $(".dot7").mouseenter(function(){
+        $(".skew-main").css("display", "none");
+        $(".glitch-main").css("display", "none");
+        $(".detail-main").css("display", "none");
+        $(".skew7").css("display", "block");
+        $(".glitch7").css("display", "block");
+        $(".detail7").css("display", "block");
+      });
+      $(".dot7").mouseleave(function(){
+        $(".skew-main").css("display", "block");
+        $(".glitch-main").css("display", "block");
+        $(".detail-main").css("display", "block");
+        $(".detail7").css("display", "none");
+        $(".skew7").css("display", "none");
+        $(".glitch7").css("display", "none");
+      });
+
+    });
 </script>
-
 </body>
 </html>

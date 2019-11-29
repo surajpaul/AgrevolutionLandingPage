@@ -1,136 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Landing Page</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/css/mdb.min.css" rel="stylesheet">
-    <!-- font(Roboto) -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap">
-    <link rel="stylesheet" href="parallex.css">
+  <title>Landing Page</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/css/mdb.min.css" rel="stylesheet">
+  <!-- custom link -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="parallex.css"> -->
 </head>
-<body style="background: #000;">
-    <section class="wrapper">
-        <div class="bg" id="stars"></div>
+<body style="background:
+        linear-gradient(to left top, rgba(64, 140, 175, 0.38) 0%, #381d1d00 50%, rgba(64, 140, 175, 0.38) 100%),
+        linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)) no-repeat center;height: 100%;">
+  <section class="wrapper">
+    <div class="bg" id="stars"></div>
         <div class="bg" id="stars2"></div>
         <div class="bg" id="stars3"></div>
-        <!-- <div id="main">
-            <span>suraj paul CSS</span>
-        </div> -->
 
-        <section class="container">
-          <!-- menubar -->
-          <div data-aos="fade-down" style="position: absolute;top: 6%;left: 5%;">
-            <a><img class="zoom" onclick="openNav()" src="img/menu.svg" width="30px;"></a>
-            <img class="pl-4 pb-2" src="img/AGREVOLUTION.png">
-            <a class="pl-5 bold menu" href="" style="font-size: 13px;color: #969696;margin-left: 40px;">Solutions</a>
-            <a class="pl-5 bold menu" href="" style="font-size: 13px;color: #969696;">DeHaat Model</a>
-            <a class="pl-5 bold menu" href="" style="font-size: 13px;color: #969696;text-transform: uppercase;">Blog</a>
-            <a class="pl-5 bold menu" href="" style="font-size: 13px;color: #969696;">About Us</a>
+
+        <section>
+          <!-- menu -->
+        <nav class="navbar navbar-expand-md large-mx-3 pt-4">
+          <div class="pt-1">
+            <a><img class="media-d-none" onclick="openNav()" src="img/menu.svg" width="30px;"></a>
+            <a href="#"><img class="pl-4 pb-2" src="img/AGREVOLUTION.png"></a>
           </div>
-          <!-- center heading -->
-          <div data-aos="fade-right" class="headings">
-            <h1 class="text-green bold main-text skew skew-main">from <span style="font-size: 60px;">soil</span><br> to <span style="font-size: 60px;">market</span></h1>
-            <h1 class="text-green bold back-text glitch glitch-main">from <span style="font-size: 60px;">soil</span><br> to <span style="font-size: 60px;">market</span></h1>
-            <h5 class="text-white detail-main">Technologies for next agri revolution</h5>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <img src="img/menu.svg" width="30px;">
+            </button>
+          <div class="collapse navbar-collapse pt-1" id="collapsibleNavbar">
+            <ul class="navbar-nav pl-5 media-pl-0">
+              <li class="nav-item">
+                <a class="pl-5 pt-2 bold menu media-pl-0" href="">Solutions</a>
+              </li>
+              <li class="nav-item">
+                <a class="pl-5 pt-2 bold menu media-pl-0" href="">DeHaat Model</a>
+              </li>
+              <li class="nav-item">
+                <a class="pl-5 pt-2 bold menu media-pl-0" href="">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="pl-5 pt-2 bold menu media-pl-0" href="">About Us</a>
+              </li>    
+            </ul>
+          </div>  
+        </nav>
+      <!-- center heading -->
+        <div data-aos="fade-right" class="headings">
+          <h1 class="text-green bold main-text skew skew-main">from soil to market</h1>
+          <h5 class="text-white detail-main">Technologies for next agri revolution</h5>
+          <!-- dot1 -->
+          <h1 class="text-green bold main-text skew skew1" style="display: none;">Know your soil</h1>
+          <h5 class="text-white detail1" style="display: none;">soil testing and health card</h5>
+          <!-- dot2 -->
+          <h1 class="text-green bold main-text skew skew2" style="display: none;">agri input</h1>
+          <h5 class="text-white detail2" style="display: none;">seed, nutrition and protection</h5>
+          <!-- dot3 -->
+          <h1 class="text-green bold main-text skew skew3" style="display: none;">advisory</h1>
+          <h5 class="text-white detail3" style="display: none;">helpline and support</h5>
+          <!-- dot4 -->
+          <h1 class="text-green bold main-text skew skew4" style="display: none;">health and growth</h1>
+          <h5 class="text-white detail4" style="display: none;">yield forecast</h5>
+          <!-- dot5 -->
+          <h1 class="text-green bold main-text skew skew5" style="display: none;">agri output</h1>
+          <h5 class="text-white detail5" style="display: none;">harvest & market access</h5>
+          <!-- dot6 -->
+          <h1 class="text-green bold main-text skew skew6" style="display: none;">farm intelligence</h1>
+          <h5 class="text-white detail6" style="display: none;">ai, ml & analytics</h5>
+          <!-- dot7 -->
+          <h1 class="text-green bold main-text skew skew7" style="display: none;">agri finance</h1>
+          <h5 class="text-white detail7" style="display: none;">credit & insurance</h5>
+        </div>
+      <!-- rotating image -->
+        <div class="rotate-img bg-img">
+          <img class="outerCircle rotate1" src="img/assets/inner.svg" data-aos="fade-up" data-aos-duration="3000">
+          <img class="outerCircle rotate2" src="img/assets/outer.svg" data-aos="fade-up" data-aos-duration="3500">
+          <img class="outerCircle rotate3" src="img/assets/outer2.svg" data-aos="fade-up" data-aos-duration="4000">
+          <div class="codepen" data-aos="fade-up" data-aos-duration="4500"></div>
+          <div class="codepen1" data-aos="fade-up" data-aos-duration="5000"></div>
+        </div>
+      <!-- hiring button -->
+        <div class="hiring">
+          <a class="bold btn-hire">We're Hiring</a>
+        </div>
+      <!-- dots -->
+            <div class="small-stars">
+                <img src="Arc.svg" class="bg-arc" style="height: 100%;">
+                
+                <div class="pulse-dot dot1">
+                  <img class="small-dots" src="img/Ellipse.svg" width="10px" style="position: absolute;top: 20%;right: 17.3%;">
+                  <span class="text-white small-text" style="font-size: 12px;position: absolute;top: 19%;right: 9.6%;">Know Your Soil</span>
+                </div>
 
-            <!-- dot1 -->
-            <h1 class="text-green bold main-text skew skew1" style="display: none;">Know your <br><span style="font-size: 60px;">soil</span></h1>
-            <h1 class="text-green bold back-text glitch glitch1" style="display: none;">Know your <br><span style="font-size: 60px;">soil</span></h1>
-            <h5 class="text-white detail1" style="display: none;">soil testing and health card</h5>
+                <div class="pulse-dot dot2">
+                  <img class="small-dots" src="img/Ellipse.svg" width="10px" style="position: absolute;top: 30%;right: 15.6%;">
+                  <span class="text-white small-text" style="font-size: 12px;position: absolute;top: 29%;right: 9.8%;">Agri Input</span>
+                </div>
 
-            <!-- dot2 -->
-            <h1 class="text-green bold main-text skew skew2" style="display: none;">agri <span style="font-size: 60px;">input</span></h1>
-            <h1 class="text-green bold back-text glitch glitch2" style="display: none;">agri <span style="font-size: 60px;">input</span></h1>
-            <h5 class="text-white detail2" style="display: none;">seed, nutrition and protection</h5>
+                <div class="pulse-dot dot3">
+                  <img class="small-dots" src="img/Ellipse.svg" width="10px" style="position: absolute;top: 40%;right: 14.7%;">
+                  <span class="text-white small-text" style="font-size: 12px;position: absolute;top: 39%;right: 8.8%;">Advisory</span>
+                </div>
 
-            <!-- dot3 -->
-            <h1 class="text-green bold main-text skew skew3" style="display: none;"><span style="font-size: 60px;">advisory</span></h1>
-            <h1 class="text-green bold back-text glitch glitch3" style="display: none;"><span style="font-size: 60px;">advisory</span></h1>
-            <h5 class="text-white detail3" style="display: none;">helpline and support</h5>
+                <div class="pulse-dot dot4">
+                  <img class="small-dots" src="img/Ellipse.svg" width="10px" style="position: absolute;top: 50%;right: 14.4%;">
+                  <span class="text-white small-text" style="font-size: 12px;position: absolute;top: 49%;right: 5.4%;">Health & Growth</span>
+                </div>
 
-            <!-- dot4 -->
-            <h1 class="text-green bold main-text skew skew4" style="display: none;"><span style="font-size: 60px;">health</span><br> and <span style="font-size: 60px;">growth</span></h1>
-            <h1 class="text-green bold back-text glitch glitch4" style="display: none;"><span style="font-size: 60px;">health</span><br> and <span style="font-size: 60px;">growth</span></h1>
-            <h5 class="text-white detail4" style="display: none;">yield forecast</h5>
+                <div class="pulse-dot dot5">
+                  <img class="small-dots" src="img/Ellipse.svg" width="10px" style="position: absolute;top: 60%;right: 14.8%;">
+                  <span class="text-white small-text" style="font-size: 12px;position: absolute;top: 59%;right: 8%;">Agri Output</span>
+                </div>
 
-            <!-- dot5 -->
-            <h1 class="text-green bold main-text skew skew5" style="display: none;">agri <span style="font-size: 60px;">output</span></h1>
-            <h1 class="text-green bold back-text glitch glitch5" style="display: none;">agri <span style="font-size: 60px;">output</span></h1>
-            <h5 class="text-white detail5" style="display: none;">harvest & market access</h5>
+                <div class="pulse-dot dot6">
+                  <img class="small-dots" src="img/Ellipse.svg" width="10px" style="position: absolute;top: 70%;right: 16%;">
+                    <span class="text-white small-text" style="font-size: 12px;position: absolute;top: 69%;right: 7%;">Farm Intelligence</span>
+                </div>
 
-            <!-- dot6 -->
-            <h1 class="text-green bold main-text skew skew6" style="display: none;">farm <span style="font-size: 60px;">intelligence</span></h1>
-            <h1 class="text-green bold back-text glitch glitch6" style="display: none;">farm <span style="font-size: 60px;">intelligence</span></h1>
-            <h5 class="text-white detail6" style="display: none;">ai, ml & analytics</h5>
-
-            <!-- dot7 -->
-            <h1 class="text-green bold main-text skew skew7" style="display: none;">agri <span style="font-size: 60px;">finance</span></h1>
-            <h1 class="text-green bold back-text glitch glitch7" style="display: none;">agri <span style="font-size: 60px;">finance</span></h1>
-            <h5 class="text-white detail7" style="display: none;">credit & insurance</h5>
-            
-          </div>
-          <!-- rotating image -->
-          <div class="rotate-img bg-img">
-            <img class="outerCircle" src="img/assets/inner.svg" style="position: absolute;width: 101%;height: 101%;margin-top: -3px;margin-left: -3px;" data-aos="fade-up" data-aos-duration="3000">
-            <img class="outerCircle" src="img/assets/outer.svg" style="position: absolute;width: 124%;height:124%;margin-top: -35px;margin-left: -35px;" data-aos="fade-up" data-aos-duration="3500">
-            <img class="outerCircle" src="img/assets/outer2.svg" style="position: absolute;width: 110%;height: 110%;margin-top: -15px;margin-left: -15px;" data-aos="fade-up" data-aos-duration="4000">
-            <div class="codepen" data-aos="fade-up" data-aos-duration="4500"></div>
-            <div class="codepen1" data-aos="fade-up" data-aos-duration="5000"></div>
-          </div>
-          <!-- hiring button -->
-          <div class="hiring">
-            <a class="bold btn-hire">We're Hiring</a>
-          </div>
-          <!-- dots -->
-          <div class="small-stars">
-            <img src="img/Arc.png" class="bg-arc">
-            
-            <div class="pulse-dot dot1">
-              <img class="small-dots" src="img/Ellipse.svg" width="10px" style="position: absolute;top: 20%;right: 18.3%;">
-              <span class="text-white small-text" style="font-size: 12px;position: absolute;top: 19%;right: 10.5%;">Know Your Soil</span>
+                <div class="pulse-dot dot7">
+                  <img class="small-dots" src="img/Ellipse.svg" width="10px" style="position: absolute;top: 80%;right: 18%;">
+                  <span class="text-white small-text" style="font-size: 12px;position: absolute;top: 79%;right: 13%;">Finance</span>
+                </div>
             </div>
-
-            <div class="pulse-dot dot2">
-              <img class="small-dots" src="img/Ellipse.svg" width="10px" style="position: absolute;top: 30%;right: 15.8%;">
-              <span class="text-white small-text" style="font-size: 12px;position: absolute;top: 29%;right: 10%;">Agri Input</span>
-            </div>
-
-            <div class="pulse-dot dot3">
-              <img class="small-dots" src="img/Ellipse.svg" width="10px" style="position: absolute;top: 40%;right: 14.4%;">
-              <span class="text-white small-text" style="font-size: 12px;position: absolute;top: 39%;right: 9.5%;">Advisory</span>
-            </div>
-
-            <div class="pulse-dot dot4">
-              <img class="small-dots" src="img/Ellipse.svg" width="10px" style="position: absolute;top: 50%;right: 13.8%;">
-              <span class="text-white small-text" style="font-size: 12px;position: absolute;top: 49%;right: 5.4%;">Health & Growth</span>
-            </div>
-
-            <div class="pulse-dot dot5">
-              <img class="small-dots" src="img/Ellipse.svg" width="10px" style="position: absolute;top: 60%;right: 14%;">
-              <span class="text-white small-text" style="font-size: 12px;position: absolute;top: 59%;right: 7.5%;">Agri Output</span>
-            </div>
-
-            <div class="pulse-dot dot6">
-              <img class="small-dots" src="img/Ellipse.svg" width="10px" style="position: absolute;top: 70%;right: 15%;">
-                <span class="text-white small-text" style="font-size: 12px;position: absolute;top: 69%;right: 6.8%;">Farm Intelligence</span>
-            </div>
-
-            <div class="pulse-dot dot7">
-              <img class="small-dots" src="img/Ellipse.svg" width="10px" style="position: absolute;top: 80%;right: 16.9%;">
-              <span class="text-white small-text" style="font-size: 12px;position: absolute;top: 79%;right: 12%;">Finance</span>
-            </div>
-          </div>
         </section>
-    </section>
+  </section>
 
+  
   <!-- overlay -->
   <div id="myNav" class="overlay">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="img/error.png" width="30px"></a>
@@ -220,49 +221,8 @@
       </div>
     </div>    
   </div>
-  <!-- overlay css-->
-  <style>
-    .overlay {
-      height: 100%;
-      width: 0;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      background-color: #fff;
-      overflow: hidden;
-      transition: 0.5s;
-    }
-    .overlay div{
-      max-width: 1200px;
-    }
-    .closebtn {
-      position: absolute;
-      right: 30px;
-      top: 20px;
-    }
-    @media screen and (max-width: 700px) {
-      .fade-in{
-        display: none;
-      }
-    }
-    .text-dark{
-      color: red;
-    }
-    .card{
-      box-shadow: none;
-      border:1px solid #e0dede;
-      border-radius: 0px;
-      transition: all 0.8s;
-    }
-    .card:hover{
-      box-shadow: 0px 0px 25px 4px #e0dede;
-      margin-top: -15px;
-    }
-    .bold{
-      font-weight: bold;
-    }
-  </style>
+    </section>
+
 
   <script>
     function openNav() {
@@ -279,47 +239,49 @@
         duration: 1000,
       });
     </script>
-  <!-- JQuery -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/js/mdb.min.js"></script>
+
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/js/mdb.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
-var lFollowX = 0,
-    lFollowY = 0,
-    x = 0,
-    y = 0,
-    friction = 1 / 30;
+  var lFollowX = 0,
+      lFollowY = 0,
+      x = 0,
+      y = 0,
+      friction = 1 / 30;
 
-function moveBackground() {
-  x += (lFollowX - x) * friction;
-  y += (lFollowY - y) * friction;
-  
-  translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
+  function moveBackground() {
+    x += (lFollowX - x) * friction;
+    y += (lFollowY - y) * friction;
+    
+    translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
 
-  $('.bg').css({
-    '-webit-transform': translate,
-    '-moz-transform': translate,
-    'transform': translate
+    $('.bg').css({
+      '-webit-transform': translate,
+      '-moz-transform': translate,
+      'transform': translate
+    });
+
+    window.requestAnimationFrame(moveBackground);
+  }
+
+  $(window).on('mousemove click', function(e) {
+
+    var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
+    var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+    lFollowX = (30 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+    lFollowY = (20 * lMouseY) / 100;
+
   });
 
-  window.requestAnimationFrame(moveBackground);
-}
-
-$(window).on('mousemove click', function(e) {
-
-  var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
-  var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
-  lFollowX = (30 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
-  lFollowY = (20 * lMouseY) / 100;
-
-});
-
-moveBackground();
+  moveBackground();
 </script>
 <script>
     $(document).ready(function(){

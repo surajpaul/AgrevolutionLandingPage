@@ -1,9 +1,7 @@
+/*background css===================================================================================================*/
 html {
     height: 100%;
     overflow: hidden;
-    background:
-        linear-gradient(to left top, rgba(64, 140, 175, 0.38) 0%, #381d1d00 50%, rgba(64, 140, 175, 0.38) 100%),
-        linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)) no-repeat center;
 }
 #stars {
     width: 1px;
@@ -190,7 +188,6 @@ html {
     659px 1860px #fff, 388px 1412px #fff, 1212px 458px #fff, 755px 1468px #fff,
     696px 1654px #fff, 1144px 60px #fff;
 }
-
 #stars:after {
     content: '';
     position: absolute;
@@ -437,7 +434,6 @@ html {
     156px 81px #fff, 1915px 502px #fff, 1076px 1846px #fff, 152px 1669px #fff,
     986px 1529px #fff, 1667px 1137px #fff;
 }
-
 #stars2:after {
     content: '';
     position: absolute;
@@ -558,7 +554,6 @@ html {
     156px 81px #fff, 1915px 502px #fff, 1076px 1846px #fff, 152px 1669px #fff,
     986px 1529px #fff, 1667px 1137px #fff;
 }
-
 #stars3:after {
     content: '';
     position: absolute;
@@ -620,8 +615,6 @@ html {
     156px 81px #fff, 1915px 502px #fff, 1076px 1846px #fff, 152px 1669px #fff,
     986px 1529px #fff, 1667px 1137px #fff;
 }
-
-
 @keyframes animStar {
     from {
         transform: translateY(0px);
@@ -630,44 +623,26 @@ html {
         transform: translateY(-2000px);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.text-green{
-   color: #6bb51e; 
+.navbar, .pagination .page-item.active .page-link{
+	box-shadow: none;
+}
+.menu{
+	font-size: 13px;color: #969696;
 }
 .menu:hover{
     color: #fff !important;
+}
+.bold{
+	font-weight: bold;
+}
+.headings{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    text-transform: uppercase;
+}
+.text-green{
+   color: #6bb51e; 
 }
 /*previous pulse*/
 .pulse-dot:hover > .small-dots{
@@ -790,104 +765,6 @@ margin-top: -52px;margin-left: -52px;
     0% { -webkit-transform:rotate(0deg); }
 100% { -webkit-transform:rotate(-360deg); }
 }
-
-
-
-
-/*glitch effect======================================================================================================*/
-.main-text {
-  position: relative;
-  display: inline-block;
-  opacity: .7;
-}
-.back-text {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 0;
-  opacity: .3;
-  display: inline-block;
-}
-/*.skew {
-  animation: skew 0.95s infinite alternate;
-}
-.glitch {
-  animation: glitch 0.8s infinite alternate;
-}*/
-@keyframes skew {
-  0% {
-    transform: skew(0deg);
-  }
-  20% {
-    transform: skew(0deg);
-  }
-  24% {
-    transform: skew(-7deg);
-  }
-  28% {
-    transform: skew(0deg);
-  }
-  70% {
-    transform: skew(0deg);
-  }
-  74%{
-    transform: skew(10deg);
-  }
-  78% {
-    transform: skew(0deg);
-  }
-  100% {
-    transform: skew(0deg);
-  }
-}
-@keyframes glitch{
-  0% {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-  20% {
-    transform: translate3d(0, 0, 0);
-    opacity: 0.3;
-  }
-  24% {
-    transform: translate3d(5px, 4px, 0);
-    opacity: 1;
-  }
-  28% {
-    transform: translate3d(0, 0, 0);
-  }
-  60% {
-    transform: translate3d(0, 0, 0);
-  }
-  64%{
-    transform: translate3d(-4px, -3px, 0);
-  }
-  68% {
-    transform: translate3d(0, 0, 0);
-  }
-  70% {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-  74%{
-    opacity: 0.3;
-    transform: translate3d(10px, -6px, 0);
-  }
-  78% {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-}
-/*custom css============================================================================================================*/
-.headings{
-    position: absolute;
-    top: 45%;
-    left: 5%;
-    text-transform: uppercase;
-}
 .hiring{
     position: absolute;
     top: 91%;
@@ -955,64 +832,110 @@ margin-top: -52px;margin-left: -52px;
   box-shadow: 0px 0px 25px 4px #e0dede;
   margin-top: -15px;
 }
-.bold{
-  font-weight: bold;
-}
-.rotate1{
-    position: absolute;width: 101%;height: 101%;margin-top: -3px;margin-left: -3px;
-}
-.rotate2{
-    position: absolute;width: 124%;height:124%;margin-top: -35px;margin-left: -35px;
-}
-.rotate3{
-    position: absolute;width: 110%;height: 110%;margin-top: -15px;margin-left: -15px;
-}
 
-/*media query==========================================================================================================*/
 
-@media screen and (min-width: 992px) {
-    .bg-img{
-        background: url('img/dehaat.png') no-repeat;
-        background-size: 300px;
-        height: 300px;
-        width: 300px;
-        position: absolute;
-        top: 30%;
-        left: 50%;
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*media-query==========================================================================================================*/
+/*===========================================small screen================================================*/
 @media screen and (max-width: 992px) {
-    .small-stars{
-        display: none;
-    }
-    .headings{
-        position: absolute;
-        top: 90%;
-        left: 5%;
-    }
-    .hiring{
-        position: absolute;
-        top: 6%;
-        left: 76%;
-    }
-    .menu{
-        display: none;
-    }
-    .rotate1{
-        position: absolute;width: 101%;height: 101%;margin-top: -3px;margin-left: -3px;display: none;
-    }
-    .rotate2{
-        position: absolute;width: 124%;height:124%;margin-top: -35px;margin-left: -35px;display: none;
-    }
-    .rotate3{
-        position: absolute;width: 110%;height: 110%;margin-top: -15px;margin-left: -15px;display: none;
-    }
-    .bg-img{
-        background: url('img/dehaat.png') no-repeat;
-        background-size: 300px;
-        height: 300px;
-        width: 300px;
-        position: absolute;
-        top: 30%;
-    }
+	.media-d-none{
+		display: none;
+	}
+	.media-pl-0{
+		padding-left: 20px !important;
+	}
+	.headings{
+	    position: absolute;
+	    top: 55%;
+	    left: 10%;
+	    text-transform: uppercase;
+	}
+	.bg-img{
+		background: url('../img/dehaat.png') no-repeat;
+		background-size: 100%;
+		height: 230px;
+		width: 230px;
+		position: relative;
+		top: 10%;
+		right: 0%;
+		display: block;
+		margin-left: auto;margin-right: auto;
+		margin-top: 65px;
+	}
+	.rotate1{
+	    position: absolute;width: 100%;height: 100%;
+	}
+	.rotate2{
+	    position: absolute;width: 100%;height:100%;
+	}
+	.rotate3{
+	    position: absolute;width: 100%;height: 100%;
+	}
+	.codepen{
+		background-color: transparent;
+		border: 8px solid #6bb51e;
+		opacity: 1;
+		border-right: 5px solid transparent;
+		border-left: 5px solid transparent;
+		border-radius: 65%;
+		height: 230px;
+		width: 230px;
+		position: relative;
+		top: 0%;
+		right: 0%;
+		display: block;
+		margin-left: auto;margin-right: auto;
+	}
+	.codepen1{
+		margin-left: auto;margin-right: auto;display: none;
+	}
+	.hiring{
+	    position: absolute;
+	    top: 92%;
+	    left: 10%;
+	}
+	.small-stars{
+		display: none;
+	}
+}
+/*===========================================large screen================================================*/
+@media screen and (min-width: 992px) {
+	.large-mx-3{
+		margin-left: 50px;margin-right: 50px;
+	}
+	.bg-img{
+		background: url('../img/dehaat.png') no-repeat;
+		background-size: 300px;
+		height: 300px;
+		width: 300px;
+		position: absolute;
+		top: 30%;
+		left: 50%;
+	}
+	.rotate1{
+	    position: absolute;width: 101%;height: 101%;margin-top: -3px;margin-left: -3px;
+	}
+	.rotate2{
+	    position: absolute;width: 124%;height:124%;margin-top: -35px;margin-left: -35px;
+	}
+	.rotate3{
+	    position: absolute;width: 110%;height: 110%;margin-top: -15px;margin-left: -15px;
+	}
 }

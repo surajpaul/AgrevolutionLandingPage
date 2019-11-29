@@ -756,12 +756,12 @@ margin-top: -52px;margin-left: -52px;
   opacity: .3;
   display: inline-block;
 }
-.skew {
+/*.skew {
   animation: skew 0.95s infinite alternate;
 }
 .glitch {
   animation: glitch 0.8s infinite alternate;
-}
+}*/
 @keyframes skew {
   0% {
     transform: skew(0deg);

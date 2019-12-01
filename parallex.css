@@ -1,3 +1,7 @@
+@font-face {
+     font-family: 'Gilroy-Bold.ttf';
+     src: url('Gilroy-Bold.ttf') format('truetype');
+}
 html {
     height: 100%;
     overflow: hidden;

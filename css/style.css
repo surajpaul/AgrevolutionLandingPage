@@ -627,7 +627,7 @@ html {
 	box-shadow: none;
 }
 .menu{
-	font-size: 13px;color: #969696;
+	font-size: 14px;color: #969696;
 }
 .menu:hover{
     color: #fff !important;
@@ -650,7 +650,7 @@ html {
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
     border-radius: 50%;
     cursor: pointer;
-    width: 10px;
+    width: 16   px;
     transition: .8s ease;
     -webkit-animation: pulse 1.50s infinite cubic-bezier(0.36, 0, 0, 1);
     -moz-animation: pulse 1.50s infinite cubic-bezier(0.36, 0, 0, 1);
@@ -791,7 +791,7 @@ margin-top: -52px;margin-left: -52px;
 }
 .bg-arc{
     width: 100%;
-    position: absolute;top: 0%;left: 30%;
+    position: absolute;top: 0%;left: 26%;
 }
 /*overlay css=========================================================================================================*/
 .overlay {

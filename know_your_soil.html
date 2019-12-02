@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>Know Your Soil</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 	<!-- Bootstrap core CSS -->
@@ -9,6 +11,9 @@
 	<!-- Material Design Bootstrap -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/css/mdb.min.css" rel="stylesheet">
 	<style>
+		html{
+			scroll-behavior: smooth;
+		}
 		@font-face {
 			font-family: 'Gilroy-Bold';
 			src: url('font/gilroy-bold-cufonfonts/Gilroy-Bold.ttf') format('truetype');
@@ -51,6 +56,10 @@
 			text-transform: uppercase;
 			font-family: 'Gilroy-Heavy';
 		}
+		h3{
+			text-transform: capitalize;
+			font-family: 'Gilroy-Heavy';
+		}
 		.font-medium{
 			font-family: 'Gilroy-Medium';
 		}
@@ -58,22 +67,73 @@
 			font-family: 'Gilroy-Regular';
 		}
 		.parallax {
-			height: 50vh;
+			height: 60vh;
 			width: 100%;
 			background-attachment: fixed;
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-color: #0f2427;
 		}
+		@keyframes float {
+            0% {
+                transform: translatey(0px);
+            }
+            50% {
+                transform: translatey(-20px);
+            }
+            100% {
+                transform: translatey(0px);
+            }
+        }
+        .avatar {
+            transform: translatey(0px);
+            animation: float 6s ease-in-out infinite;
+            img { width: 100%; height: auto; }
+        }
+        .text-out-line{
+        	font-size: 5vw;
+        	text-transform: uppercase;
+        	font-family: 'Gilroy-Bold';
+        	text-shadow: 0 0 1px #444, 0 0 1px #444,
+						0 0 1px #444, 0 0 1px #444, 
+						0 0 1px #444, 0 0 1px #444;
+        }
+        .font-13{
+        	font-size: 13px;
+        }
+        .border{
+        	border:1px solid #fff !important;
+        	transition: all .8s ease;
+        	cursor: pointer;
+        }
+        .border:hover{
+        	border:1px solid #999 !important;
+        }
+        a{
+        	color: #222;
+        }
+        .bg-green{
+        	background-color: #6ab41f;
+        }
+        @media screen and (max-width: 600px) {
+			.parallax {
+				height: auto;
+				width: 100%;
+				background-attachment: fixed;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-color: #0f2427;
+			}
+		}
 	</style>
 </head>
 <body>
 	<!-- navbar -->
 	<section class="container">
-		<nav class="navbar navbar-expand-md large-mx-3 pt-4">
+		<nav class="navbar navbar-expand-md large-mx-3 pt-4" id="menu">
 			<div class="pt-1">
-				<a><img class="media-d-none" onclick="openNav()" src="img/menu.svg" width="30px;"></a>
-				<a href="#"><!-- <img class="pl-4 pb-2" src="img/AGREVOLUTION.png"> -->MENU</a>
+				<a><img class="media-d-none" onclick="openNav()" src="soil/menu (1).png" width="20px"></a>
+				<a href="#" class="pl-4"><!-- <img class="pl-4 pb-2" src="img/AGREVOLUTION.png"> --><span class="bold">DeHaat</span></a>
 			</div>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 				<img src="img/menu.svg" width="30px;">
@@ -104,8 +164,8 @@
 		
 	<section class="container" style="margin-top: -25px;">
 		<h2 class="bold">know your soil</h2>
-		<div class="row">
-			<div class="col-md-6 pt-5">
+		<div class="row pt-5">
+			<div class="col-md-6">
 				<p class="font-medium" style="letter-spacing: 2px;">
 					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
 				</p>
@@ -113,17 +173,19 @@
 					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
 				</p>
 			</div>
-			<div class="col-md-6">
-				<img src="soil/Two Ellipse.svg">
+			<div class="col-md-6" style="background: url('soil/Two Ellipse.svg') no-repeat center;background-size: 55%;background-position: 99% 40%;">
+				<img src="soil/BigImage.png" width="70%">
+				<img src="soil/SmallImage.png" class="d-block ml-auto" width="40%" style="margin-top: -100px;">
 			</div>
 		</div>
 
 
-		<div class="row pt-5">
-			<div class="col-md-6">
-				<img src="soil/Two Ellipse.svg">
+		<div class="row py-5">
+			<div class="col-md-6 pt-5" style="background: url('soil/Two Ellipse-blue.svg') no-repeat center;background-size: 55%;background-position: 50% 0%;">
+				<img src="soil/SmallImage.png" class="d-block mr-auto" width="40%">
+				<img src="soil/BigImage.png" class="d-block ml-auto" width="70%" style="margin-top: -80px;z-index: -1;display: flex;">
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-6 pt-5">
 				<h2 class="bold">know your soil ?</h2>
 				<p class="font-medium pt-5" style="letter-spacing: 2px;">
 					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
@@ -134,7 +196,7 @@
 			</div>
 		</div>
 	</section>
-
+	<!-- parallex -->
 	<section class="mt-5">
 		<div class="parallax">
 			<div class="container">
@@ -144,14 +206,117 @@
 							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
 						</p>
 						<p class="font-regular pt-2 text-white">
-							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s text of the printing and typesetting industry text of the printing and typesetting industry.
 						</p>
 					</div>
-					<div class="col-md-6">
-						
+					<div class="col-md-6 avatar">
+						<img src="soil/Plant@2x.png" class="d-block mx-auto" width="90%">
 					</div>
 				</div>
 			</div>
+		</div>
+	</section>
+
+	<section class="container pt-5">
+		<h3 class="bold pt-4">Our Revolution</h3>
+		<div class="row pt-2">
+			<div class="col-md-6">
+				<span class="text-white bold text-out-line" style="">
+					Soil to market
+				</span>
+			</div>
+			<div class="col-md-6 py-5">
+				<p class="font-regular pt-2 text-dark pt-5">
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s text of the printing and typesetting industry text of the printing and typesetting industry.
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-11">
+				
+			</div>
+			<div class="col-md-1">
+				<div class="bg-green" align="right" style="position: absolute;bottom: 0px;right: 0px;height: 40px;width: 45px;">
+					<a class="" href="#menu">
+						<img class="d-block mx-auto" src="soil/up-arrow.png" style="position:relative;margin-top: -18px;">
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- footer -->
+	<section class="border-top">
+		<footer class="container py-5">
+			<div class="row text-dark">
+				<div class="col-md-3 font-regular">
+					<p class="pt-3">COPYRIGHT © DeHaat 2019</p>
+					<p class="pt-2 text-dark"><a class="mt-4" href="">Privacy</a></p>
+					<p class="pt-2 text-dark"><a class="mt-4" href="">Contact Us</a></p>
+				</div>
+				<div class="col-md-3">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="border px-4 pt-3 pb-2 font-regular">
+								<h6 class="bold">Know Your Soil</h6>
+								<h6 class="font-13">Soil Testing and Health Card</h6>
+							</div>
+						</div>
+						<div class="col-md-12 pt-3">
+							<div class="border px-4 pt-3 pb-2 font-regular">
+								<h6 class="bold">Advisory</h6>
+								<h6 class="font-13">Helpline ans Support</h6>
+							</div>
+						</div>
+						<div class="col-md-12 pt-3">
+							<div class="border px-4 pt-3 pb-2 font-regular">
+								<h6 class="bold">Agri Input</h6>
+								<h6 class="font-13">Seed, Nutrition, Protection</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="border px-4 pt-3 pb-2 font-regular">
+								<h6 class="bold">Growth Monitpr</h6>
+								<h6 class="font-13">Yield Forecast</h6>
+							</div>
+						</div>
+						<div class="col-md-12 pt-3">
+							<div class="border px-4 pt-3 pb-2 font-regular">
+								<h6 class="bold">Agri Output</h6>
+								<h6 class="font-13">Harvest & Market Access</h6>
+							</div>
+						</div>
+						<div class="col-md-12 pt-3">
+							<div class="border px-4 pt-3 pb-2 font-regular">
+								<h6 class="bold">Agri Input</h6>
+								<h6 class="font-13">Seed, Nutrition, Protection</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="border px-4 pt-3 pb-2 font-regular">
+								<h6 class="bold">Agri Financing</h6>
+								<h6 class="font-13">Credit & Insurance</h6>
+							</div>
+						</div>
+						<div class="col-md-12 pt-3">
+							<div class="border px-4 pt-3 pb-2 font-regular">
+								<h6 class="bold">Farm Intelligence</h6>
+								<h6 class="font-13">AI, ML & Analytics</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="footer border-top font-medium py-3" align="center">
+			<span class="font-13">Powered by <strong class="bold">AKVIZUALS</strong></span>
 		</div>
 	</section>
 

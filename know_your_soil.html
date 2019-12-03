@@ -85,6 +85,17 @@
                 transform: translatey(0px);
             }
         }
+        @keyframes float-out {
+            0% {
+                transform: translatey(0px);
+            }
+            50% {
+                transform: translatey(20px);
+            }
+            100% {
+                transform: translatey(0px);
+            }
+        }
         .avatar {
             transform: translatey(0px);
             animation: float 6s ease-in-out infinite;
@@ -173,17 +184,17 @@
 					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
 				</p>
 			</div>
-			<div class="col-md-6" style="background: url('soil/Two Ellipse.svg') no-repeat center;background-size: 55%;background-position: 99% 40%;">
-				<img src="soil/BigImage.png" width="70%">
-				<img src="soil/SmallImage.png" class="d-block ml-auto" width="40%" style="margin-top: -100px;">
+			<div class="col-md-6" style="background: url('soil/Two Ellipse.svg') no-repeat center;background-size: 55%;background-position: 99% 40%;animation: float 6s ease-in-out infinite;">
+				<img src="soil/BigImage.png" width="70%" style="animation: float-out 6s ease-in-out infinite;">
+				<img src="soil/SmallImage.png" class="d-block ml-auto" width="40%" style="margin-top: -100px;animation: float-out 6s ease-in-out infinite;">
 			</div>
 		</div>
 
 
 		<div class="row py-5">
-			<div class="col-md-6 pt-5" style="background: url('soil/Two Ellipse-blue.svg') no-repeat center;background-size: 55%;background-position: 50% 0%;">
-				<img src="soil/SmallImage.png" class="d-block mr-auto" width="40%">
-				<img src="soil/BigImage.png" class="d-block ml-auto" width="70%" style="margin-top: -80px;z-index: -1;display: flex;">
+			<div class="col-md-6 pt-5" style="background: url('soil/Two Ellipse-blue.svg') no-repeat center;background-size: 55%;background-position: 50% 0%;animation: float 6s ease-in-out infinite;">
+				<img src="soil/SmallImage.png" class="d-block mr-auto" width="40%" style="animation: float-out 6s ease-in-out infinite;">
+				<img src="soil/BigImage.png" class="d-block ml-auto" width="70%" style="margin-top: -80px;z-index: -1;display: flex;animation: float-out 6s ease-in-out infinite;">
 			</div>
 			<div class="col-md-6 pt-5">
 				<h2 class="bold">know your soil ?</h2>
@@ -319,8 +330,6 @@
 			<span class="font-13">Powered by <strong class="bold">AKVIZUALS</strong></span>
 		</div>
 	</section>
-
-
 
 
 <!-- JQuery -->

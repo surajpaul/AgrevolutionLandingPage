@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2" height="169" viewBox="0 0 2 169">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f1f1f1;
+        stroke: #6ebb1d;
+        stroke-width: 1px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="GreenLine" class="cls-1" d="M3406,2337h1v168h-1V2337Z" transform="translate(-3405.5 -2336.5)"/>
+</svg>

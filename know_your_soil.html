@@ -10,148 +10,8 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Material Design Bootstrap -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/css/mdb.min.css" rel="stylesheet">
-	<style>
-		html{
-			scroll-behavior: smooth;
-		}
-		@font-face {
-			font-family: 'Gilroy-Bold';
-			src: url('font/gilroy-bold-cufonfonts/Gilroy-Bold.ttf') format('truetype');
-		}
-		@font-face {
-			font-family: 'Gilroy-Heavy';
-			src: url('font/gilroy-bold-cufonfonts/Gilroy-Heavy.ttf') format('truetype');
-		}
-		@font-face {
-			font-family: 'Gilroy-Light';
-			src: url('font/gilroy-bold-cufonfonts/Gilroy-Light.ttf') format('truetype');
-		}
-		@font-face {
-			font-family: 'Gilroy-Medium';
-			src: url('font/gilroy-bold-cufonfonts/Gilroy-Medium.ttf') format('truetype');
-		}
-		@font-face {
-			font-family: 'Gilroy-Regular';
-			src: url('font/gilroy-bold-cufonfonts/Gilroy-Regular.ttf') format('truetype');
-		}
-		.navbar{
-			box-shadow: none;
-		}
-		.bold{
-			font-weight: bold;
-		}
-		nav{
-			font-family: 'Gilroy-Medium';
-		}
-		.menu{
-			text-decoration: none;
-			color: #000;
-			font-size: 14px;
-		}
-		marquee{
-		  max-width : 100% ;
-		  z-index: -1;
-		}
-		h1{
-			text-transform: uppercase;
-			font-family: 'Gilroy-Light';
-			font-size: 140px;
-		}
-		h2{
-			text-transform: capitalize;
-			font-family: 'Gilroy-Heavy';
-			font-size: 45px;
-		}
-		.font-light{
-			font-family: 'Gilroy-Light';
-		}
-		.font-medium{
-			font-family: 'Gilroy-Medium';
-		}
-		.font-regular{
-			font-family: 'Gilroy-Regular';
-		}
-		.parallax {
-			height: auto;
-			width: 100%;
-			background-attachment: fixed;
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-color: #081621;
-		}
-		@keyframes float {
-            0% {
-                transform: translatey(0px);
-            }
-            50% {
-                transform: translatey(-20px);
-            }
-            100% {
-                transform: translatey(0px);
-            }
-        }
-        @keyframes float-out {
-            0% {
-                transform: translatey(0px);
-            }
-            50% {
-                transform: translatey(20px);
-            }
-            100% {
-                transform: translatey(0px);
-            }
-        }
-        .avatar {
-            transform: translatey(0px);
-            animation: float 6s ease-in-out infinite;
-            img { width: 100%; height: auto; }
-        }
-        .text-out-line{
-        	font-size: 5vw;
-        	text-transform: uppercase;
-        	font-family: 'Gilroy-Bold';
-        	text-shadow: 0 0 1px #444, 0 0 1px #444,
-						0 0 1px #444, 0 0 1px #444, 
-						0 0 1px #444, 0 0 1px #444;
-        }
-        .font-13{
-        	font-size: 13px;
-        }
-        .border{
-        	border:1px solid #fff !important;
-        	transition: all .8s ease;
-        	cursor: pointer;
-        }
-        .border .bold:hover{
-        	/*border:1px solid #999 !important;*/
-        	color: #000;
-        }
-        a{
-        	color: #222;
-        }
-        .bg-green{
-        	background-color: #6ab41f;
-        }
-        @media screen and (max-width: 600px) {
-			.parallax {
-				height: auto;
-				width: 100%;
-				background-attachment: fixed;
-				background-size: cover;
-				background-repeat: no-repeat;
-				background-color: #0f2427;
-			}
-		}
-
-
-		/*new*/
-		.text-dark{
-			color: #646464 !important;
-		}
-		.text-green{
-		   color: #6bb51e; 
-		}
-	</style>
+	<!-- custom css -->
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<!-- navbar -->
@@ -186,21 +46,15 @@
 			</div>  
 		</nav>
 	</section>
-	<section class="pt-5" style="margin-bottom: -25px;z-index: -1;display: flex;">
-		<!-- <marquee class="pt-5" behavior="scroll" direction="left" scrollamount="100" scrolldelay="1200">
-	  		<img class="px-3" src="soil/KNOW YOUR SOIL_Text.png">
-		</marquee> -->
-	</section>
-		
 
-	<h1 class="py-5 text-green" align="center">know your soil</h1>
 	<section class="container" style="margin-top: -25px;">
 		<div class="row pt-5" align="center">
+			<h1 class="pl-3 py-5 bold" align="left" style="color: #000;font-size: 45px;">know your soil</h1>
 			<div class="col-md-12">
-				<p class="font-medium text-dark" style="letter-spacing: 1px;font-size: 16px;">
+				<p class="font-medium text-dark" style="letter-spacing: 1px;font-size: 20px;">
 					Knowing the Soil is where it all starts – the nutrient content and chemical composition of the soil defines how fertile the soil is and what level of plant life it can support and sustain on a consistent basis.
 				</p>
-				<p class="font-medium text-dark pt-3" style="letter-spacing: 1px;font-size: 16px;">
+				<p class="font-medium text-dark pt-3" style="letter-spacing: 1px;font-size: 13px;">
 					We help our farmers get the soil test done at our testing labs or bring in their existing soil health card. Soil composition data points provides foundations for selecting the right kind of Agri Input (seed/fertilizer) and to generate advanced analytics e.g. yield predictions and Personalized Advisory.
 				</p>
 			</div>
@@ -208,57 +62,29 @@
 	</section>
 
 	<!-- background dots -->
-	<section class="mt-5 pt-5" style="background: url('soil/DottedPattern.png') no-repeat center;background-size: 120%;">
+	<section class="pt-5" style="background: url('soil/DottedPattern.png') no-repeat center;background-size: 120%;">
 		<div class="container py-5">
 			<div class="row">
 				<div class="col-md-12 pt-5">
-					<img src="soil/GreenLine.svg" class="d-block mx-auto" style="position: absolute;left: 50%;margin-top: -90px;z-index: 9;">
-					
-						<div class="card" data-tilt>
-					    	<div class="bg pt-5"></div>
-					    </div>
-						<!-- <img src="soil/BannerVideo.png" width="100%"> -->
-					
+					<img src="soil/GreenLine.svg" class="d-block mx-auto" style="position: absolute;left: 50%;margin-top: -50px;z-index: 9;">
+					<!-- tilt image -->
+					<div class="tilt tilt-movie" data-tilt data-tilt-glare="true" data-tilt-scale="1.1">
+						<img src="soil/BannerVideo.png" width="100%">
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-
-<style>
-.card {
-  position: relative;
-  height: 80vh;
-  width: 100%;
-  transform-style: preserve-3d;
-  cursor: pointer;
-}
-.card .bg {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: url('soil/BannerVideo.png');
-  background-size: cover;
-  background-position: center;
-}
-</style>
 	<section class="container mt-5 pt-4">
 		<div class="row">
 			<div class="col-md-6">
-				<!-- <img src="soil/DottedPattern2.png" class="d-block ml-auto" width="40%" style="position: absolute;"> -->
-				<!-- <div class="card" data-tilt>
-			    	<div class="bg pt-5"></div>
-			    </div> -->
 			    <img src="soil/DottedPattern2.png" class="d-block ml-auto" width="40%" style="margin-bottom: -150px;">
 			    <img src="soil/Lab.png" width="82%">
 			</div>
 			<div class="col-md-6 pl-5">
-				<h2 class="bold pt-4">Know Your Soil</h2>
-				<h4 class="font-light" style="font-size: 45px;">Lab Test</h4>
-				<p class="font-medium text-dark pt-4" style="letter-spacing: 1px;font-size: 16px;">
+				<h2 class="bold pt-4" style="color: #000;font-size: 45px;text-transform: uppercase;letter-spacing: 1.5px;">Know Your Soil ?</h2>
+				<p class="font-medium text-dark pt-4" style="letter-spacing: 1px;font-size: 15px;">
 					Knowing the Soil is where it all starts – the nutrient content and chemical composition of the soil defines how fertile the soil is and what level of plant life it can support and sustain on a consistent basis.
 				</p>
 			</div>
@@ -272,8 +98,8 @@
 				<img src="soil/GreenLine.svg" class="d-block mx-auto" style="position: absolute;left: 50%;margin-top: -90px;">
 				<div class="row py-5">
 					<div class="col-md-6 pt-3">
-						<h2 class="bold text-white" style="letter-spacing: 2px;">Know About Soil</h2>
-						<h4 class="font-light text-white" style="font-size: 45px;">Health Card</h4>
+						<h2 class="text-white" style="letter-spacing: 2px;text-transform: uppercase;font-size: 45px;">Health Card</h2>
+						<!-- <h4 class="font-light text-white" style="font-size: 45px;">Health Card</h4> -->
 						<div class="row pt-3">
 							<div class="col-md-2 pt-4">
 								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="0 0 87 87">
@@ -428,7 +254,7 @@
 
 	"use strict";
 
-  $(".card").tilt({
+  $(".tilt").tilt({
     maxTilt: 15,
     perspective: 1400,
     easing: "cubic-bezier(.03,.98,.52,.99)",

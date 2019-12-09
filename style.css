@@ -139,6 +139,9 @@ a{
 	.media-pt-4{
 		padding-top: 40px;
 	}
+	.team-frame{
+		height: 2800px !important;
+	}
 }
 /*new*/
 .text-dark{

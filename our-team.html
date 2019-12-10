@@ -12,6 +12,53 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/css/mdb.min.css" rel="stylesheet">
 	<!-- custom css -->
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- slick -->
+	<link rel="stylesheet" type="text/css" href="slick/slick.css">
+  	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+<style type="text/css">
+    .slider {
+        width:80%;
+        margin: 0px auto;
+    }
+
+    .slick-slide {
+      margin: 0px 40px 0px 0px;
+    }
+
+    .slick-slide img {
+      width: 40%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: black;
+    }
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: 1;
+    }
+    
+    .slick-active {
+      opacity: 1;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
+    /*custom*/
+    .slick-prev{
+    	display: none !important;
+    }
+    .slick-next{
+    	width: 145px !important;
+    }
+    .slick-prev:before,
+	.slick-next:before{
+		font-family: 'Gilroy-Regular' !important;
+		font-weight: bold;
+	}
+</style>
 </head>
 <body>
 	<!-- navbar -->
@@ -71,6 +118,49 @@
 				</div>
 			</div>
 		</div>
+	</section>
+
+	<!-- clients -->
+	<section class="regular slider">
+	<div>
+		<div class="row">
+			<div class="col-md-4">
+				<p class="font-regular">
+					<h6 class="text-green" style="font-size: 20px;">Runners Up</h6>
+					<h6 style="font-size: 18px;">TSEC - IIM Calcutta 2014</h6>
+				</p>
+			</div>
+			<div class="col-md-8">
+				<img src="soil/BrandLogo.png">
+			</div>
+		</div>
+	</div>
+	<div>
+		<div class="row">
+			<div class="col-md-4">
+				<p class="font-regular">
+					<h6 class="text-green" style="font-size: 20px;">Runners Up</h6>
+					<h6 style="font-size: 18px;">TSEC - IIM Calcutta 2014</h6>
+				</p>
+			</div>
+			<div class="col-md-8">
+				<img src="soil/BrandLogo.png">
+			</div>
+		</div>
+	</div>
+	<div>
+		<div class="row">
+			<div class="col-md-4">
+				<p class="font-regular">
+					<h6 class="text-green" style="font-size: 20px;">Runners Up</h6>
+					<h6 style="font-size: 18px;">TSEC - IIM Calcutta 2014</h6>
+				</p>
+			</div>
+			<div class="col-md-8">
+				<img src="soil/BrandLogo.png">
+			</div>
+		</div>
+	</div>
 	</section>
 
 	<!-- team -->
@@ -200,6 +290,21 @@
   });
   
 }( jQuery ) );
+</script>
+
+
+<!-- slick -->
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  $(document).on('ready', function() {
+    $(".regular").slick({
+      dots: true,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    });
+  });
 </script>
 </body>
 </html>

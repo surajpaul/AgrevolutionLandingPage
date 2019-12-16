@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Know Your Soil</title>
+	<title>Advisory</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Font Awesome -->
@@ -15,6 +15,56 @@
   	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
 	<!-- custom css -->
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+		@media only screen and (min-width: 700px) {
+			.col-2-media{
+				flex: 0 0 20% !important;
+	    		max-width: 20% !important;
+			}
+			.media-relative{
+				position: relative;
+			}
+			.media-absolute{
+				position: absolute;
+			}
+		}
+		@media only screen and (max-width: 700px) {
+			.col-2-media{
+				flex: 0 0 100% !important;
+	    		max-width: 100% !important;
+	    		text-align: center;
+	    		padding-top: 0px !important;padding-bottom: 0px !important;
+			}
+			.triangle-right {
+				display: none;
+			}
+		}
+		.triangle-right {
+			position: absolute;
+			right: 90%;
+			width: 0;
+			height: 0;
+			top: 35%;
+			border-top: 40px solid transparent;
+			border-left: 50px solid #6bb51e;
+			border-bottom: 40px solid transparent;
+		}
+		.img1 {
+		  max-height: 100%;
+		  max-width: 100%;
+		  padding:50px;
+		  height: auto;
+		  width: auto;
+		  display: block;
+		  position: absolute;
+		  top: 0;
+		  bottom: 50px;
+		  left: 35px;
+		  right: 0;
+		  box-sizing: border-box;
+		  margin: auto;
+		}
+	</style>
 </head>
 <body>
 	<!-- navbar -->
@@ -52,39 +102,57 @@
 
 	<section class="container" style="margin-top: -25px;">
 		<div class="row pt-5" align="left">
-			<h1 class="pl-3 py-5 bold" align="left" style="color: #000;font-size: 45px;">know your soil</h1>
 			<div class="col-md-12">
-				<p class="font-regular text-dark" style="letter-spacing: 1px;font-size: 20px;">
-					Knowing the Soil is where it all starts – the nutrient content and chemical composition<br> of the soil defines how fertile the soil is and what level of plant life it can support<br> and sustain on a consistent basis.
+				<h1 class=" bold pt-5" align="left" style="color: #000;font-size: 45px;">Advisory </h1>
+				<h5 class="" align="left" style="color: #000;font-size: 30px;">Farmer Helpline and Support</h5>
+			</div>
+			<div class="col-md-10 pt-5">
+				<p class="font-regular text-dark" style="letter-spacing: 1px;font-size: 18px;">
+					<b class="bold">What crop to grow? How best to grow it? What seed/fertilizer to use and when?</b> Answers to these questions have never been more critical and relevant today with billions of mouths to feed while pursuing sustainable agriculture and dealing with climate change.
 				</p>
 				<p class="font-medium text-dark pt-3" style="letter-spacing: 1px;font-size: 13px;">
-					We help our farmers get the soil test done at our testing labs or bring in their existing soil health cards. Soil composition data<br> points provide foundations for selecting the right kind of Agri Input (seed/fertilizer) and to generate advanced analytics<br> e.g. yield predictions and Personalized Advisory.
+					Traditionally crop advisory for farmers has come from other farmers and from local <b class="bold">“historical experience”.</b> While that may be useful in limited ways, that mechanism does not incorporate proper scientific know-how and advances in agri technology and processes.
 				</p>
 			</div>
-		</div>
-		<div class="row pt-5" align="left">
-			<h1 class="pl-3 py-5 bold" align="left" style="color: #000;font-size: 45px;">Steps involved in<br>Soil Testing</h1>
-			<div class="row">
-				<div class="col-md-4">
-					<img src="soil/Vector Smart Object.png" class="d-block mr-auto" width="60%">
-					<h1 class="bold pt-4 pb-3">01</h1>
-					<p class="font-regular text-dark" style="font-size: 15px;">
-						Periodically we keep explaining the benefits of soil testing to farmers.<b class="bold text-black"> Farmers request for soil collection</b> through our DeHaat App or our Toll-free number which will be further sent to our lab for quality test.
-					</p>
-				</div>
-				<div class="col-md-4">
-					<img src="soil/Vector Smart Object-2.png" class="d-block mr-auto" width="50%">
-					<h1 class="bold pt-4 pb-3">02</h1>
-					<p class="font-regular text-dark" style="font-size: 15px;">
-						Next, <b class="bold text-black">we provide the soil health card</b> in hard copy as well as on the DeHaat app.
-					</p>
-				</div>
-				<div class="col-md-4">
-					<img src="soil/Vector Smart Object-3.png" class="d-block mr-auto" width="70%">
-					<h1 class="bold pt-4 pb-3">03</h1>
-					<p class="font-regular text-dark" style="font-size: 15px;">
-						On the basis of soil health report, we recommend appropriate <b class="bold text-black">input with personalized advisory.</b>
-					</p>
+			<div class="col-md-12 mt-5">
+				<div class="row">
+					<div class="col-2 col-2-media py-5 media-relative" style="background-color: #6bb51e;">
+						<div class="pr-3 pl-4 pt-4 pb-3 media-absolute">
+							<p class="font-medium text-white bold capital" style="letter-spacing: 1.5px;">We provide cost effective Advisory services to our member farmers</p>
+						</div>
+					</div>
+					<div class="col-2 border-grey col-2-media py-5">
+						<div class="pr-3 pl-4 pt-4">
+							<img src="soil/advisory/plant.png" width="40%">
+							<p class="font-regular text-black bold capital pt-4" style="font-size: 14px;">crop planning & <br>growth</p>
+						</div>
+						<div class="triangle-right"></div>
+					</div>
+					<div class="col-2 border-grey col-2-media py-5">
+						<div class="pr-3 pl-3 pt-4">
+							<img src="soil/advisory/germs.png" width="33%">
+							<p class="font-regular text-black bold capital pt-4" style="font-size: 14px;">disease detection</p>
+						</div>
+					</div>
+					<div class="col-2 border-grey col-2-media py-5">
+						<div class="pr-3 pl-4 pt-4">
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="0 0 76 77">
+  								<image id="pesticide" width="76" height="77" xlink:href="data:img/png;base64,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"/>
+							</svg>
+							<p class="font-regular text-black bold capital pt-3" style="font-size: 14px;">pesticide dosage</p>
+						</div>
+					</div>
+					<div class="col-2 border-grey col-2-media py-5">
+						<div class="pr-3 pl-4 pt-4">
+							<img src="soil/advisory/harvester.png" width="38%">
+							<p class="font-regular text-black bold capital pt-3" style="font-size: 14px;">best harvesting <br>practices</p>
+						</div>
+					</div>
+					<div class="col-md-12" align="right">
+						<p class="font-medium text-dark pt-3" style="letter-spacing: 1px;font-size: 13px;">
+							Our analytics technology seeks to provide personalized advisory based on each farmers individual farming conditions.
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -95,7 +163,100 @@
 		</svg>
 	</div>
 
-	<!-- slider -->
+	<!-- tech platform -->
+	<section class="" style="background-color: #081621;margin-top: 150px;">
+		<img src="soil/GreenLine.svg" class="d-block mx-auto" style="position: absolute;left: 50%;margin-top: -80px;z-index: 9;">
+		<div class="container py-5">
+			<div class="row pb-4">
+				<div class="col-md-6">
+					<h1 class=" bold pt-5 text-white" align="left" style="color: #000;font-size: 45px;">DeHaat Technology Platform</h1>
+					<p class="font-medium text-white pt-5" style="letter-spacing: 1px;font-size: 13px;">
+						DeHaat Technology Platform provides features to send out reminder notifications in local language relevant information related to <b class="bold">crop monitoring, weather and market.</b><br>
+						Given that the Farmers still less digitally connected and culturally may prefer a human direct interaction - we provide advisory in offline modes as well. Just a phone call to our Call Center will provide the Farmer advisory from human operator. Farmer can also physically visit their nearest DeHaat Center. Our Technology Solution integrates all services on a single platform that includes last mile connection to the farmers doorstep including Agri Input he needs for next planting
+					</p>
+					<button class="learn-more mt-4">
+					    <span class="circle">
+					      <span class="icon arrow"></span>
+					    </span>
+				    	<span class="button-text" style="margin: 0px;">Explore</span>
+				  	</button>
+				</div>
+				<div class="col-md-6" style="background: url('tech/light BG.png') no-repeat center;background-size: 100%">
+					<img class="img1" src="tech/Phone.png">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- call -->
+	<section class="container">
+		<div class="row pt-5">
+			<div class="col-md-6">
+				<h1 class="pt-5 bold text-black" align="left" style="color: #000;font-size: 50px;">crop reminder calls experience</h1>
+				<form class="pt-5">
+				    <input type="tel" id="defaultLoginFormEmail" class="form-control mb-4 text-dark" placeholder="+91">
+				    <button class="btn bold font-medium" style="background: #6ebb1d;color: #081621;font-size: 20px;padding-top: 10px;padding-bottom: 10px;border-radius: 0px;">
+						ENTER
+					</button>
+				</form>
+			</div>
+			<div class="col-md-6">
+				<img src="soil/Lab.png" width="90%">
+			</div>
+		</div>
+
+		<div class="row pt-5">
+			<div class="col-md-6">
+				<img src="soil/Lab.png" width="90%">
+			</div>
+			<div class="col-md-6">
+				<h1 class="pt-5 bold text-black" align="left" style="color: #000;font-size: 50px;">crop reminder calls experience</h1>
+				<p class="font-regular text-dark" style="letter-spacing: 1px;font-size: 18px;">
+					Traditionally crop advisory for farmers has come from other farmers and from local <b class="bold">“historical experience”.</b> While that may be useful in limited ways, that mechanism does not incorporate proper scientific know-how and advances in agri technology and processes.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- advisory team -->
+	<section class="container pt-5">
+		<h1 class="bold text-black pt-5" align="left" style="color: #000;font-size: 50px;">advisory team</h1>
+		<div class="row pt-4">
+			<div class="col-md-4">
+				<img src="soil/Slider2.png" width="100%">
+			</div>
+			<div class="col-md-4">
+				<img src="soil/Slider3.png" width="100%">
+			</div>
+			<div class="col-md-4">
+				<img src="soil/Slider2.png" width="100%">
+			</div>
+		</div>
+	</section>
+
+	<!-- indian map -->
+	<section class="container mt-5 pt-5">
+		<div class="row">
+			<div class="col-md-6">
+				<h6 class="uppercase bold font-medium text-black" style="font-size: 28px;">dehaat toll free experience</h6>
+				<h2 class="bold font-medium text-black" style="font-size: 80px;">1800 1036 110</h2>
+				<p class="font-regular text-dark pt-5" style="letter-spacing: 1px;font-size: 18px;">
+					Traditionally crop advisory for farmers has come from other farmers and from local <b class="bold">“historical experience”.</b> While that may be useful in limited ways, that mechanism does not incorporate proper scientific know-how and advances in agri technology and processes.
+				</p>
+				<button class="learn-more mt-5">
+				    <span class="circle">
+				      <span class="icon arrow"></span>
+				    </span>
+			    	<span class="button-text">Get In Touch</span>
+			  	</button>
+			</div>
+			<div class="col-md-6">
+				<img src="soil/India.svg" width="100%">
+			</div>
+		</div>
+	</section>
+
+<!-- slider -->
 	<section class="regular slider mt-5 pt-4" style="overflow: hidden;">
 	    <div>
 	    	<img src="soil/Slider3.png" width="100%">
@@ -115,95 +276,6 @@
 	    <div>
 	    	<img src="soil/Slider2.png" width="100%">
 	    </div>
-	</section>
-
-	<!-- indian map -->
-	<section class="container">
-		<div class="row">
-			<div class="col-md-6">
-				<h1 class="pt-5 pb-3 bold" align="left" style="color: #000;font-size: 45px;">our soil lab <br>location</h1>
-				<div class="pt-4">
-					<h4 class="text-green">Bihar</h4>
-					<p class="font-regular">B-83, Star Tower Colony, Lohiya Nagar Kankarbagh</p>
-					<h6 class="bold">+91 123 123 1234</h6>
-				</div>
-				<div class="pt-4">
-					<h4 class="text-green">Uttarpradesh</h4>
-					<p class="font-regular">B-83, Star Tower Colony, Lohiya Nagar Kankarbagh</p>
-					<h6 class="bold">+91 123 123 1234</h6>
-				</div>
-			</div>
-			<div class="col-md-6">
-				<img src="soil/India.svg" width="100%">
-			</div>
-		</div>
-	</section>
-
-	<!-- <section class="container mt-5 pt-4">
-		<div class="row">
-			<div class="col-md-6">
-			    <img src="soil/DottedPattern2.png" class="d-block ml-auto" width="40%" style="margin-bottom: -150px;">
-			    <img src="soil/Lab.png" width="82%">
-			</div>
-			<div class="col-md-6 pl-5">
-				<h2 class="bold pt-4" style="color: #000;font-size: 45px;text-transform: uppercase;letter-spacing: 1.5px;">Know Your Soil ?</h2>
-				<p class="font-medium text-dark pt-4" style="letter-spacing: 1px;font-size: 15px;">
-					Knowing the Soil is where it all starts – the nutrient content and chemical composition of the soil defines how fertile the soil is and what level of plant life it can support and sustain on a consistent basis.
-				</p>
-			</div>
-		</div>
-	</section> -->
-
-	<!-- parallex -->
-	<section style="margin-top: 160px;">
-		<div class="parallax">
-			<div class="container">
-				<img src="soil/GreenLine.svg" class="d-block mx-auto" style="position: absolute;left: 50%;margin-top: -90px;">
-				<div class="row py-5">
-					<div class="col-md-6 pt-3">
-						<h2 class="text-white" style="letter-spacing: 2px;text-transform: uppercase;font-size: 45px;">Health Card</h2>
-						<div class="row pt-3">
-							<div class="col-md-2 pt-5">
-								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="0 0 87 87">
-								  <image id="seeding" width="85" height="87" xlink:href="data:img/png;base64,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"/>
-								</svg>
-							</div>
-							<div class="col-md-10 pt-4">
-								<h5 class="font-medium text-green">Farmer Profile</h5>
-								<p class="text-white font-regular pt-2" style="font-size: 14px;">
-									Health card contains basic details of Farmers i.e. Name, Address, Land Details, Current crop details, Land Coordinates, etc.
-								</p>
-							</div>
-							<div class="col-md-2 pt-5">
-								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="0 0 87 87">
-								  <image id="seeding" width="85" height="87" xlink:href="data:img/png;base64,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"/>
-								</svg>
-							</div>
-							<div class="col-md-10 pt-4">
-								<h5 class="font-medium text-green">Soil Profile</h5>
-								<p class="text-white font-medium pt-2" style="font-size: 14px;">
-									All the soil sample results will be mentioned in it like PH value, O.C (Organic carbon), NPK (Nitrogen, Phosphorus, and Potassium).
-								</p>
-							</div>
-							<div class="col-md-2 pt-5">
-								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="0 0 87 87">
-								  <image id="seeding" width="85" height="87" xlink:href="data:img/png;base64,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"/>
-								</svg>
-							</div>
-							<div class="col-md-10 pt-4">
-								<h5 class="font-medium text-green">Recommendations</h5>
-								<p class="text-white font-medium pt-2" style="font-size: 14px;">
-									We will then suggest the best crop which will suit the soil and guide them with personalized advisory. The farmers will start receiving advisory on smart/feature phones.
-								</p>
-							</div>	
-						</div>
-					</div>
-					<div class="col-md-6 pt-5 avatar">
-						<img src="soil/Card.png" class="d-block mr-auto mt-5" width="90%">
-					</div>
-				</div>
-			</div>
-		</div>
 	</section>
 
 	<!-- footer -->
@@ -306,8 +378,6 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
 <!-- Bootstrap core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-<!-- slick -->
 <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
 <script src="slick/slick.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">

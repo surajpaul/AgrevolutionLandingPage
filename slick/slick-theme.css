@@ -67,10 +67,10 @@
 .slick-next:before
 {
     font-family: 'slick';
-    font-size: 14px;
+    font-size: 20px;
     line-height: 1;
 
-    opacity: .95;
+    opacity: .75;
     color: white;
 
     -webkit-font-smoothing: antialiased;
@@ -92,7 +92,7 @@
 }
 [dir='rtl'] .slick-prev:before
 {
-    content: 'NEXT SLIDE →';
+    content: '→';
 }
 
 .slick-next
@@ -106,7 +106,7 @@
 }
 .slick-next:before
 {
-    content: 'NEXT SLIDE →';
+    content: '→';
 }
 [dir='rtl'] .slick-next:before
 {

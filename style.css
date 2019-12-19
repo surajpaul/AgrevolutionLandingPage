@@ -28,6 +28,9 @@ html{
 .bold{
 	font-weight: bold;
 }
+.justify{
+	text-align: justify;
+}
 nav{
 	font-family: 'Gilroy-Medium';
 }
@@ -44,8 +47,8 @@ marquee{
 	text-transform: uppercase;
 }
 h1{
-	text-transform: uppercase;
-	font-family: 'Gilroy-Light';
+	text-transform: capitalize;
+	font-family: 'Gilroy-Medium';
 }
 h2{
 	text-transform: capitalize;
@@ -124,6 +127,11 @@ a{
 .bg-green{
 	background-color: #6ab41f;
 }
+@media screen and (min-width: 600px) {
+	.pr-200{
+		padding-right: 200px;
+	}
+}
 @media screen and (max-width: 600px) {
 	.parallax {
 		height: auto;
@@ -147,6 +155,9 @@ a{
 	}
 	.team-frame{
 		height: 2800px !important;
+	}
+	.media-justify{
+		text-align: justify;
 	}
 }
 /*new*/

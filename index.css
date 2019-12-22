@@ -27,17 +27,31 @@
 .navbar-nav li a:hover{
 	color: #6bb51e;
 }
+.cls-1,.cls-2,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7 {
+	fill: #fff;
+}
 h1{
 	text-transform: capitalize;
 	font-family: 'Gilroy-Medium';
 	font-size: 3.6rem;
 }
 h5{
-	text-transform: uppercase;
+	text-transform: capitalize;
+	letter-spacing: 1px;
 	font-family: 'Gilroy-Medium' !important;
 	font-size: 1.25rem;
 }
-html {
+.small-text{
+	font-family: 'Gilroy-Light';
+	font-weight: bold;
+	text-transform: capitalize;
+}
+.detail1,.detail2,.detail3,.detail4,.detail5,.detail6,.detail7{
+	font-family: 'Gilroy-Light';
+	font-weight: bold;
+	text-transform: capitalize;
+}
+/*html {
 	background:
         linear-gradient(to left top, rgba(64, 140, 175, 0.38) 0%, #381d1d00 50%, rgba(64, 140, 175, 0.38) 100%),
         linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)) no-repeat center;
@@ -96,7 +110,7 @@ html {
 #main {
 	position: absolute;
 	color: #fff;
-}
+}*/
 .navbar, .pagination .page-item.active .page-link{
 	box-shadow: none;
 }
@@ -153,7 +167,7 @@ html {
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
     border-radius: 50%;
     cursor: pointer;
-    width: 10px;
+    width: 13px;
     transition: .8s ease;
     -webkit-animation: pulse 1.50s infinite cubic-bezier(0.36, 0, 0, 1);
     -moz-animation: pulse 1.50s infinite cubic-bezier(0.36, 0, 0, 1);
@@ -194,8 +208,8 @@ opacity: .9;
 width: 100%;
 height: 100%;
 position: relative;
--moz-animation: spinoffPulse 12s infinite linear;
--webkit-animation: spinoffPulse 12s infinite linear;
+-moz-animation: spinoffPulse 18s infinite linear;
+-webkit-animation: spinoffPulse 18s infinite linear;
 }
 @-moz-keyframes spinPulse {
     0% { -moz-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #bdd73c;}
@@ -225,8 +239,8 @@ border-radius: 65%;
 width: 135%;
 height: 135%;
 margin-top: -52px;margin-left: -52px;
--moz-animation: spinPulse 4s infinite ease-in-out;
--webkit-animation: spinPulse 4s infinite ease-in-out;
+-moz-animation: spinPulse 6s infinite ease-in-out;
+-webkit-animation: spinPulse 6s infinite ease-in-out;
 }
 .codepen1 {
     background-color: transparent;
@@ -238,8 +252,8 @@ margin-top: -52px;margin-left: -52px;
     width: 106%;
     height: 106%;
     margin-top: -362px;margin-left: -10px;
-    -moz-animation: spinoffPulse 3s infinite linear;
-    -webkit-animation: spinoffPulse 3s infinite linear;
+    -moz-animation: spinoffPulse 6s infinite linear;
+    -webkit-animation: spinoffPulse 6s infinite linear;
 }
 @-moz-keyframes spinPulse {
     0% { -moz-transform:rotate(160deg); opacity:0; box-shadow:0 0 1px #bdd73c;}
@@ -367,7 +381,10 @@ margin-top: -52px;margin-left: -52px;
         width: 300px;
         position: absolute;
         top: 30%;
-        left: 48%;
+        left: 52%;
+    }
+    .media-d-none-big{
+    	display: none;
     }
 }
 @media screen and (max-width: 992px) {
@@ -386,27 +403,84 @@ margin-top: -52px;margin-left: -52px;
         display: none;
     }
     .rotate1{
-        position: absolute;width: 101%;height: 101%;margin-top: -3px;margin-left: -3px;display: none;
+        position: absolute;width: 100%;height: 101%;margin-top: -3px;margin-left: -3px;display: none;
     }
     .rotate2{
-        position: absolute;width: 124%;height:124%;margin-top: -35px;margin-left: -35px;display: none;
+        position: absolute;width: 100%;height:124%;margin-top: -35px;margin-left: -35px;display: none;
     }
     .rotate3{
-        position: absolute;width: 110%;height: 110%;margin-top: -15px;margin-left: -15px;display: none;
+        position: absolute;width: 100%;height: 110%;margin-top: -15px;margin-left: -15px;display: none;
     }
     .bg-img{
         background: url('img/dehaat.png') no-repeat;
-        background-size: 300px;
-        height: 300px;
-        width: 300px;
+        background-size: 200px;
+        height: 200px;
+        width: 200px;
         position: absolute;
         left: 0;right: 0;
         text-align: center;
         margin-left: auto;margin-right: auto;
-        top: 15%;
+        top: 20%;
     }
+    .codepen {
+	background-color: transparent;
+	border: 8px solid #6bb51e;
+	opacity: 1;
+	border-right: 5px solid transparent;
+	border-left: 5px solid transparent;
+	border-radius: 65%;
+	width: 120%;
+	height: 120%;
+	margin-top: -20px;margin-left: -20px;
+	-moz-animation: spinPulse 4s infinite ease-in-out;
+	-webkit-animation: spinPulse 4s infinite ease-in-out;
+	}
+	.codepen1 {
+	    background-color: transparent;
+	    border: 5px solid #6bb51e;
+	    opacity: 1;
+	    border-left: 5px solid transparent;
+	    border-right: 5px solid transparent;
+	    border-radius: 55%;
+	    width: 106%;
+	    height: 106%;
+	    margin-top: -227px;margin-left: -6px;
+	    -moz-animation: spinoffPulse 3s infinite linear;
+	    -webkit-animation: spinoffPulse 3s infinite linear;
+	}
     .text-heading{
     	position: absolute;
-    	top: 68% !important;
+    	top: 58% !important;
     }
+}
+
+
+/*temp*/
+.dropdown-menu{
+	position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+     padding: 0px; 
+     margin: 0px; 
+    font-size: 1rem;
+    color: #fff !important;
+    text-align: left;
+    list-style: none;
+    background-color: #0e1e26;
+     background-clip: none; 
+    border: none;
+     border-radius: 0px; 
+}
+.navbar .dropdown-menu a{
+	color: #fff;
+}
+a.waves-effect, a.waves-light{
+	display: block !important;
+}
+.dropdown-item:focus, .dropdown-item:hover{
+	background: transparent;
 }

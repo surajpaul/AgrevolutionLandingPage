@@ -10,6 +10,9 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Material Design Bootstrap -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/css/mdb.min.css" rel="stylesheet">
+	<!-- slick -->
+	<link rel="stylesheet" type="text/css" href="slick/slick.css">
+  	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
 	<!-- custom css -->
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<style>
@@ -103,10 +106,9 @@
 			</div>
 			<div class="col-md-10 pt-4">
 				<p class="font-regular text-dark" style="letter-spacing: 1px;font-size: 18px;">
-					Input material at the beginning of farming cycle is the most important aspect that determines the quality and volume of the output - hence the income and livelihood of the farmer. Serious gaps in the agri-input value chain exist due to demand and supply mismatch, substandard locally manufactured products, duplication, adulteration, and black-marketing of key products.
-				</p>
-				<p class="font-medium text-dark pt-3" style="letter-spacing: 1px;font-size: 13px;">
-					Farmers are often misguided about the variety, solution, and dosage of Seed, Fertilizer and Pesticide they should be using. Our objective is to provide agri input of right Kind of right Quality at right Price and at right Time. Our robust technology solutions for supply chain management enables us to provide direct cost saving to the farmer up to 15%, delivery of input at farmers’ doorstep and post-sales support with advisory on usage and monitoring Health & Growth of the crop as the cropping season wears on.
+					Input material at the beginning of farming cycle is the most important aspect that determines the quality and volume of the output - hence the income and livelihood of the farmer. Serious gaps in the agri-input value chain exist due to demand and supply mismatch, substandard locally manufactured products, duplication, adulteration, and black-marketing of key products.<br><br>
+					Farmers are often misguided about the variety, solution, and dosage of Seed, Fertilizer and Pesticide they should be using. Our objective is to provide agri input of right Kind of right Quality at right Price and at right Time.<br><br>
+					Our robust technology solutions for supply chain management enables us to provide direct cost saving to the farmer up to 15%, delivery of input at farmers’ doorstep and post-sales support with advisory on usage and monitoring Health & Growth of the crop as the cropping season wears on.
 				</p>
 			</div>
 		</div>
@@ -122,13 +124,60 @@
 		<div class="container py-5">
 			<div class="row">
 				<div class="col-md-12 pt-5">
-					<img src="soil/GreenLine.svg" class="d-block mx-auto" style="position: absolute;left: 50%;margin-top: -50px;z-index: 9;">
-					<div class="tilt tilt-movie" data-tilt data-tilt-glare="true" data-tilt-scale="1.1">
-						<img src="soil/BannerVideo.png" width="100%">
+					<img src="soil/GreenLine.svg" class="d-block mx-auto" style="position: absolute;left: 50%;margin-top: -65px;z-index: 9;">
+					<div>
+						<!-- <img src="soil/BannerVideo.png" width="100%"> -->
+						<iframe width="100%" height="480" src="https://www.youtube.com/embed/1kIq_fBeF7k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</div>
 				</div>
 			</div>
 		</div>
+	</section>
+
+	<!-- slider -->
+	<section class="regular slider mt-5 pt-4">
+	    <div class="container1">
+			  <img src="soil/Slider3.png" alt="Avatar" class="image" style="width:100%">
+			  <div class="middle">
+			    <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been ...</div>
+			  </div>
+			</div>
+			<div class="container1">
+			  <img src="soil/Slider2.png" alt="Avatar" class="image" style="width:100%">
+			  <div class="middle">
+			    <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been ...</div>
+			  </div>
+			</div>
+			<div class="container1">
+			  <img src="soil/Slider3.png" alt="Avatar" class="image" style="width:100%">
+			  <div class="middle">
+			    <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been ...</div>
+			  </div>
+			</div>
+			<div class="container1">
+			  <img src="soil/Slider2.png" alt="Avatar" class="image" style="width:100%">
+			  <div class="middle">
+			    <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been ...</div>
+			  </div>
+			</div>
+			<div class="container1">
+			  <img src="soil/Slider3.png" alt="Avatar" class="image" style="width:100%">
+			  <div class="middle">
+			    <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been ...</div>
+			  </div>
+			</div>
+			<div class="container1">
+			  <img src="soil/Slider2.png" alt="Avatar" class="image" style="width:100%">
+			  <div class="middle">
+			    <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been ...</div>
+			  </div>
+			</div>
+			<div class="container1">
+			  <img src="soil/Slider3.png" alt="Avatar" class="image" style="width:100%">
+			  <div class="middle">
+			    <div class="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been ...</div>
+			  </div>
+			</div>
 	</section>
 
 	<!-- partner -->
@@ -287,35 +336,36 @@
 		</div>
 	</section>
 
-
 <!-- JQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!-- Bootstrap tooltips -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
 <!-- Bootstrap core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="slick/slick.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  $(document).on('ready', function() {
+    $(".regular").slick({
+        dots: true,
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 1
+            }
+        }]
+    });
+  });	
+</script>
 
-
-<!-- tilt effect -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="https://unpkg.com/tilt.js@1.1.19/dest/tilt.jquery.js"></script>
-	<script>
-	( function( $ ) {
-
-		"use strict";
-
-	  $(".tilt").tilt({
-	    maxTilt: 15,
-	    perspective: 1400,
-	    easing: "cubic-bezier(.03,.98,.52,.99)",
-	    speed: 1200,
-	    glare: true,
-	    maxGlare: 0.2,
-	    scale: 1.04
-	  });
-	  
-	}( jQuery ) );
-	</script>
 	<script>
 		document.querySelector("html").classList.add('js');
 

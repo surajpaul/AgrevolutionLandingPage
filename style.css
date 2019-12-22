@@ -314,7 +314,7 @@ button:hover .button-text {
 	color: #000;
 }
 /*slick slider*/
-.slick-slide {
+/*.slick-slide {
     margin: 0px 8px;
     cursor: pointer;
 }
@@ -422,4 +422,68 @@ button:hover .button-text {
 }
 .slick-arrow.slick-hidden {
     display: none;
+}*/
+.slider {
+        width: 90%;
+        margin: 100px auto;
+    }
+
+    .slick-slide {
+      margin: 0px 20px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: black;display: block;
+    }
+
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: 1;
+    }
+    
+    .slick-active {
+      opacity: 1;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
+
+/*hover to show text*/
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: -32%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.container1:hover .image {
+  opacity: 0.3;
+}
+.container1:hover .middle {
+  opacity: 1;
+}
+.container1{
+	position: relative;
+}
+.text {
+  color: #000;
+  font-size: 13px;
 }

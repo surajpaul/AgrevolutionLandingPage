@@ -19,6 +19,9 @@
 	font-family: 'Gilroy-Regular';
 	src: url('font/gilroy-bold-cufonfonts/Gilroy-Regular.ttf') format('truetype');
 }
+.font-regular{
+	font-family: 'Gilroy-Regular';
+}
 .navbar-nav li a{
 	color: #fff;
 	font-family: 'Gilroy-Light';
@@ -298,7 +301,7 @@ margin-top: -52px;margin-left: -52px;
 }
 .btn-hire{
     font-size: 15px;
-    color: #000;
+    color: #000 !important;
     background: #fff;
     width:140px;
     height: 50px;
@@ -396,8 +399,12 @@ margin-top: -52px;margin-left: -52px;
     }
     .hiring{
         position: absolute !important;
-        top: 7.5%;
-        left: 67% !important;
+        /*top: 6.5%;
+        left: 58% !important;*/
+        top: 94%;
+        left: 0 !important;
+        right: 0 !important;
+        text-align: center;
     }
     .menu{
         display: none;

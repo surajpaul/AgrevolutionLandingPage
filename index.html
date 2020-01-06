@@ -18,13 +18,31 @@ body {
   margin: 0;
   background-color: #000;
   width: 100%;height: 100%;
+  overflow-y: hidden;
 }
 canvas {
   display: block;
   vertical-align: bottom;
 }
 /* ---- particles.js container ---- */
-
+.modal-dialog {
+max-width: 900px;
+margin: 70px auto;
+}
+.modal-body {
+position:relative;
+padding:0px;
+}
+.close {
+position:absolute;
+right:-30px;
+top:0;
+z-index:999;
+font-size:2rem;
+font-weight: normal;
+color:#fff;
+opacity:1;
+}
 #particles-js {
   position: absolute;
   width: 100%;
@@ -470,17 +488,41 @@ canvas {
 				      </div>
 				    </li> 
 					<li class="nav-item pl-5">
-						<a class="bold" href="">DeHaat Model</a>
+						<a class="bold" href="dehaat_network.html">DeHaat Network</a>
 					</li>
 					<li class="nav-item pl-5">
-						<a class="bold" href="">Blog</a>
+						<a class="bold" href="https://twitter.com/dehaattm?lang=en">Blog</a>
 					</li>
 					<li class="nav-item pl-5">
-						<a class="bold" href="our-team.html">About Us</a>
+						<a class="bold" href="about_us.html">About Us</a>
 					</li>
 				</ul>
 			</div>  
 		</nav>
+<!-- try -->
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+  	<a class="font-regular text-white" href="solution.html">Solutions</a>
+  	<a class="font-regular text-white" href="dehaat_network.html">DeHaat Network</a>
+  	<a class="font-regular text-white" href="https://twitter.com/dehaattm?lang=en">Blog</a>
+  	<a class="font-regular text-white" href="about_us.html">About Us</a>
+  	<hr style="border-top: 1px solid #fff;">
+    <a class="font-regular" href="know_your_soil.html">Know Your Soil</a>
+    <a class="font-regular" href="agri_input.html">Agri Input</a>
+    <a class="font-regular" href="advisory.html">Advisory</a>
+    <a class="font-regular" href="health_growth.html">Health & Growth</a>
+    <a class="font-regular" href="agri_output.html">Agri Output</a>
+    <a class="font-regular" href="farm_intelligence.html">Farm Intelligence</a>
+    <a class="font-regular" href="finance.html">Finance</a>
+  </div>
+</div>
+
+<span class="media-d-none-big" style="font-size:30px;cursor:pointer;position: absolute;right: 5%;top:5%;" onclick="openNav()">
+	<img src="img/menu (1).svg" class="fun-img" id="magic-toggle" width="30px">
+</span>
+<!-- try -->
+
 		<!-- image rotate -->
 		<div class="rotate-img bg-img">
 			<img class="outerCircle rotate1" src="img/assets/inner.svg" data-aos="fade-up" data-aos-duration="3000">
@@ -588,40 +630,124 @@ canvas {
 				</span>
 			</h1>
 			<h5 class="text-white">Technologies for next agri revolution</h5>
+			<a class="video-btn media-video" data-toggle="modal" data-src="https://www.youtube.com/embed/2ZDAK_d27TE" data-target="#myModal">
+				<div class="row">
+					<div class="col-md-1 col-1 media-absolute media-L0">
+						<img src="img/play-button.png" width="40px">
+					</div>
+					<div class="col-md-11 pt-2 pl-4 col-11 media-absolute media-L10">
+						<h5 class="bold font-medium text-white">Watch The Video</h5>
+					</div>
+				</div>
+			</a>
+			
 		</div>
 		<div class="hiring">
-			<a class="bold btn-hire">We're Hiring</a>
+			<a class="bold btn-hire" href="about_us.html#hiring">We're Hiring</a>
 			<a class="pl-5 pt-3 bold menu" href="contact_us.html">Contact Us</a>
 		</div>
-<div class="media-d-none-big" style="position: absolute;top: 90%">
-	<a href=""><span class="text-white small-text small-text1 pl-3">Know Your Soil</span></a>
-</div>
-<div class="media-d-none-big" style="position: absolute;top: 94%">
-	<a href=""><span class="text-white small-text small-text1 pl-3">Agri Input</span></a>
-</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					  <span aria-hidden="true">&times;</span>
+					</button>        
+				<!-- 16:9 aspect ratio -->
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
-</section>	
+</section>
+<style>
+@media screen and (max-width: 992px){
+	.media-video{
+		position: absolute;
+		left: 0;right: 0;
+		width: 70%;
+		text-align: center;
+	}
+	.media-absolute{
+		position: absolute;
+	}
+	.media-L0{
+		left: 0%;
+	}
+	.media-L10{
+		left: 16%;
+	}
+}
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 8%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #6bb51e;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #fff;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 10px;
+  right: 35px;
+  }
+}
+</style>
 
 
 
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
 
-
-
-
-
-
-
-
-
-
-
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
 
 <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-
-
 <!-- JQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!-- Bootstrap tooltips -->
@@ -746,12 +872,42 @@ canvas {
 <script>
     $(document).ready(function(){
       // change center image
-      $(".pulse-dot").mouseenter(function(){
-          $(".rotate-img").css("background", "url('img/tracter.png') no-repeat");
-          $(".rotate-img").css("background-size", "296px");
+      $(".dot1").mouseenter(function(){
+          $(".rotate-img").css("background", "url('img/home/Soil.png') no-repeat");
+          $(".rotate-img").css("background-size", "300px");
           $(".cursor--small").css("transition", ".6s");
       });
-      $(".pulse-dot").mouseleave(function(){
+      $(".dot2").mouseenter(function(){
+          $(".rotate-img").css("background", "url('img/home/Fertilizer.png') no-repeat");
+          $(".rotate-img").css("background-size", "300px");
+          $(".cursor--small").css("transition", ".6s");
+      });
+      $(".dot3").mouseenter(function(){
+          $(".rotate-img").css("background", "url('img/home/Advisoey.png') no-repeat");
+          $(".rotate-img").css("background-size", "300px");
+          $(".cursor--small").css("transition", ".6s");
+      });
+      $(".dot4").mouseenter(function(){
+          $(".rotate-img").css("background", "url('img/home/Heath Growth.png') no-repeat");
+          $(".rotate-img").css("background-size", "300px");
+          $(".cursor--small").css("transition", ".6s");
+      });
+      $(".dot5").mouseenter(function(){
+          $(".rotate-img").css("background", "url('img/home/Output.png') no-repeat");
+          $(".rotate-img").css("background-size", "300px");
+          $(".cursor--small").css("transition", ".6s");
+      });
+      $(".dot6").mouseenter(function(){
+          $(".rotate-img").css("background", "url('img/home/AI.png') no-repeat");
+          $(".rotate-img").css("background-size", "300px");
+          $(".cursor--small").css("transition", ".6s");
+      });
+      $(".dot7").mouseenter(function(){
+          $(".rotate-img").css("background", "url('img/home/Finance.png') no-repeat");
+          $(".rotate-img").css("background-size", "300px");
+          $(".cursor--small").css("transition", ".6s");
+      });
+      $(".dot1,.dot2,.dot3,.dot4,.dot5,.dot6,.dot7").mouseleave(function(){
           $(".rotate-img").css("background", "url('img/dehaat.png') no-repeat");
           $(".rotate-img").css("background-size", "300px");
           $(".cursor--small").css("transition", "none");
@@ -863,5 +1019,28 @@ canvas {
       });
     });
 </script>
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+<script src="https://cdn.rawgit.com/JacobLett/bootstrap4-latest/master/bootstrap-4-latest.min.js"></script>
+<script>
+	$(document).ready(function() {
+		var $videoSrc;  
+		$('.video-btn').click(function() {
+		    $videoSrc = $(this).data( "src" );
+		});
+		console.log($videoSrc);
+		// when the modal is opened autoplay it  
+		$('#myModal').on('shown.bs.modal', function (e) {    
+		// set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+		$("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
+		})
+		// stop playing the youtube video when I close the modal
+		$('#myModal').on('hide.bs.modal', function (e) {
+		    // a poor man's stop video
+		    $("#video").attr('src',$videoSrc); 
+		})
+	});
+</script>
+
 </body>
 </html>

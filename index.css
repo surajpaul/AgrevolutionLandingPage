@@ -42,7 +42,7 @@ h5{
 	text-transform: capitalize;
 	letter-spacing: 1px;
 	font-family: 'Gilroy-Medium' !important;
-	font-size: 1.25rem;
+	font-size: 1.1rem;
 }
 .small-text{
 	font-family: 'Gilroy-Light';
@@ -384,7 +384,7 @@ margin-top: -52px;margin-left: -52px;
         width: 300px;
         position: absolute;
         top: 30%;
-        left: 52%;
+        left: 50%;
     }
     .media-d-none-big{
     	display: none;

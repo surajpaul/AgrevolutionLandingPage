@@ -300,12 +300,12 @@ a{
 	.media-100{
 		width: 100%;
 	}
-	.slider{
+	/*.slider{
 		width: 97% !important;
 	}
 	.slick-prev, .slick-next{
 		width: 40px;
-	}
+	}*/
 }
 @media screen and (max-width: 600px) {
 	.media-bg {
@@ -510,7 +510,7 @@ button:hover .button-text {
 }
 .slick-prev:before,
 .slick-next:before {
-  color: black;display: block;
+  color: black;
 }
 .slick-slide {
   transition: all ease-in-out .3s;
@@ -522,6 +522,30 @@ button:hover .button-text {
 .slick-current {
   opacity: 1;
 }
+/*.slider {
+    width: 90%;
+    margin: 100px auto;
+}
+.slick-slide {
+  margin: 0px 20px;
+}
+.slick-slide img {
+  width: 100%;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: black;display: block;
+}
+.slick-slide {
+  transition: all ease-in-out .3s;
+  opacity: 1;
+}
+.slick-active {
+  opacity: 1;
+}
+.slick-current {
+  opacity: 1;
+}*/
 /*hover to show text*/
 .image {
   opacity: 1;
@@ -635,7 +659,7 @@ button:hover .button-text {
 	}
 }
 @media only screen and (max-width: 700px) {
-	.slider{
+	/*.slider{
 		width: 93% !important;
 	}
 	.slick-prev{
@@ -643,7 +667,7 @@ button:hover .button-text {
 	}
 	.slick-list{
 		padding: 0px 0px 0px 9px !important;
-	}
+	}*/
 }
 /*carousel	mobile phone*/
 .carousel {

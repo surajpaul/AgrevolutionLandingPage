@@ -154,6 +154,9 @@ a{
 .font-45{
 	font-size: 45px;
 }
+.font-30{
+	font-size: 30px;
+}
 .font-18{
 	font-size: 18px;
 }
@@ -166,9 +169,18 @@ a{
 .padT-15{
 	padding-top: 15px;
 }
+.form-control{
+	color: #000 !important;
+}
 @media screen and (min-width: 600px) {
 	.media-pt-4{
 		padding-top: 1.5rem!important;
+	}
+	.media-pt-5{
+		padding-top: 3rem;
+	}
+	.media-mt-5{
+		margin-top: 3rem;
 	}
 	.pr-200{
 		padding-right: 200px;
@@ -206,11 +218,14 @@ a{
 	.font-45{
 		font-size: 30px;
 	}
+	.font-30{
+		font-size: 20px;
+	}
 	.font-18{
-		font-size: 13px;
+		font-size: 15px;
 	}
 	.media-pt-4{
-		padding-top: 0px !important;
+		padding-top: 10px !important;
 	}
 	.parallax {
 		height: auto;
@@ -329,6 +344,9 @@ a{
 /*new*/
 .capital{
 	text-transform: capitalize;
+}
+.border-radius-50{
+	border-radius: 50%;
 }
 .text-dark{
 	color: #646464 !important;
@@ -715,4 +733,69 @@ cursor: pointer;
 	cursor: pointer;
 	width: 64%;
 	}
+}
+/*agri input*/
+.carousel-inner {
+  width: 80%;
+  margin: auto; 
+}
+blockquote {
+    border-left: none;
+    margin: 0;
+}
+blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+blockquote p:after {
+    content: "\f10e";
+    font-family: 'Fontawesome';
+    float: right;
+    margin-right: 10px;
+}
+blockquote .small, blockquote footer, blockquote small {
+    font-size: 80%;
+    line-height: 1.42857143;
+    color: #777;
+}
+blockquote .small:before, blockquote footer:before, blockquote small:before {
+    content: '\2014 \00A0';
+}
+.carousel-indicators {
+    position: relative;
+    right: 50%;
+    top: auto;
+    bottom: 0px;
+    margin-top: 20px;
+}
+.carousel-indicators li {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    opacity: 0.4;
+    overflow: hidden;
+    transition: all .4s ease-in;
+    vertical-align: middle;
+  text-indent: 0;
+}
+.carousel-indicators .active {
+    width: 128px;
+    height: 128px;
+    opacity: 1;
+    transition: all .2s;
+}
+.carousel-control-next, .carousel-control-prev {
+  width: auto;
+  color: #CACACA;
+display: inline-block;
+  margin-top: 30px;
+}
+.carousel-control-next:hover, .carousel-control-prev:hover {
+ opacity:.9;
+  color: #CACACA;
 }

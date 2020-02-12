@@ -391,6 +391,13 @@ margin-top: -52px;margin-left: -52px;
     }
 }
 @media screen and (max-width: 992px) {
+	#dot-arrow{
+		width: 64px;
+		height: 64px;
+	}
+	.dot-arrow{
+		padding-top: 10px !important;
+	}
 	.media-d-none{
 		display: none;
 	}

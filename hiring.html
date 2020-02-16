@@ -13,19 +13,20 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/css/mdb.min.css" rel="stylesheet">
 	<!-- custom css -->
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style>
 		.border-hiring{
 			box-shadow: 0px 15px 15px 15px #eff3f6;
 			border-radius: 8px;
 			cursor: pointer;
 		}
-		.border-grey{
-			border:1px solid #888;
+		.border-green{
+			border:1px solid #6bb51e;
 			cursor: pointer;
 		}
 		.btn-white{
 			background-color: #fff;
-			color: #000;
+			color: #6bb51e;
 		}
 		.font-10{
 			font-size: 10px;
@@ -62,6 +63,12 @@
 		}
 		.border-hiring:focus > .date{
 			color: #fff; 
+		}
+		[data-toggle="collapse"] .fa:before {  
+		  content: "\f078";
+		}
+		[data-toggle="collapse"].collapsed .fa:before {
+		  content: "\f054";
 		}
 	</style>
 </head>
@@ -131,145 +138,260 @@
     </span>
     <!-- try -->
 
-	<section class="container d-none" style="margin-top: -70px;">
+	<section class="container" style="margin-top: -70px;">
 		<div class="row pt-5" align="left" data-aos="fade-up">
 			<div class="col-md-12">
 				<h1 class="font-regular bold pt-5 text-black font-45" align="left">We Are Hiring</h1>
+				<h5 class="text-green font-regular font-30" align="left">What's your next destination ?</h5>
 			</div>
 		</div>
 	</section>
 
-	<!-- tabs -->
-	<section class="container my-5 d-none">
+	<!-- filters -->
+	<section class="container my-5 pb-5">
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-3 col-md-3-hiring col-12" id="filter-options" style="border-right: 2px solid #e3e7ea;">
+				<h5 class="font-bold py-3">Refine by</h5>
+				<hr>
 				<div class="row">
-					<div class="col-md-6 my-4">
-						<div class="border-hiring p-4" tabindex="1">
-							<p align="right" class="font-10 font-regular date">01/01/2020</p>
-							<h5 class="font-bold bold">Designation</h5>
-							<hr>
-							<p class="font-medium font-15 text-grey">
-								Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs...
-							</p>
-							<p class="w-100 py-3 border-grey btn-white font-bold" align="center">
-								Description
-							</p>
-						</div>
+					<div class="col-md-8 bold font-medium">
+						Departments
 					</div>
-					<div class="col-md-6 my-4">
-						<div class="border-hiring p-4" tabindex="2">
-							<p align="right" class="font-10 font-regular date">01/01/2020</p>
-							<h5 class="font-bold bold">Designation</h5>
-							<hr>
-							<p class="font-medium font-15 text-grey">
-								Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs...
-							</p>
-							<p class="w-100 py-3 border-grey btn-white font-bold" align="center">
-								Description
-							</p>
-						</div>
+					<div class="col-md-1" align="right">
+						<button class="btn btn-link p-0 collapsed" data-toggle="collapse" data-target="#department" aria-expanded="false" aria-controls="department">
+						<i class="fa text-green" aria-hidden="true"></i>
+						</button>
 					</div>
-					<div class="col-md-6 my-4">
-						<div class="border-hiring p-4" tabindex="3">
-							<p align="right" class="font-10 font-regular date">01/01/2020</p>
-							<h5 class="font-bold bold">Designation</h5>
-							<hr>
-							<p class="font-medium font-15 text-grey">
-								Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs...
-							</p>
-							<p class="w-100 py-3 border-grey btn-white font-bold" align="center">
-								Description
-							</p>
+					<div class="col-md-12 collapse font-regular font-15" id="department" data-parent="#accordion">
+						<div class="form-check">
+							<label class="form-check-label" for="check1">
+								<input type="checkbox" class="form-check-input font-regular font-14" value="Internal_Solutions">Internal Solutions
+							</label>
+						</div>
+						<div class="form-check">
+							<label class="form-check-label" for="check2">
+								<input type="checkbox" class="form-check-input font-regular font-14" value="Software_Developer">Software developers
+							</label>
+						</div>
+						<div class="form-check">
+							<label class="form-check-label" for="check2">
+								<input type="checkbox" class="form-check-input font-regular font-14" value="Imagery">Imagery
+							</label>
+						</div>
+						<div class="form-check">
+							<label class="form-check-label" for="check2">
+								<input type="checkbox" class="form-check-input font-regular font-14" value="Team_Manager">Team Manager
+							</label>
 						</div>
 					</div>
 				</div>
-			</div>	
-			<div class="col-md-6 pl-5 pt-5">
-				<h5 class="font-bold bold">Job Description</h5>
-				<p align="left" class="font-10 font-regular date">01/01/2020</p>
 				<hr>
-				<p class="font-medium font-15 text-grey">
-					Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designsLorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designsLorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designsLorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designsLorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs...
-				</p>
-				<p class="w-100 py-3 border-grey btn-white font-bold" align="center">
-							Download PDF
-						</p>
+				<div class="row">
+					<div class="col-md-8 bold font-medium">
+						Locations
+					</div>
+					<div class="col-md-1" align="right">
+						<button class="btn btn-link p-0 collapsed" data-toggle="collapse" data-target="#location" aria-expanded="false" aria-controls="location">
+						<i class="fa text-green" aria-hidden="true"></i>
+						</button>
+					</div>
+					<div class="col-md-12 collapse font-regular font-15" id="location" data-parent="#accordion">
+						<div class="form-check">
+							<label class="form-check-label" for="check1">
+								<input type="checkbox" class="form-check-input font-regular font-14" value="patna">Bihar,Patna
+							</label>
+						</div>
+
+						<div class="form-check">
+							<label class="form-check-label" for="check2">
+								<input type="checkbox" class="form-check-input font-regular font-14" value="jharkhand">Bihar,Jharkhand
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-9 col-md-9-hiring col-12 pl-5" id="accordion">
+				<div id="filter-header"></div>
+				<div id="filter-list" class="filter-list pt-3">
+
+					<div class="row py-3 filter-item" id="headingOne" style="border-bottom: 1px solid #e3e7ea;">
+						<div class="col-md-5">
+							<h6 class="font-medium">Software Engineering Manager</h6>
+						</div>
+						<div class="col-md-4">
+							<h6 class="font-regular">Internal Solutions</h6>
+						</div>
+						<div class="col-md-2">
+							<h6 class="font-regular">Bihar, Patna</h6>
+						</div>
+						<div class="col-md-1" align="right">
+							<button class="btn btn-link p-0 collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+							<i class="fa text-green" aria-hidden="true"></i>
+							</button>
+						</div>
+
+						<div class="col-md-12 collapse font-regular font-15" id="collapseOne" aria-labelledby="headingOne" data-parent="#accordion">
+							<ul class="font-14 font-regular text-grey">
+								<li>Lead development of software solutions for company’s Internal Operations.</li>
+								<li>Work with the Product Management team to define and refine product requirements and Ensure that Minimum Viable Products (MVP) are well-prepared.</li>
+								<li>Drive the Technical team and the Product Owners in an Agile development process.</li>
+								<li>Ensure timely delivery and quality of the software components.</li>
+								<li>Work with cross-functional stakeholders for successful rollout, user acceptance, training and application support.</li>
+								<li>Recruit top talent and build world class development team.</li>
+								<li>Partner with Head of Technology and executive leadership to align with company vision and practices.</li>
+							</ul>
+							<a href="asset/hiring/VP Engineering - ERP Solutions.pdf" target="_blank" download>
+								<p class="w-100 py-3 border-green text-green btn-white font-bold" align="center">
+									Download PDF
+								</p>
+							</a>
+						</div>
+					</div>
+
+					<div class="row py-3 filter-item" id="headingTwo" style="border-bottom: 1px solid #e3e7ea;">
+						<div class="col-md-5">
+							<h6 class="font-medium">Backend Developer</h6>
+						</div>
+						<div class="col-md-4">
+							<h6 class="font-regular">Software Developer</h6>
+						</div>
+						<div class="col-md-2">
+							<h6 class="font-regular">Bihar, Patna</h6>
+						</div>
+						<div class="col-md-1" align="right">
+							<button class="btn-link btn p-0 collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							<i class="fa text-green" aria-hidden="true"></i>
+							</button>
+						</div>
+
+						<div class="col-md-12 collapse" id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordion">
+							<ul>
+								<li>You’ll design and build scalable systems to be used by millions of farmers and agri businesses.</li>
+								<li>You’ll work on building progressive web apps forked-off open source frameworks that work equally well on low end devices, low bandwidth networks and even offline.</li>
+								<li>You’ll work with spatial imagery data to build maps based solutions for farmers and businesses.</li>
+								<li>We believe in a small and effective team - you’ll have a say in what to build and then own it.</li>
+								<li>You’ll work with Android/web developers to develop backend services that meet their needs.</li>
+								<li>We are paranoid about performance - you’ll investigate performance/scalability bottlenecks and
+								existing queries, and/or write new queries with performance optimisation in mind.</li>
+								<li>Identify libraries and technologies that solve our problems and/or are worth experimentation</li>
+							</ul>
+							<a href="asset/hiring/Dehaat-SDE-Backend.pdf" target="_blank" download>
+								<p class="w-100 py-3 border-green text-green btn-white font-bold" align="center">
+									Download PDF
+								</p>
+							</a>
+						</div>
+					</div>
+
+					<div class="row py-3 filter-item" id="headingThree" style="border-bottom: 1px solid #e3e7ea;">
+						<div class="col-md-5">
+							<h6 class="font-medium">Android Developer</h6>
+						</div>
+						<div class="col-md-4">
+							<h6 class="font-regular">Software Developer</h6>
+						</div>
+						<div class="col-md-2">
+							<h6 class="font-regular">Bihar, Patna</h6>
+						</div>
+						<div class="col-md-1" align="right">
+							<button class="btn-link btn p-0 collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							<i class="fa text-green" aria-hidden="true"></i>
+							</button>
+						</div>
+
+						<div class="col-md-12 collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#accordion">
+							<ul>
+								<li>Have 2-8 years of experience in app development.</li>
+								<li>Come up with your own goals and don’t need heavy direction or daily check-ins.</li>
+								<li>Have experience in setting up the full workflow - right from Dev, Test, Build to Deployment.</li>
+								<li>Have sound understanding of Android Architecture and SDK, Android Studio and Debugger.</li>
+								<li>Expert in core Java (OOP) with sound CS fundamentals (data structures and algorithms).</li>
+								<li>Expert in basic android components: Activity, Services, Intent, Broadcast Receiver etc.</li>
+								<li>Experience in using analytics, location and maps APIs, payment gateway, etc.</li>
+								<li>Understanding of MVC, MVVM, VIPER and other patterns.</li>
+								<li>Deep understanding of Factory, Adapter, Observer, Singleton and other behaviour patterns.</li>
+								<li>Must have worked on Offline Sync, Caching, Local Storage, Realm/Room/SQLLite databases.</li>
+								<li>Have knowledge of REST paradigm, service oriented architecture and distributed systems.</li>
+								<li>Have a STEM degree from a top tier educational institute</li>
+							</ul>
+							<a href="asset/hiring/Dehaat-SDE-Android.pdf" target="_blank" download>
+								<p class="w-100 py-3 border-green text-green btn-white font-bold" align="center">
+									Download PDF
+								</p>
+							</a>
+						</div>
+					</div>
+
+					<div class="row py-3 filter-item" id="headingFour" style="border-bottom: 1px solid #e3e7ea;">
+						<div class="col-md-5">
+							<h6 class="font-medium">Data Scientist</h6>
+						</div>
+						<div class="col-md-4">
+							<h6 class="font-regular">Imagery</h6>
+						</div>
+						<div class="col-md-2">
+							<h6 class="font-regular">Bihar, Patna</h6>
+						</div>
+						<div class="col-md-1" align="right">
+							<button class="btn-link btn p-0 collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+							<i class="fa text-green" aria-hidden="true"></i>
+							</button>
+						</div>
+
+						<div class="col-md-12 collapse" id="collapseFour" aria-labelledby="headingFour" data-parent="#accordion">
+							<ul>
+								<li>Have 4+ years of experience in image based machine learning and/or image processing.</li>
+								<li>Come up with your own goals and don’t need heavy direction or daily check-ins.</li>
+								<li>Fluent in Python (preferred) or R, capable of framing problems as programming tasks from the ground up, as well as working with existing code.</li>
+								<li>Fluent in statistical/machine learning libraries in Python or R.</li>
+								<li>Understanding or intent to learn geospatial data formats and GIS concepts.</li>
+								<li> Experience with image based machine learning.</li>
+								<li>Knowledge of GIS concepts and experience with vector geospatial data is a plus.</li>
+								<li>A STEM degree from top tier educational institutes</li>
+							</ul>
+							<a href="asset/hiring/Dehaat-DataScientist-Imagery.pdf" target="_blank" download>
+								<p class="w-100 py-3 border-green text-green btn-white font-bold" align="center">
+									Download PDF
+								</p>
+							</a>
+						</div>
+					</div>
+
+					<div class="row py-3 filter-item" id="headingFive" style="border-bottom: 1px solid #e3e7ea;">
+						<div class="col-md-5">
+							<h6 class="font-medium">State Head, Agri-Input Business</h6>
+						</div>
+						<div class="col-md-4">
+							<h6 class="font-regular">Team Manager</h6>
+						</div>
+						<div class="col-md-2">
+							<h6 class="font-regular">Bihar,Jharkhand</h6>
+						</div>
+						<div class="col-md-1" align="right">
+							<button class="btn-link btn p-0 collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+							<i class="fa text-green" aria-hidden="true"></i>
+							</button>
+						</div>
+
+						<div class="col-md-12 collapse" id="collapseFive" aria-labelledby="headingFive" data-parent="#accordion">
+							<ul>
+								<li>Leadership experience of handling large sales team.</li>
+								<li>Having sound technical knowledge of agriculture sector (preferred).</li>
+								<li>Good & Effective communication skill in Hindi and English.</li>
+								<li>Awareness of Agri Input Markets (preferred).</li>
+								<li>Proficiency in use of Microsoft Office Tools (Excel, Word, PPT)</li>
+							</ul>
+							<a href="asset/hiring/JD - Input_State Bussiness Head.pdf" target="_blank" download>
+								<p class="w-100 py-3 border-green text-green btn-white font-bold" align="center">
+									Download PDF
+								</p>
+							</a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
-
-
-
-<!-- try eg -->
-<h3>Filter Items</h3>
-<ul id="filter-options">
-  <li><input type="checkbox" value="filter_red" data-filter_id="red"> Red</li>
-  <li><input type="checkbox" value="filter_green" data-filter_id="green"> Green</li>
-  <li><input type="checkbox" value="filter_blue" data-filter_id="blue"> Blue</li>
-  <li><input type="checkbox" value="filter_orange" data-filter_id="orange"> Orange</li>
-  <li><input type="checkbox" value="filter_yellow" data-filter_id="yellow"> Yellow</li>
-</ul>
-
-
-<ul id="product-list">
-  <li class="filter_red">
-    <h2>Red Fire Truck</h2>
-    <p></p>
-  </li>
-  <li class="filter_blue">
-    <h2>Blue Kite</h2>
-    <p></p>
-  </li>
-  <li class="filter_blue filter_green">
-    <h2>Green & Blue Parot</h2>
-    <p></p>
-  </li>
-  <li class="filter_yellow">
-    <h2>Yellow Canary</h2>
-    <p></p>
-  </li>
-</ul>
-<style>
-ul{
-  list-style: none;
-  display: inline-block;
-}
-
-#filter-options li{
-  float: left;
-  margin-left: 20px;
-}
-
-#product-list{
-  display: block;
-}
-</style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script>
-$("#filter-options :checkbox").click(function() 
-	{
-       	$("#product-list li").hide();
-       	$("#filter-options :checkbox:checked").each(function() 
-       	{
-           $("." + $(this).val()).fadeIn();
-		});
-       
-        if($('#filter-options :checkbox').filter(':checked').length < 1) 
-        {
-        	$("#product-list li").fadeIn();
-        	
-        }
-        
-    });
-</script>
-
-
-<!-- try eg end -->
-
-
-
-
 
 	<!-- footer -->
 	<section class="border-top">
@@ -371,12 +493,12 @@ $("#filter-options :checkbox").click(function()
 	</section>
 
 <script>
-function openNav() {
-  document.getElementById("myNav").style.width = "100%";
-}
-function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
-}
+	function openNav() {
+	  document.getElementById("myNav").style.width = "100%";
+	}
+	function closeNav() {
+	  document.getElementById("myNav").style.width = "0%";
+	}
 </script>
 <!-- JQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -385,5 +507,50 @@ function closeNav() {
 <!-- Bootstrap core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+<!-- search filter -->
+<script>
+	(function($) {
+	  jQuery.expr[':'].Contains = function(a, i, m) {
+	    return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase()) >= 0;
+	  };
+	  function listFilter(header, list) {
+
+	    var input = $("<input>").attr({
+	      "class": "filterinput form-control form-control-sm mr-3 w-50",
+	      "type": "search",
+	      "placeholder": 'Find your role...'
+	    });
+	    $(header).append(input).appendTo(header);
+	    $(input)
+	      .change(function() {
+	        var filter = $(this).val();
+	        if (filter) {
+	          $(list).find(".filter-item:not(:Contains(" + filter + "))").slideUp();
+	          $(list).find(".filter-item:Contains(" + filter + ")").slideDown();
+	        } else {
+	          $(list).find(".filter-item").slideDown();
+	        }
+	        return false;
+	      })
+	      .keyup(function() {
+	        $(this).change();
+	      });
+	    /* no form submit by pressing ENTER button */
+	    $(input).keypress(function(event) {
+	      /* http://www.cambiaresearch.com/articles/15/javascript-key-codes */
+	      if (event.keyCode == 10 || event.keyCode == 13){
+	        event.preventDefault();
+	      }
+	    });
+	  }
+	  $(function() {
+	    listFilter($("#filter-header"), $("#filter-list"));
+	  });
+	}(jQuery));
+	$(document).ready(function() {
+	  $("#filter-list li.active").prependTo("#filter-list");
+	  $("#filter-list li.active").last().css('border-bottom', '1px solid grey');
+	});
+</script>
 </body>
 </html>

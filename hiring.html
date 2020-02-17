@@ -70,6 +70,75 @@
 		[data-toggle="collapse"].collapsed .fa:before {
 		  content: "\f054";
 		}
+		.py-45{
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+			border-radius: 5px;
+			background-color: #f8f8f8;
+			border: 1px solid #d6d6d6;
+			font-size: 20px;
+		}
+		.control-group {
+		  display: inline-block;
+		  vertical-align: top;
+		  background: #fff;
+		  text-align: left;
+		}
+		.control {
+		  display: block;
+		  position: relative;
+		  padding-left: 30px;
+		}
+		.control input {
+		  position: absolute;
+		  z-index: -1;
+		  opacity: 0;
+		}
+		.control__indicator {
+		  position: absolute;
+		  top: 2px;
+		  left: 0;
+		  height: 20px;
+		  width: 20px;
+		  background: #e6e6e6;
+		  border-radius: 5px;
+		}
+		.control--radio .control__indicator {
+		  border-radius: 50%;
+		}
+		.control:hover input ~ .control__indicator,
+		.control input:focus ~ .control__indicator {
+		  background: #ccc;
+		}
+		.control input:checked ~ .control__indicator {
+		  background: #6bb51e;
+		}
+		.control:hover input:not([disabled]):checked ~ .control__indicator,
+		.control input:checked:focus ~ .control__indicator {
+		  background: #6bb51e;
+		}
+		.control input:disabled ~ .control__indicator {
+		  background: #6bb51e;
+		  opacity: 0.6;
+		  pointer-events: none;
+		}
+		.control__indicator:after {
+		  content: '';
+		  position: absolute;
+		  display: none;
+		}
+		.control input:checked ~ .control__indicator:after {
+		  display: block;
+		}
+		.control--checkbox .control__indicator:after {
+		  left: 8px;
+		  top: 5px;
+		  width: 5px;
+		  height: 9px;
+		  border: solid #fff;
+		  border-width: 0 2px 2px 0;
+		  transform: rotate(45deg);
+		}
 	</style>
 </head>
 <body>
@@ -147,6 +216,11 @@
 		</div>
 	</section>
 
+	<div class="container mt-5" style="max-width: 800px;">
+		<p align="center" class="font-bold font-30">Find your perfect role.</p>
+		<div id="filter-header"></div>
+	</div>
+
 	<!-- filters -->
 	<section class="container my-5 pb-5">
 		<div class="row">
@@ -163,24 +237,25 @@
 						</button>
 					</div>
 					<div class="col-md-12 collapse font-regular font-15" id="department" data-parent="#accordion">
-						<div class="form-check">
-							<label class="form-check-label" for="check1">
-								<input type="checkbox" class="form-check-input font-regular font-14" value="Internal_Solutions">Internal Solutions
+						<div class="control-group">
+							<label class="control control--checkbox" for="Internal_Solutions">Internal Solutions
+								<input type="checkbox" id="Internal_Solutions" />
+								<div class="control__indicator"></div>
 							</label>
-						</div>
-						<div class="form-check">
-							<label class="form-check-label" for="check2">
-								<input type="checkbox" class="form-check-input font-regular font-14" value="Software_Developer">Software developers
+
+							<label class="control control--checkbox" for="Software_developers">Software developers
+								<input type="checkbox" id="Software_developers" />
+								<div class="control__indicator"></div>
 							</label>
-						</div>
-						<div class="form-check">
-							<label class="form-check-label" for="check2">
-								<input type="checkbox" class="form-check-input font-regular font-14" value="Imagery">Imagery
+
+							<label class="control control--checkbox" for="Imagery">Imagery
+								<input type="checkbox" id="Imagery" />
+								<div class="control__indicator"></div>
 							</label>
-						</div>
-						<div class="form-check">
-							<label class="form-check-label" for="check2">
-								<input type="checkbox" class="form-check-input font-regular font-14" value="Team_Manager">Team Manager
+
+							<label class="control control--checkbox" for="Team_Manager">Team Manager
+								<input type="checkbox" id="Team_Manager" />
+								<div class="control__indicator"></div>
 							</label>
 						</div>
 					</div>
@@ -196,33 +271,28 @@
 						</button>
 					</div>
 					<div class="col-md-12 collapse font-regular font-15" id="location" data-parent="#accordion">
-						<div class="form-check">
-							<label class="form-check-label" for="check1">
-								<input type="checkbox" class="form-check-input font-regular font-14" value="patna">Bihar,Patna
-							</label>
-						</div>
-
-						<div class="form-check">
-							<label class="form-check-label" for="check2">
-								<input type="checkbox" class="form-check-input font-regular font-14" value="jharkhand">Bihar,Jharkhand
+						<div class="control-group">
+							<label class="control control--checkbox">Gurgaon
+								<input type="checkbox"/>
+								<div class="control__indicator"></div>
 							</label>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-9 col-md-9-hiring col-12 pl-5" id="accordion">
-				<div id="filter-header"></div>
+				<!-- <div id="filter-header"></div> -->
 				<div id="filter-list" class="filter-list pt-3">
-
-					<div class="row py-3 filter-item" id="headingOne" style="border-bottom: 1px solid #e3e7ea;">
+					<div class="row py-3 filter-item Internal_Solutions" id="headingOne" style="border-bottom: 1px solid #e3e7ea;">
 						<div class="col-md-5">
 							<h6 class="font-medium">Software Engineering Manager</h6>
+							<h5 class="font-medium text-grey">17-Mar-2020</h5>
 						</div>
 						<div class="col-md-4">
 							<h6 class="font-regular">Internal Solutions</h6>
 						</div>
 						<div class="col-md-2">
-							<h6 class="font-regular">Bihar, Patna</h6>
+							<h6 class="font-regular">Gurgaon</h6>
 						</div>
 						<div class="col-md-1" align="right">
 							<button class="btn btn-link p-0 collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -248,15 +318,16 @@
 						</div>
 					</div>
 
-					<div class="row py-3 filter-item" id="headingTwo" style="border-bottom: 1px solid #e3e7ea;">
+					<div class="row py-3 filter-item Software_Developer" id="headingTwo" style="border-bottom: 1px solid #e3e7ea;">
 						<div class="col-md-5">
 							<h6 class="font-medium">Backend Developer</h6>
+							<h5 class="font-medium text-grey">17-Mar-2020</h5>
 						</div>
 						<div class="col-md-4">
 							<h6 class="font-regular">Software Developer</h6>
 						</div>
 						<div class="col-md-2">
-							<h6 class="font-regular">Bihar, Patna</h6>
+							<h6 class="font-regular">Gurgaon</h6>
 						</div>
 						<div class="col-md-1" align="right">
 							<button class="btn-link btn p-0 collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -283,15 +354,16 @@
 						</div>
 					</div>
 
-					<div class="row py-3 filter-item" id="headingThree" style="border-bottom: 1px solid #e3e7ea;">
+					<div class="row py-3 filter-item Software_Developer" id="headingThree" style="border-bottom: 1px solid #e3e7ea;">
 						<div class="col-md-5">
 							<h6 class="font-medium">Android Developer</h6>
+							<h5 class="font-medium text-grey">17-Mar-2020</h5>
 						</div>
 						<div class="col-md-4">
 							<h6 class="font-regular">Software Developer</h6>
 						</div>
 						<div class="col-md-2">
-							<h6 class="font-regular">Bihar, Patna</h6>
+							<h6 class="font-regular">Gurgaon</h6>
 						</div>
 						<div class="col-md-1" align="right">
 							<button class="btn-link btn p-0 collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -322,15 +394,16 @@
 						</div>
 					</div>
 
-					<div class="row py-3 filter-item" id="headingFour" style="border-bottom: 1px solid #e3e7ea;">
+					<div class="row py-3 filter-item Imagery" id="headingFour" style="border-bottom: 1px solid #e3e7ea;">
 						<div class="col-md-5">
 							<h6 class="font-medium">Data Scientist</h6>
+							<h5 class="font-medium text-grey">17-Mar-2020</h5>
 						</div>
 						<div class="col-md-4">
 							<h6 class="font-regular">Imagery</h6>
 						</div>
 						<div class="col-md-2">
-							<h6 class="font-regular">Bihar, Patna</h6>
+							<h6 class="font-regular">Gurgaon</h6>
 						</div>
 						<div class="col-md-1" align="right">
 							<button class="btn-link btn p-0 collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
@@ -357,15 +430,16 @@
 						</div>
 					</div>
 
-					<div class="row py-3 filter-item" id="headingFive" style="border-bottom: 1px solid #e3e7ea;">
+					<div class="row py-3 filter-item Team_Manager" id="headingFive" style="border-bottom: 1px solid #e3e7ea;">
 						<div class="col-md-5">
 							<h6 class="font-medium">State Head, Agri-Input Business</h6>
+							<h5 class="font-medium text-grey">17-Mar-2020</h5>
 						</div>
 						<div class="col-md-4">
 							<h6 class="font-regular">Team Manager</h6>
 						</div>
 						<div class="col-md-2">
-							<h6 class="font-regular">Bihar,Jharkhand</h6>
+							<h6 class="font-regular">Gurgaon</h6>
 						</div>
 						<div class="col-md-1" align="right">
 							<button class="btn-link btn p-0 collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
@@ -516,9 +590,9 @@
 	  function listFilter(header, list) {
 
 	    var input = $("<input>").attr({
-	      "class": "filterinput form-control form-control-sm mr-3 w-50",
+	      "class": "filterinput form-control form-control-sm py-45 w-100",
 	      "type": "search",
-	      "placeholder": 'Find your role...'
+	      "placeholder": 'Search by role or keyword...'
 	    });
 	    $(header).append(input).appendTo(header);
 	    $(input)
@@ -551,6 +625,62 @@
 	  $("#filter-list li.active").prependTo("#filter-list");
 	  $("#filter-list li.active").last().css('border-bottom', '1px solid grey');
 	});
+
+	// filters checkbox
+	$(function () {
+        $("#Internal_Solutions").click(function () {
+            if ($(this).is(":checked")) {
+                $(".Internal_Solutions").show(800);
+                $(".Software_Developer").hide(800);
+                $(".Imagery").hide(800);
+                $(".Team_Manager").hide(800);
+            } else {
+            	$(".Internal_Solutions").show(800);
+                $(".Software_Developer").show(800);
+                $(".Imagery").show(800);
+                $(".Team_Manager").show(800);
+            }
+        });
+        $("#Software_Developer").click(function () {
+            if ($(this).is(":checked")) {
+                $(".Internal_Solutions").hide(800);
+                $(".Software_Developer").show(800);
+                $(".Imagery").hide(800);
+                $(".Team_Manager").hide(800);
+            } else {
+            	$(".Internal_Solutions").show(800);
+                $(".Software_Developer").show(800);
+                $(".Imagery").show(800);
+                $(".Team_Manager").show(800);
+            }
+        });
+        $("#Imagery").click(function () {
+            if ($(this).is(":checked")) {
+                $(".Internal_Solutions").hide(800);
+                $(".Software_Developer").hide(800);
+                $(".Imagery").show(800);
+                $(".Team_Manager").hide(800);
+            } else {
+            	$(".Internal_Solutions").show(800);
+                $(".Software_Developer").show(800);
+                $(".Imagery").show(800);
+                $(".Team_Manager").show(800);
+            }
+        });
+        $("#Team_Manager").click(function () {
+            if ($(this).is(":checked")) {
+                $(".Internal_Solutions").hide(800);
+                $(".Software_Developer").hide(800);
+                $(".Imagery").hide(800);
+                $(".Team_Manager").show(800);
+            } else {
+            	$(".Internal_Solutions").show(800);
+                $(".Software_Developer").show(800);
+                $(".Imagery").show(800);
+                $(".Team_Manager").show(800);
+            }
+        });
+    });
 </script>
 </body>
 </html>

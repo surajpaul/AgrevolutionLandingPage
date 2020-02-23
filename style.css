@@ -182,6 +182,9 @@ a{
 	.media-mt-5{
 		margin-top: 3rem;
 	}
+	.media-border-left{
+		border-left: 1px solid #b3b3b3!important;
+	}
 	.pr-200{
 		padding-right: 200px;
 	}

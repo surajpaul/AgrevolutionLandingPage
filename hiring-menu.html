@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DeHaat | Hiring</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/favicon.png" type="image" sizes="16x16">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/css/mdb.min.css" rel="stylesheet">
+  <!-- custom css -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    @media screen and (max-width: 992px){
+    .media-video{
+      position: absolute;
+      left: 0;right: 0;
+      width: 70%;
+      text-align: center;
+    }
+    .media-absolute{
+      position: absolute;
+    }
+    .media-L0{
+      left: 0%;
+    }
+    .media-L10{
+      left: 16%;
+    }
+  }
+  .overlay {
+    overflow-x: hidden;
+    transition: 0.5s;
+      background-image:linear-gradient(to bottom, rgba(4, 68, 8, 0.75), rgba(0, 0, 0, 0.85)),url(images/background/bg.jpg);
+      background-repeat: no-repeat;
+      height: 100vh;
+      left: 0;
+      position: fixed;
+      top: 0;
+      width: 0;
+      background-position: left;
+      background-size: 260%; 
+  }
+  .overlay-content {
+    position: relative;
+    top: 8%;
+    width: 100%;
+    text-align: left;
+    margin-top: 30px;
+    padding: 0px 32px 0px 32px;
+  }
+  .link{
+    border-bottom: 1px solid #fff;
+    color: #fff !important;
+  }
+  .overlay a {
+    padding: 8px 0px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #6bb51e;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .overlay a:hover, .overlay a:focus {
+    color: #fff;
+  }
+
+  .overlay .closebtn {
+    position: absolute;
+    top: 0px;
+    right: 18px;
+    font-size: 60px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 10px;
+    right: 35px;
+    }
+  }
+  @media screen and (min-width: 900px) {
+    .media-d-none-big{
+      display: none;
+    }
+  }
+    .border-hiring{
+      box-shadow: 0px 15px 15px 15px #eff3f6;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .border-green{
+      border:1px solid #6bb51e;
+      cursor: pointer;
+    }
+    .btn-white{
+      background-color: #fff;
+      color: #6bb51e;
+    }
+    .font-10{
+      font-size: 10px;
+    }
+    .date{
+      color: #000;
+    }
+    .border-hiring:hover{
+      transition: .5s ease;
+      background-color: #6bb51e;
+    }
+    .border-hiring:hover > h5{
+      color: #fff !important; 
+    }
+    .border-hiring:hover > .text-grey{
+      color: #fff; 
+    }
+    .border-hiring:hover > .date{
+      color: #fff; 
+    }
+    /*active*/
+    .border-hiring:focus{
+      transition: .5s ease;
+        background-color: #6bb51e;
+        outline: none;
+        color: #fff;
+        border: transparent;
+    }
+    .border-hiring:focus > h5{
+      color: #fff !important; 
+    }
+    .border-hiring:focus > .text-grey{
+      color: #fff; 
+    }
+    .border-hiring:focus > .date{
+      color: #fff; 
+    }
+    [data-toggle="collapse"] .fa:before {  
+      content: "\f078";
+    }
+    [data-toggle="collapse"].collapsed .fa:before {
+      content: "\f054";
+    }
+    .py-45{
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      border-radius: 5px;
+      background-color: #f8f8f8;
+      border: 1px solid #d6d6d6;
+      font-size: 20px;
+    }
+    .control-group {
+      display: inline-block;
+      vertical-align: top;
+      background: #fff;
+      text-align: left;
+    }
+    .control {
+      display: block;
+      position: relative;
+      padding-left: 30px;
+    }
+    .control input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+    .control__indicator {
+      position: absolute;
+      top: 2px;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background: #e6e6e6;
+      border-radius: 5px;
+    }
+    .control--radio .control__indicator {
+      border-radius: 50%;
+    }
+    .control:hover input ~ .control__indicator,
+    .control input:focus ~ .control__indicator {
+      background: #ccc;
+    }
+    .control input:checked ~ .control__indicator {
+      background: #6bb51e;
+    }
+    .control:hover input:not([disabled]):checked ~ .control__indicator,
+    .control input:checked:focus ~ .control__indicator {
+      background: #6bb51e;
+    }
+    .control input:disabled ~ .control__indicator {
+      background: #6bb51e;
+      opacity: 0.6;
+      pointer-events: none;
+    }
+    .control__indicator:after {
+      content: '';
+      position: absolute;
+      display: none;
+    }
+    .control input:checked ~ .control__indicator:after {
+      display: block;
+    }
+    .control--checkbox .control__indicator:after {
+      left: 8px;
+      top: 5px;
+      width: 5px;
+      height: 9px;
+      border: solid #fff;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+    .mix{
+      border-bottom: 1px solid #e3e7ea;
+      width: 100%;
+    }
+  .container1{
+  padding: 2%;
+  min-height: 400px;
+  text-align: justify;
+  position: relative;
+  }
+  .container1 .mix{
+  display: none;
+  }
+  /**
+  * Fail message styles
+  */
+  .container1 .fail-message{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+
+  -webkit-transition: 150ms;
+  -moz-transition: 150ms;
+  transition: 150ms;
+  }
+  .container1 .fail-message:before{
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  }
+  .container1 .fail-message span{
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 20px;
+  font-weight: 700;
+  }
+  .container1.fail .fail-message{
+  opacity: 1;
+  pointer-events: auto;
+  }
+  </style>
+</head>
+<body>
+  <!-- navbar -->
+    <nav class="navbar navbar-expand-md media-padL-70 padT-15" id="menu">
+        <div class="pt-1">
+            <a href="index.html" class="px-0">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="70" viewBox="0 0 998 261" style="color: #000;fill: #000;">
+                  <image width="998" height="261" xlink:href="data:img/png;base64,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"/>
+                </svg>
+            </a>
+        </div>
+        <button class="navbar-toggler media-d-none" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <img src="img/menu.svg" class="fun-img" id="magic-toggle" width="30px">
+        </button>
+        <div class="collapse navbar-collapse pt-1" id="collapsibleNavbar">
+            <ul class="navbar-nav pl-5 pt-3 media-padL-0">
+                <li class="nav-item pl-5 dropdown">
+                        <a class="bold dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Solutions
+                    </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item py-2 pr-2 pl-3 bold" href="solution.html" style="font-size: 14px;font-style: 'Gilroy-Medium';">Solution For Farmer</a>
+                    <a class="dropdown-item py-2 pr-2 pl-3 bold" href="solution_for_micro_entrepreneur.html" style="font-size: 14px;font-style: 'Gilroy-Medium';">Solution For Micro-entrepreneur</a>
+                    <a class="dropdown-item py-2 pr-2 pl-3 bold" href="solution_for_institutional_buyers.html" style="font-size: 14px;font-style: 'Gilroy-Medium';">Solution For Institutional Buyers</a>
+                  </div>
+                </li> 
+                <li class="nav-item pl-5">
+                    <a class="bold" href="dehaat_network.html">DeHaat Network</a>
+                </li>
+                <li class="nav-item pl-5">
+                    <a class="bold" href="https://twitter.com/dehaattm?lang=en">Blog</a>
+                </li>
+                <li class="nav-item pl-5">
+                    <a class="bold" href="about_us.html">About Us</a>
+                </li>
+            </ul>
+        </div>  
+    </nav>
+    <span class="media-d-none-big" style="font-size:30px;cursor:pointer;position: absolute;right: 5%;top:5%;" onclick="openNav()">
+      <img src="images/icons/menu-black.svg" class="fun-img" id="magic-toggle" width="30px">
+    </span>
+
+    <section class="container" style="margin-top: -70px;">
+      <div class="row pt-5" align="left" data-aos="fade-up">
+        <div class="col-md-12">
+          <h1 class="font-regular bold pt-5 text-black font-45" align="left">We Are Hiring</h1>
+          <h5 class="text-green font-regular font-30" align="left">What's your next destination ?</h5>
+        </div>
+      </div>
+    </section>
+
+    <div class="container mt-5" style="max-width: 800px;">
+      <p align="center" class="font-bold font-30">Find your perfect role.</p>
+      <div id="filter-header"></div>
+    </div>
+
+    <!-- filters -->
+    <section class="container my-5 pb-5">
+      <div class="row">
+        <div class="col-md-3 col-md-3-hiring col-12" id="filter-options" style="border-right: 2px solid #e3e7ea;">
+          <form class="controls" id="Filters">
+            <button id="Reset" class="font-regular" style="font-size: 14px;outline: none;"><i class="fas fa-sliders-h pr-2"></i>Clear Filters</button>
+            <h5 class="font-bold py-3">Refine by</h5>
+            <hr>
+            <div>
+              <a class="row p-0 collapsed" data-toggle="collapse" data-target="#department" aria-expanded="false" aria-controls="department">
+                <div class="col-md-8 col-10 bold font-medium">
+                  Departments
+                </div>
+                <div class="col-md-1 col-2" align="right">
+                  <i class="fa text-green" aria-hidden="true"></i>
+                </div>
+              </a>
+              <div class="col-md-12 pt-3 collapse font-regular font-15" id="department" data-parent="#accordion">
+                <div class="control-group">
+                  <fieldset>
+                    <label class="control control--checkbox checkbox">Internal Solutions
+                      <input type="checkbox" value=".Internal_Solutions" />
+                      <div class="control__indicator"></div>
+                    </label>
+
+                    <label class="control control--checkbox checkbox">Software Developer
+                      <input type="checkbox" value=".Software_Developer" />
+                      <div class="control__indicator"></div>
+                    </label>
+
+                    <label class="control control--checkbox checkbox">Imagery
+                      <input type="checkbox" value=".Imagery" />
+                      <div class="control__indicator"></div>
+                    </label>
+
+                    <label class="control control--checkbox checkbox">Team Manager
+                      <input type="checkbox" value=".Team_Manager" />
+                      <div class="control__indicator"></div>
+                    </label>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div>
+              <a class="row p-0 collapsed" data-toggle="collapse" data-target="#location" aria-expanded="false" aria-controls="location">
+                <div class="col-md-8 col-10 bold font-medium">
+                  Locations
+                </div>
+                <div class="col-md-1 col-2" align="right">
+                  <i class="fa text-green" aria-hidden="true"></i>
+                </div>
+              </a>
+              <div class="col-md-12 pt-3 collapse font-regular font-15" id="location" data-parent="#accordion">
+                <div class="control-group">
+                  <fieldset>
+                    <label class="control control--checkbox checkbox">Gurgaon
+                      <input type="checkbox" value=".Gurgaon" />
+                      <div class="control__indicator"></div>
+                    </label>
+
+                    <label class="control control--checkbox checkbox">Patna
+                      <input type="checkbox" value=".Patna" />
+                      <div class="control__indicator"></div>
+                    </label>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-9 col-md-9-hiring col-12 media-pl-5 hiring-pl-3" id="accordion">
+          <div id="filter-list" class="filter-list pt-3">
+            <div id="Container" class="container1">
+              <div class="fail-message"><span>No items were found matching the selected filters</span></div>
+
+              <div class="py-3 filter-item mix Internal_Solutions Gurgaon">
+                <a class="p-0 collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  <div class="row">
+                    <div class="col-md-5 col-12">
+                      <h6 class="font-medium">Software Engineering Manager</h6>
+                      <h5 class="font-medium text-grey">17-Mar-2020</h5>
+                    </div>
+                    <div class="col-md-4 col-12">
+                      <h6 class="font-regular">Internal Solutions</h6>
+                    </div>
+                    <div class="col-md-2 col-10">
+                      <h6 class="font-regular">Gurgaon</h6>
+                    </div>
+                    <div class="col-md-1 col-2" align="right">
+                      <i class="fa text-green" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </a>
+
+                <div class="col-md-12 collapse font-regular font-15" id="collapseOne" aria-labelledby="headingOne" data-parent="#accordion">
+                  <ul class="font-14 font-regular text-grey">
+                    <li>Lead development of software solutions for company’s Internal Operations.</li>
+                    <li>Work with the Product Management team to define and refine product requirements and Ensure that Minimum Viable Products (MVP) are well-prepared.</li>
+                    <li>Drive the Technical team and the Product Owners in an Agile development process.</li>
+                    <li>Ensure timely delivery and quality of the software components.</li>
+                    <li>Work with cross-functional stakeholders for successful rollout, user acceptance, training and application support.</li>
+                    <li>Recruit top talent and build world class development team.</li>
+                    <li>Partner with Head of Technology and executive leadership to align with company vision and practices.</li>
+                  </ul>
+                  <a href="asset/hiring/VP Engineering - ERP Solutions.pdf" target="_blank" download>
+                    <p class="w-100 py-3 border-green text-green btn-white font-bold" align="center">
+                      Download PDF
+                    </p>
+                  </a>
+                </div>
+              </div>
+
+              <div class="py-3 filter-item mix Software_Developer Gurgaon">
+                <a class="p-0 collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <div class="row">
+                    <div class="col-md-5 col-12">
+                      <h6 class="font-medium">Backend Developer</h6>
+                      <h5 class="font-medium text-grey">17-Mar-2020</h5>
+                    </div>
+                    <div class="col-md-4 col-12">
+                      <h6 class="font-regular">Software Developer</h6>
+                    </div>
+                    <div class="col-md-2 col-10">
+                      <h6 class="font-regular">Gurgaon</h6>
+                    </div>
+                    <div class="col-md-1 col-2" align="right">
+                      <i class="fa text-green" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </a>
+
+                <div class="col-md-12 collapse" id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordion">
+                  <ul>
+                    <li>You’ll design and build scalable systems to be used by millions of farmers and agri businesses.</li>
+                    <li>You’ll work on building progressive web apps forked-off open source frameworks that work equally well on low end devices, low bandwidth networks and even offline.</li>
+                    <li>You’ll work with spatial imagery data to build maps based solutions for farmers and businesses.</li>
+                    <li>We believe in a small and effective team - you’ll have a say in what to build and then own it.</li>
+                    <li>You’ll work with Android/web developers to develop backend services that meet their needs.</li>
+                    <li>We are paranoid about performance - you’ll investigate performance/scalability bottlenecks and
+                    existing queries, and/or write new queries with performance optimisation in mind.</li>
+                    <li>Identify libraries and technologies that solve our problems and/or are worth experimentation</li>
+                  </ul>
+                  <a href="asset/hiring/Dehaat-SDE-Backend.pdf" target="_blank" download>
+                    <p class="w-100 py-3 border-green text-green btn-white font-bold" align="center">
+                      Download PDF
+                    </p>
+                  </a>
+                </div>
+              </div>
+
+              <div class="py-3 filter-item mix Software_Developer Gurgaon">
+                <a class="p-0 collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <div class="row">
+                    <div class="col-md-5 col-12">
+                      <h6 class="font-medium">Android Developer</h6>
+                      <h5 class="font-medium text-grey">17-Mar-2020</h5>
+                    </div>
+                    <div class="col-md-4 col-12">
+                      <h6 class="font-regular">Software Developer</h6>
+                    </div>
+                    <div class="col-md-2 col-10">
+                      <h6 class="font-regular">Gurgaon</h6>
+                    </div>
+                    <div class="col-md-1 col-2" align="right">
+                      <i class="fa text-green" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </a>
+
+                <div class="col-md-12 collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#accordion">
+                  <ul>
+                    <li>Have 2-8 years of experience in app development.</li>
+                    <li>Come up with your own goals and don’t need heavy direction or daily check-ins.</li>
+                    <li>Have experience in setting up the full workflow - right from Dev, Test, Build to Deployment.</li>
+                    <li>Have sound understanding of Android Architecture and SDK, Android Studio and Debugger.</li>
+                    <li>Expert in core Java (OOP) with sound CS fundamentals (data structures and algorithms).</li>
+                    <li>Expert in basic android components: Activity, Services, Intent, Broadcast Receiver etc.</li>
+                    <li>Experience in using analytics, location and maps APIs, payment gateway, etc.</li>
+                    <li>Understanding of MVC, MVVM, VIPER and other patterns.</li>
+                    <li>Deep understanding of Factory, Adapter, Observer, Singleton and other behaviour patterns.</li>
+                    <li>Must have worked on Offline Sync, Caching, Local Storage, Realm/Room/SQLLite databases.</li>
+                    <li>Have knowledge of REST paradigm, service oriented architecture and distributed systems.</li>
+                    <li>Have a STEM degree from a top tier educational institute</li>
+                  </ul>
+                  <a href="asset/hiring/Dehaat-SDE-Android.pdf" target="_blank" download>
+                    <p class="w-100 py-3 border-green text-green btn-white font-bold" align="center">
+                      Download PDF
+                    </p>
+                  </a>
+                </div>
+              </div>
+
+              <div class="py-3 filter-item mix Imagery Gurgaon">
+                <a class="p-0 collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  <div class="row">
+                    <div class="col-md-5 col-12">
+                      <h6 class="font-medium">Data Scientist</h6>
+                      <h5 class="font-medium text-grey">17-Mar-2020</h5>
+                    </div>
+                    <div class="col-md-4 col-12">
+                      <h6 class="font-regular">Imagery</h6>
+                    </div>
+                    <div class="col-md-2 col-10">
+                      <h6 class="font-regular">Gurgaon</h6>
+                    </div>
+                    <div class="col-md-1 col-2" align="right">
+                      <i class="fa text-green" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </a>
+                    
+
+                <div class="col-md-12 collapse" id="collapseFour" aria-labelledby="headingFour" data-parent="#accordion">
+                  <ul>
+                    <li>Have 4+ years of experience in image based machine learning and/or image processing.</li>
+                    <li>Come up with your own goals and don’t need heavy direction or daily check-ins.</li>
+                    <li>Fluent in Python (preferred) or R, capable of framing problems as programming tasks from the ground up, as well as working with existing code.</li>
+                    <li>Fluent in statistical/machine learning libraries in Python or R.</li>
+                    <li>Understanding or intent to learn geospatial data formats and GIS concepts.</li>
+                    <li> Experience with image based machine learning.</li>
+                    <li>Knowledge of GIS concepts and experience with vector geospatial data is a plus.</li>
+                    <li>A STEM degree from top tier educational institutes</li>
+                  </ul>
+                  <a href="asset/hiring/Dehaat-DataScientist-Imagery.pdf" target="_blank" download>
+                    <p class="w-100 py-3 border-green text-green btn-white font-bold" align="center">
+                      Download PDF
+                    </p>
+                  </a>
+                </div>
+              </div>
+
+              <div class="py-3 filter-item mix Team_Manager Patna">
+                <a class="p-0 collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  <div class="row">
+                    <div class="col-md-5 col-12">
+                      <h6 class="font-medium">State Head, Agri-Input Business</h6>
+                      <h5 class="font-medium text-grey">17-Mar-2020</h5>
+                    </div>
+                    <div class="col-md-4 col-12">
+                      <h6 class="font-regular">Team Manager</h6>
+                    </div>
+                    <div class="col-md-2 col-10">
+                      <h6 class="font-regular">Patna</h6>
+                    </div>
+                    <div class="col-md-1 col-2" align="right">
+                      <i class="fa text-green" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </a>
+                    
+
+                <div class="col-md-12 collapse" id="collapseFive" aria-labelledby="headingFive" data-parent="#accordion">
+                  <ul>
+                    <li>Leadership experience of handling large sales team.</li>
+                    <li>Having sound technical knowledge of agriculture sector (preferred).</li>
+                    <li>Good & Effective communication skill in Hindi and English.</li>
+                    <li>Awareness of Agri Input Markets (preferred).</li>
+                    <li>Proficiency in use of Microsoft Office Tools (Excel, Word, PPT)</li>
+                  </ul>
+                  <a href="asset/hiring/JD - Input_State Bussiness Head.pdf" target="_blank" download>
+                    <p class="w-100 py-3 border-green text-green btn-white font-bold" align="center">
+                      Download PDF
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- footer -->
+  <section class="border-top">
+    <footer class="container pt-5">
+      <div class="row text-dark">
+        <div class="col-md-3-media col-12 font-regular">
+          <p class="pt-3">COPYRIGHT © DeHaat 2019</p>
+          <p class="pt-2 text-dark"><a class="mt-4" href="contact_us.html">Contact Us</a></p>
+        </div>
+        <div class="col-md-9-media col-12">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="border px-4 pt-3 pb-2 font-regular">
+                <a href="know_your_soil.html" class="bold">Know Your Soil</a>
+                <h6 class="font-14 text-green">Soil Testing & Health Card</h6>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="border px-4 pt-3 pb-2 font-regular">
+                <a href="health_growth.html" class="bold">Health & Growth</a>
+                <h6 class="font-14 text-green">Yield Forecast</h6>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="border px-4 pt-3 pb-2 font-regular">
+                <a href="farm_intelligence.html" class="bold">Farm Intelligence</a>
+                <h6 class="font-14 text-green">AI, ML & Analytics</h6>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="border px-4 pt-3 pb-0 font-regular">
+                <a href="solution.html" class="bold">Solution For Farmers</a>
+                <h6 class="font-14 text-green">Agri solutions</h6>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="border px-4 pt-3 pb-2 font-regular">
+                <a href="agri_input.html" class="bold">Agri Input</a>
+                <h6 class="font-14 text-green">Seed, Nutrition, Protection</h6>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="border px-4 pt-3 pb-2 font-regular">
+                <a href="advisory.html" class="bold">Advisory</a>
+                <h6 class="font-14 text-green">Helpline ans Support</h6>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="border px-4 pt-3 pb-2 font-regular">
+                <a href="finance.html" class="bold">Agri Financing</a>
+                <h6 class="font-14 text-green">Credit & Insurance</h6>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="border px-4 pt-3 pb-0 font-regular">
+                <a href="solution_for_micro_entrepreneur.html" class="bold">Solution For Micro-Entrepreneur</a>
+                <h6 class="font-14 text-green">Agri solutions</h6>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="border px-4 pt-3 pb-2 font-regular">
+                <a href="agri_output.html" class="bold">Agri Output</a>
+                <h6 class="font-14 text-green">Harvest & Market Access</h6>
+              </div>
+            </div>
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-3">
+              <div class="border px-4 pt-3 pb-2 font-regular">
+                <a href="solution_for_institutional_buyers.html" class="bold">Solution For Institutional-Buyers</a>
+                <h6 class="font-14 text-green">Agri solutions</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row pt-4">
+        <div class="col-md-3-media"></div>
+        <div class="col-md-10-media pb-4 col-12">
+          <strong class="bold font-medium pl-4 text-dark">Be Social With Us :</strong>
+          <a href="https://www.linkedin.com/company/dehaat" target="_blank"><i class="fab fa-linkedin-in pl-4"></i></a>
+          <a href="https://twitter.com/DeHaatTM?s=09" target="_blank"><i class="fab fa-twitter pl-4"></i></a>
+          <a href="https://www.facebook.com/DeHaatTM/" target="_blank"><i class="fab fa-facebook-f pl-4"></i></a>
+        </div>
+        <div class="col-md-1 col-12 media-pt-5-big">
+          <div class="bg-green" align="right" style="position: absolute;bottom: 0px;right: 0px;height: 40px;width: 45px;">
+            <a class="" href="#menu">
+              <img class="d-block mx-auto" src="images/icons/up-arrow.svg" width="34px" style="position:relative;margin-top: -18px;">
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="footer border-top font-medium py-3" align="center">
+      <span class="font-13">Powered by <a><strong class="bold">AKVIZUALS</strong></a></span>
+    </div>
+  </section>
+
+
+<!-- try old -->
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="images/icons/quit.svg" width="30px"></a>
+  <div class="overlay-content">
+    <a class="font-regular text-green bold dropdown-toggle" data-toggle="collapse" data-target="#collapse-solution">Solutions</a>
+    <div id="collapse-solution" class="collapse font-regular text-white">
+    <a class="py-0 text-white" href="solution.html">Solution For Farmer</a>
+    <a class="py-0 text-white" href="solution_for_micro_entrepreneur.html">Solution For Micro-Entrepreneur</a>
+    <a class="py-0 text-white" href="solution_for_institutional_buyers.html">Solution For Institutional-Buyers</a>
+    </div>
+    <a class="font-regular text-green bold" href="dehaat_network.html">DeHaat Network</a>
+    <a class="font-regular text-green" href="https://twitter.com/dehaattm?lang=en"><img class="pr-2" src="images/icons/blog.svg" width="35px"><span class="pl-2 bold">Social Wall</span></a>
+    <a class="font-regular text-green" href="about_us.html"><img class="pr-2" src="images/icons/visibility.svg" width="35px"><span class="pl-2 bold">About Us</span></a>
+    <hr style="border-top: 2px solid #66864b;">
+    <a class="font-regular link" href="know_your_soil.html">Know Your Soil</a>
+    <a class="font-regular link" href="agri_input.html">Agri Input</a>
+    <a class="font-regular link" href="advisory.html">Advisory</a>
+    <a class="font-regular link" href="health_growth.html">Health & Growth</a>
+    <a class="font-regular link" href="agri_output.html">Agri Output</a>
+    <a class="font-regular link" href="farm_intelligence.html">Farm Intelligence</a>
+    <a class="font-regular link" href="finance.html">Finance</a>
+  </div>
+</div>
+<style>
+  .text-green{
+    color: #6bb51e !important;
+  }
+</style>
+<script>
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+</script>
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+<!-- search filter -->
+<script>
+  (function($) {
+    jQuery.expr[':'].Contains = function(a, i, m) {
+      return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase()) >= 0;
+    };
+    function listFilter(header, list) {
+
+      var input = $("<input>").attr({
+        "class": "filterinput form-control form-control-sm py-45 w-100",
+        "type": "search",
+        "placeholder": 'Search by role or keyword...'
+      });
+      $(header).append(input).appendTo(header);
+      $(input)
+        .change(function() {
+          var filter = $(this).val();
+          if (filter) {
+            $(list).find(".filter-item:not(:Contains(" + filter + "))").slideUp();
+            $(list).find(".filter-item:Contains(" + filter + ")").slideDown();
+          } else {
+            $(list).find(".filter-item").slideDown();
+          }
+          return false;
+        })
+        .keyup(function() {
+          $(this).change();
+        });
+      /* no form submit by pressing ENTER button */
+      $(input).keypress(function(event) {
+        /* http://www.cambiaresearch.com/articles/15/javascript-key-codes */
+        if (event.keyCode == 10 || event.keyCode == 13){
+          event.preventDefault();
+        }
+      });
+    }
+    $(function() {
+      listFilter($("#filter-header"), $("#filter-list"));
+    });
+  }(jQuery));
+  $(document).ready(function() {
+    $("#filter-list li.active").prependTo("#filter-list");
+    $("#filter-list li.active").last().css('border-bottom', '1px solid grey');
+  });
+</script>
+
+<!-- checkbox filter -->
+<script>
+  var checkboxFilter = {
+    $filters: null,
+    $reset: null,
+    groups: [],
+    outputArray: [],
+    outputString: '',
+
+    init: function(){
+      var self = this;
+      self.$filters = $('#Filters');
+      self.$reset = $('#Reset');
+      self.$container = $('#Container');
+      
+      self.$filters.find('fieldset').each(function(){
+        self.groups.push({
+          $inputs: $(this).find('input'),
+          active: [],
+          tracker: false
+        });
+      });
+      console.log();
+      self.bindHandlers();
+    },
+    
+    // The "bindHandlers" method will listen for whenever a form value changes.
+    bindHandlers: function(){
+      var self = this;
+      self.$filters.on('change', function(){
+        self.parseFilters();
+      });
+      self.$reset.on('click', function(e){
+        e.preventDefault();
+        self.$filters[0].reset();
+        self.parseFilters();
+      });
+    },
+    
+    // The parseFilters method checks which filters are active in each group:
+    parseFilters: function(){
+      var self = this;
+      for(var i = 0, group; group = self.groups[i]; i++){
+        group.active = []; // reset arrays
+        group.$inputs.each(function(){ 
+          $(this).is(':checked') && group.active.push(this.value);
+        });
+        group.active.length && (group.tracker = 0);
+      }
+      self.concatenate();
+    },
+    // The "concatenate" method will crawl through each group, concatenating filters as desired:
+    concatenate: function(){
+      var self = this,
+        cache = '',
+        crawled = false,
+        checkTrackers = function(){
+          var done = 0;
+          for(var i = 0, group; group = self.groups[i]; i++){
+            (group.tracker === false) && done++;
+          }
+          return (done < self.groups.length);
+        },
+        crawl = function(){
+          for(var i = 0, group; group = self.groups[i]; i++){
+            group.active[group.tracker] && (cache += group.active[group.tracker]);
+
+            if(i === self.groups.length - 1){
+              self.outputArray.push(cache);
+              cache = '';
+              updateTrackers();
+            }
+          }
+        },
+        updateTrackers = function(){
+          for(var i = self.groups.length - 1; i > -1; i--){
+            var group = self.groups[i];
+
+            if(group.active[group.tracker + 1]){
+              group.tracker++; 
+              break;
+            } else if(i > 0){
+              group.tracker && (group.tracker = 0);
+            } else {
+              crawled = true;
+            }
+          }
+        };
+      
+      self.outputArray = []; // reset output array
+
+      do{
+        crawl();
+      }
+      while(!crawled && checkTrackers());
+
+      self.outputString = self.outputArray.join();
+      
+      // If the output string is empty, show all rather than none:
+      
+      !self.outputString.length && (self.outputString = 'all'); 
+      
+      //console.log(self.outputString); 
+      
+      // ^ we can check the console here to take a look at the filter string that is produced
+      
+      // Send the output string to MixItUp via the 'filter' method:
+      
+      if(self.$container.mixItUp('isLoaded')){
+        self.$container.mixItUp('filter', self.outputString);
+      }
+    }
+  };
+  // On document ready, initialise our code.
+  $(function(){
+    // Initialize checkboxFilter code
+    checkboxFilter.init();
+    // Instantiate MixItUp
+    $('#Container').mixItUp({
+      controls: {
+        enable: false // we won't be needing these
+      },
+      animation: {
+        easing: 'cubic-bezier(0.86, 0, 0.07, 1)',
+        duration: 600
+      }
+    });    
+  });
+</script>
+</body>
+</html>
